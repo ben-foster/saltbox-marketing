@@ -5,7 +5,7 @@ import logo from "../images/saltbox-logo-horizontal-color.png"
 
 const Header = ({ siteTitle }) => (
     <header className="w-full shadow">
-        <div className="flex flex-row flex-wrap items-center py-8 container mx-auto">
+        <div className="flex flex-row flex-wrap items-center px-2 py-8 container mx-auto">
             <div className="flex-grow-0">
                 <Link to="/">  
                     <img 

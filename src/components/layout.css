@@ -2,18 +2,50 @@
 
 html {
     @apply text-gray-900 antialiased leading-tight font-sans;
+    font-size: 18px;
+}
+
+h1,h2,h3,h4,h5,a,span {
+    font-family: "Ubuntu";
+}
+
+p, ol, ul {
+    @apply leading-loose tracking-wider mb-6 font-light;
+    font-family: "Ubuntu";
+}
+
+a {
+    @apply font-light;
+}
+
+p a {
+    @apply underline font-bold;
+    font-family: "Ubuntu Mono";
 }
 
 h1 {
-    @apply text-2xl;
+    @apply text-4xl tracking-tighter;
 }
 
 h2 {
-    @apply text-xl;
+    @apply text-2xl pt-2 mb-2;
+    
 }
 
 h3 {
-    @apply text-lg;
+    @apply text-lg text-gray-700 uppercase tracking-wider mb-2;
+}
+
+a {
+
+}
+
+ul {
+    @apply list-disc list-outside ml-8;
+}
+
+ul li {
+    @apply leading-normal mb-3 pl-4;
 }
 
 
