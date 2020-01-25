@@ -5,10 +5,10 @@ import Layout from "../components/layout";
 
 const Whitepaper = ({ pageContext }) => (
 	<Layout pageContext={pageContext}>
-        <SEO 
+        {/* <SEO 
             title={pageContext.yoast_meta.yoast_wpseo_title} 
             description={pageContext.yoast_meta.yoast_wpseo_metadesc}
-        />
+        /> */}
 		
 	</Layout>
 );
