@@ -5,7 +5,6 @@ import SEO from "../components/seo";
 import Layout from "../components/layout";
 
 const Post = ({ data }) => {
-    console.log(data)
     const { title, content, author, acf, yoast_meta } = data.wordpressPost;
     return (
         <Layout>

@@ -7,7 +7,6 @@ import SEO from "../components/seo"
 import background from "../images/hexagons.svg"
 
 const IndexPage = ({ data }) => {
-	console.log(data)
 	const { title, acf, yoast_meta } = data.wordpressPage;
 	return ( 
 		<Layout>
