@@ -5,7 +5,7 @@ import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 
 const TeamMember = ({ data }) => {
-    const { title, content, yoast_meta } = data.wordpressWpCaseStudies;
+    const { title, content, yoast_meta } = data.wordpressWpTeamMembers;
     return (
         <Layout>
             <SEO 
@@ -24,7 +24,7 @@ const TeamMember = ({ data }) => {
 
 export const query = graphql`
 	query($id: String!) {
-		wordpressWpCaseStudies(id: { eq: $id }) {
+		wordpressWpTeamMembers(id: { eq: $id }) {
 			id
 			title
             content

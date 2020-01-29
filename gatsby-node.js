@@ -38,6 +38,7 @@ exports.createPages = async ({ graphql, actions }) => {
 					node {
 						id
 						path
+						slug
 						status
 					}
 				}
@@ -57,7 +58,34 @@ exports.createPages = async ({ graphql, actions }) => {
 					node {
 						id
 						path
+						slug
 						status
+					}
+				}
+			}
+			allWordpressWpTeamMembers {
+				edges {
+					node {
+						id
+						path
+						slug
+						status
+					}
+				}
+			}
+			allWordpressMenusMenusItems {
+				edges{
+					node {
+						slug
+						name
+						items {
+							title
+							url
+							child_items {
+								title
+								url
+							}
+						}
 					}
 				}
 			}
@@ -76,16 +104,22 @@ exports.createPages = async ({ graphql, actions }) => {
 		allWordpressWpServices, 
 		allWordpressWpCaseStudies, 
 		allWordpressWpWhitepapers, 
+		allWordpressWpTeamMembers, 
 	} = result.data
 
-	const pageTemplate = path.resolve(`./src/templates/page.js`)
 	const homeTemplate = path.resolve(`./src/templates/index.js`)
+	const servicesTemplate = path.resolve(`./src/templates/services.js`)
 	const contactTemplate = path.resolve(`./src/templates/contact.js`)
+	const teamTemplate = path.resolve(`./src/templates/team.js`)
+	const resourcesTemplate = path.resolve(`./src/templates/resources.js`)
+	const caseStudiesTemplate = path.resolve(`./src/templates/case-studies.js`)
+	const privacyPolicyTemplate = path.resolve(`./src/templates/privacy-policy.js`)
+	const pageTemplate = path.resolve(`./src/templates/page.js`)
 
 	allWordpressPage.edges.forEach(edge => {
 		const path = edge.node.path;
+		// delete path from node so it doesn't get passed to page context (namespace issue - 'path' already exists on context)
 		delete edge.node.path;
-
 		// Check for specific pages, otherwise apply generic page template
 		if(path === "/") {
 			createPage({
@@ -93,10 +127,40 @@ exports.createPages = async ({ graphql, actions }) => {
 				component: slash(homeTemplate),
 				context: { ...edge.node },
 			})
-		} else if(path === "/contact") {
+		} else if(path === "/services/") {
+			createPage({
+				path,
+				component: slash(servicesTemplate),
+				context: { ...edge.node },
+			})
+		} else if(path === "/contact/") {
 			createPage({
 				path,
 				component: slash(contactTemplate),
+				context: { ...edge.node },
+			})
+		} else if(path === "/team/") {
+			createPage({
+				path,
+				component: slash(teamTemplate),
+				context: { ...edge.node },
+			})
+		} else if(path === "/resources/") {
+			createPage({
+				path,
+				component: slash(resourcesTemplate),
+				context: { ...edge.node },
+			})
+		} else if(path === "/case-studies/") {
+			createPage({
+				path,
+				component: slash(caseStudiesTemplate),
+				context: { ...edge.node },
+			})
+		} else if(path === "/privacy-policy/") {
+			createPage({
+				path,
+				component: slash(privacyPolicyTemplate),
 				context: { ...edge.node },
 			})
 		} else {
@@ -156,6 +220,19 @@ exports.createPages = async ({ graphql, actions }) => {
 		createPage({
 			path,
 			component: slash(whitepaperTemplate),
+			context: { ...edge.node },
+		})
+	})
+
+	const teamMemberTemplate = path.resolve(`./src/templates/team-member.js`)
+
+	allWordpressWpTeamMembers.edges.forEach(edge => {
+		const path = edge.node.path;
+		delete edge.node.path;
+		
+		createPage({
+			path,
+			component: slash(teamMemberTemplate),
 			context: { ...edge.node },
 		})
 	})

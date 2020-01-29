@@ -4,8 +4,8 @@ import { graphql } from "gatsby";
 import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 
-const TeamMember = ({ data }) => {
-    const { title, content, yoast_meta } = data.wordpressWpCaseStudies;
+const PrivacyPolicy = ({ data }) => {
+    const { title, content, yoast_meta } = data.wordpressPage;
     return (
         <Layout>
             <SEO 
@@ -24,7 +24,7 @@ const TeamMember = ({ data }) => {
 
 export const query = graphql`
 	query($id: String!) {
-		wordpressWpCaseStudies(id: { eq: $id }) {
+		wordpressPage(id: { eq: $id }) {
 			id
 			title
             content
@@ -36,4 +36,4 @@ export const query = graphql`
 	}
 `
 
-export default TeamMember;
+export default PrivacyPolicy;

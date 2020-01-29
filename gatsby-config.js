@@ -37,9 +37,9 @@ module.exports = {
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
 				fonts: [
-					`Roboto\+Mono\:200,400,700`,
-					`Roboto\+Slab\:200,400,700`,
-					`Ubuntu\:300,300i,400,700` // you can also specify font weights and styles
+					`Roboto\+Slab\:400`,
+					`Ubuntu\:300,300i,400,700`,
+					`Ubuntu\+Mono\:400` // you can also specify font weights and styles
 				],
 				display: `swap`
 			}
@@ -121,18 +121,21 @@ module.exports = {
 				// all routes that begin with `yoast` from fetch.
 				// Whitelisted routes using glob patterns
 				includedRoutes: [
-					`**/categories`,
 					`**/posts`,
 					`**/pages`,
 					`**/media`,
+					`**/categories`,
 					`**/tags`,
 					`**/taxonomies`,
+					`**/menus`,
 					`**/users`,
 					`**/services`,
 					`**/case_studies`,
 					`**/testimonials`,
 					`**/clients`,
 					`**/whitepapers`,
+					`**/team_members`,
+					`**/pets`,
 				],
 				// Blacklisted routes using glob patterns
 				excludedRoutes: [],

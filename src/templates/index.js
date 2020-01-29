@@ -1,35 +1,53 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import background from "../images/hexagons.svg"
+import SEO from "../components/layout/seo";
+import Layout from "../components/layout/layout";
+import HomeHero from "../components/content/home-hero";
+import FeaturedServices from "../components/content/featured-services";
+import FeaturedClients from "../components/content/featured-clients";
+import FeaturedPosts from "../components/content/featured-posts";
 
 const IndexPage = ({ data }) => {
-	const { title, acf, yoast_meta } = data.wordpressPage;
+	const { acf, yoast_meta } = data.wordpressPage;
 	return ( 
 		<Layout>
-			<SEO 
+			<SEO
 				title={yoast_meta.yoast_wpseo_title} 
 				description={yoast_meta.yoast_wpseo_metadesc} 
 			/>
-			<div style={{ backgroundImage: `url(${background})` }}>
-				<div className="container mx-auto flex flex-row flex-wrap items-center py-64 px-20">
-					<div className="flex flex-row-reverse w-1/2 p-24">
-						<Img 
-							className="w-64"
-							fluid={acf.hero.hero_logo.localFile.childImageSharp.fluid}
-							alt="Saltbox logo"
-						/>
-					</div>
-					<div className="flex flex-col w-1/2 text-gray-800">
-						<h1 className="font-light">{acf.hero.hero_tagline}</h1>
-					</div>
-					
-				</div>
-			</div>
-		
+			<HomeHero
+				tagline={acf.hero.hero_tagline}
+				imageFluid={acf.hero.hero_logo.localFile.childImageSharp.fluid}
+			/>
+			<FeaturedServices
+				title={acf.services.services_title}
+				description={acf.services.services_description}
+			/>
+			{/* <FeaturedWhitepaper
+				title={acf.whitepaper.whitepaper_title}
+				description={acf.whitepaper.whitepaper_description}
+			/>
+			<FeaturedCaseStudies
+				title={acf.case_studies.case_studies_title}
+				description={acf.case_studies.case_studies_description}
+			/>
+			<FeaturedTestimonials
+				title={acf.testimonials.testimonials_title}
+				description={acf.testimonials.testimonials_description}
+			/> */} 
+			<FeaturedClients
+				title={acf.clients.featured_clients_title}
+				description={acf.clients.clients_description}
+			/>
+			<FeaturedPosts
+				title={acf.recent_posts.recent_posts_title}
+				description={acf.recent_posts.recent_posts_description}
+			/>
+			{/* <ContactUs
+				title={acf.recent_posts.recent_posts_title}
+				description={acf.recent_posts.recent_posts_description}
+			/> */}
 		</Layout>
 	)
 }
@@ -39,7 +57,6 @@ export const query = graphql`
 	query($id: String!) {
 		wordpressPage(id: { eq: $id }) {
 			id
-			title
 			path
 			acf {
 				hero {

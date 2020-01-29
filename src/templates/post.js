@@ -1,24 +1,32 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 
-import SEO from "../components/seo";
-import Layout from "../components/layout";
+import SEO from "../components/layout/seo";
+import Layout from "../components/layout/layout";
 
 const Post = ({ data }) => {
     const { title, content, author, acf, yoast_meta } = data.wordpressPost;
     return (
         <Layout>
-            <SEO 
+            <SEO
                 title={yoast_meta.yoast_wpseo_title} 
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
-            <div className="mx-auto max-w-3xl flex flex-row flex-wrap items-center py-64 px-20">
-                <div className="flex flex-col text-gray-800">
+            <div className="max-w-3xl mx-auto flex items-center pt-32 px-20">
+                <div className="flex flex-col">
                     <h1 className="leading-normal">{title}</h1>
                     { acf.subheader && (
-                        <h2 className="font-light text-gray-500 italic leading-snug mb-8">{acf.subheader}</h2>
+                        <p className="text-2xl font-light text-gray-500 italic leading-snug pt-2 mb-8">{acf.subheader}</p>
                     )}
-                    <p className="text-sm mb-3">by <span>{author.name}</span></p>
+                    <p className="text-sm mb-3">
+                        by 
+                        <Link 
+                            to={author.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}
+                            className="no-underline ml-1"    
+                        >
+                            <span>{author.name}</span>
+                        </Link>
+                    </p>
                     <div dangerouslySetInnerHTML={{ __html: content }}></div>
                 </div>
             </div>
