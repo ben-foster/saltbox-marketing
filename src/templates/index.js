@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
 			/>
 			<HomeHero
 				tagline={acf.hero.hero_tagline}
-				imageFluid={acf.hero.hero_logo.localFile.childImageSharp.fluid}
+				logoSrc={acf.hero.hero_logo.localFile.publicURL}
 			/>
 			<FeaturedServices
 				title={acf.services.services_title}
@@ -72,6 +72,8 @@ export const query = graphql`
 					hero_tagline
 					hero_logo {
 						localFile {
+							publicURL
+							extension
 							childImageSharp {
 								fluid(maxWidth: 500, quality: 100) {
 									...GatsbyImageSharpFluid

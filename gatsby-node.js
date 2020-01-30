@@ -73,6 +73,16 @@ exports.createPages = async ({ graphql, actions }) => {
 					}
 				}
 			}
+			allWordpressWpPets {
+				edges {
+					node {
+						id
+						path
+						slug
+						status
+					}
+				}
+			}
 			allWordpressMenusMenusItems {
 				edges{
 					node {
@@ -113,6 +123,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	const teamTemplate = path.resolve(`./src/templates/team.js`)
 	const resourcesTemplate = path.resolve(`./src/templates/resources.js`)
 	const caseStudiesTemplate = path.resolve(`./src/templates/case-studies.js`)
+	const petsTemplate = path.resolve(`./src/templates/pets.js`)
 	const privacyPolicyTemplate = path.resolve(`./src/templates/privacy-policy.js`)
 	const pageTemplate = path.resolve(`./src/templates/page.js`)
 
@@ -155,6 +166,12 @@ exports.createPages = async ({ graphql, actions }) => {
 			createPage({
 				path,
 				component: slash(caseStudiesTemplate),
+				context: { ...edge.node },
+			})
+		} else if(path === "/pets/") {
+			createPage({
+				path,
+				component: slash(petsTemplate),
 				context: { ...edge.node },
 			})
 		} else if(path === "/privacy-policy/") {

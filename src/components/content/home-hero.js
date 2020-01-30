@@ -4,16 +4,15 @@ import Img from "gatsby-image";
 import background from "../../images/hexagons.svg"
 
 const HomeHero = (props) => {
-    const { imageFluid, tagline } = props;
+    const { logoSrc, tagline } = props;
     return (
         <div style={{ backgroundImage: `url(${background})` }}>
             <div className="container mx-auto flex flex-row flex-wrap items-center py-48 px-20">
                 <div className="flex flex-row-reverse w-1/2 p-24">
-                    <Img 
+                    <img 
                         className="w-64"
-                        fluid={imageFluid}
+                        src={logoSrc}
                         alt="Saltbox logo"
-                        loading="eager"
                     />
                 </div>
                 <div className="flex flex-col w-1/2 text-gray-800">

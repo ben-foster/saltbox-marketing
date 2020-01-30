@@ -27,7 +27,7 @@ const Post = ({ data }) => {
                             <span>{author.name}</span>
                         </Link>
                     </p>
-                    <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                    <div dangerouslySetInnerHTML={{ __html: content }}></div>    
                 </div>
             </div>
         </Layout>

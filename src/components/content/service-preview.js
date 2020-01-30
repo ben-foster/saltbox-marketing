@@ -7,7 +7,7 @@ const ServicePreview = ({ service }) => (
         {/* Featured Image */}
         { service.featured_media ? (
             service.featured_media.localFile.childImageSharp ? (
-                <div className="w-full h-32 mb-6 rounded overflow-hidden">
+                <div className="w-full h-32 rounded overflow-hidden">
                     <Link to={service.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}>
                         <Img 
                             className="object-cover"
@@ -18,7 +18,7 @@ const ServicePreview = ({ service }) => (
                 </div>
             ) : (
                 service.featured_media.localFile.publicURL && (
-                    <div className="w-full h-40 mb-6 rounded overflow-hidden">    
+                    <div className="w-full h-40 rounded overflow-hidden">    
                         <img
                             src={service.featured_media.localFile.publicURL}
                             alt={service.featured_media.alt_text}
@@ -28,7 +28,7 @@ const ServicePreview = ({ service }) => (
                 )
             )
         ) : (
-            <div className="w-full h-32 mb-6 rounded overflow-hidden">
+            <div className="w-full h-32 rounded overflow-hidden">
                 <Link 
                     to={service.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}
                     className="block w-full h-full"    
@@ -38,11 +38,13 @@ const ServicePreview = ({ service }) => (
             </div>
         )}
         {/* Title */}
-        <h3 className="text-sm text-center mb-2">
-            <Link to={service.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}>
-                {service.title}
-            </Link>
-        </h3>
+        <div className="flex justify-center items-center w-full h-20">
+            <h3 className="text-center mb-2">
+                <Link to={service.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}>
+                    {service.title}
+                </Link>
+            </h3>
+        </div>
         {/* Excerpt */}
         <div 
             dangerouslySetInnerHTML={{ __html: service.excerpt }}
