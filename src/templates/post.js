@@ -19,10 +19,10 @@ const Post = ({ data }) => {
                         <p className="text-2xl font-light text-gray-500 italic leading-snug pt-2 mb-8">{acf.subheader}</p>
                     )}
                     <p className="text-sm mb-3">
-                        by 
+                        {"by "}
                         <Link 
                             to={author.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}
-                            className="no-underline ml-1"    
+                            className="no-underline"    
                         >
                             <span>{author.name}</span>
                         </Link>

@@ -6,7 +6,12 @@ import Layout from "../components/layout/layout";
 import HomeHero from "../components/content/home-hero";
 import FeaturedServices from "../components/content/featured-services";
 import FeaturedClients from "../components/content/featured-clients";
+import FeaturedCaseStudies from "../components/content/featured-case-studies";
+import FeaturedTestimonials from "../components/content/featured-testimonials";
+import FeaturedWhitepaper from "../components/content/featured-whitepaper";
 import FeaturedPosts from "../components/content/featured-posts";
+import ContactUs from "../components/content/contact-us";
+
 
 const IndexPage = ({ data }) => {
 	const { acf, yoast_meta } = data.wordpressPage;
@@ -23,11 +28,7 @@ const IndexPage = ({ data }) => {
 			<FeaturedServices
 				title={acf.services.services_title}
 				description={acf.services.services_description}
-			/>
-			{/* <FeaturedWhitepaper
-				title={acf.whitepaper.whitepaper_title}
-				description={acf.whitepaper.whitepaper_description}
-			/>
+			/> 
 			<FeaturedCaseStudies
 				title={acf.case_studies.case_studies_title}
 				description={acf.case_studies.case_studies_description}
@@ -35,7 +36,11 @@ const IndexPage = ({ data }) => {
 			<FeaturedTestimonials
 				title={acf.testimonials.testimonials_title}
 				description={acf.testimonials.testimonials_description}
-			/> */} 
+			/>
+			<FeaturedWhitepaper
+				title={acf.whitepaper.whitepaper_title}
+				description={acf.whitepaper.whitepaper_description}
+			/>
 			<FeaturedClients
 				title={acf.clients.featured_clients_title}
 				description={acf.clients.clients_description}
@@ -44,10 +49,10 @@ const IndexPage = ({ data }) => {
 				title={acf.recent_posts.recent_posts_title}
 				description={acf.recent_posts.recent_posts_description}
 			/>
-			{/* <ContactUs
-				title={acf.recent_posts.recent_posts_title}
-				description={acf.recent_posts.recent_posts_description}
-			/> */}
+			<ContactUs
+				title={acf.contact_us.contact_us_title}
+				description={acf.contact_us.contact_us_description}
+			/>
 		</Layout>
 	)
 }

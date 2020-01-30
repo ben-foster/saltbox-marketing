@@ -52,6 +52,10 @@ ul li {
     @apply leading-normal mb-3 pl-4;
 }
 
+blockquote cite p {
+    @apply mb-2 leading-tight text-gray-700;
+}
+
 
 @tailwind components;
 @tailwind utilities;
