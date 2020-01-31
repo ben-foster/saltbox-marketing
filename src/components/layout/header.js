@@ -5,7 +5,7 @@ import HeaderLogo from "./header-logo";
 import HeaderCTA from "./header-cta";
 
 const Header = () => (
-    <header className="w-full shadow">
+    <header className="w-full">
         <div className="flex flex-row flex-wrap items-center px-2 py-6 container mx-auto">
             <HeaderLogo />
             <HeaderNav />

@@ -5,7 +5,7 @@ import HeaderNavItem from './header-nav-item';
 
 const HeaderCTA = () => {
     return (
-        <div className="flex-grow flex flex-row flex-wrap justify-end">  
+        <div className="flex flex-grow-0 flex-row flex-no-wrap justify-end">  
             <StaticQuery
                 query={graphql`
                     query HeaderCTAQuery {
