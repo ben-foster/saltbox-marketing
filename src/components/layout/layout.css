@@ -44,16 +44,28 @@ h3 {
     @apply text-lg text-gray-700 uppercase tracking-wider mb-2;
 }
 
-ul {
-    @apply list-disc list-outside ml-8;
+ul, ol {
+    @apply ml-8 list-outside;
 }
 
-ul li {
+ul {
+    @apply list-disc;
+}
+
+ol {
+    @apply list-decimal;
+}
+
+ul li, ol li {
     @apply leading-normal mb-3 pl-4;
 }
 
 blockquote cite p {
     @apply mb-2 leading-tight text-gray-700;
+}
+
+.blog-post-body p {
+    line-height: 2.75;
 }
 
 
