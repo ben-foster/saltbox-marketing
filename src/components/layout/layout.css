@@ -41,7 +41,7 @@ h2 {
 }
 
 h3 {
-    @apply text-lg text-gray-700 uppercase tracking-wider mb-2;
+    @apply text-lg text-gray-700 uppercase tracking-wider mt-8 mb-2;
 }
 
 ul, ol {

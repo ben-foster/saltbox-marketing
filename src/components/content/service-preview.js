@@ -15,7 +15,7 @@ const ServicePreview = ({ service }) => (
             </Link>
         </div>
         {/* Title */}
-        <div className="flex justify-center items-center w-full h-20">
+        <div className="flex justify-center items-center w-full h-24">
             <h3 className="text-center mb-2">
                 <Link to={service.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}>
                     {service.title}
