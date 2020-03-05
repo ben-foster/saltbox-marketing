@@ -13,7 +13,7 @@ const Post = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
             <div className="max-w-3xl mx-auto flex items-center pt-32 px-20">
-                <div className="flex flex-col">
+                <div className="flex flex-col w-full">
                     <h1 className="leading-normal">{title}</h1>
                     { acf.subheader && (
                         <p className="text-2xl font-light text-gray-500 italic leading-snug pt-2 mb-8">{acf.subheader}</p>
