@@ -1,10 +1,51 @@
 module.exports = {
   theme: {
-    fontFamily: {
-      'sans': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
-      'serif': ['Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
-      'mono': ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
-    },
+    colors: {
+      gray: {
+        100: '#EDF2F7',
+        200: '#DDE5EE',
+        300: '#B9C9DA',
+        400: '#93A8BD',
+        500: '#768A9E',
+        600: '#5E7387',
+        700: '#495C6F',
+        800: '#293642',
+        900: '#192129',
+      },
+      teal: {
+        100: '#C3FEF6',
+        200: '#91FDF2',
+        300: '#62F4EA',
+        400: '#3CE7E1',
+        500: '#1CD4D4',
+        600: '#0FB2B8',
+        700: '#099AA5',
+        800: '#07808D',
+        900: '#056270',
+      },
+      blue: {
+        100: '#B3ECFF',
+        200: '#81DEFD',
+        300: '#5BD0FB',
+        400: '#40C3F7',
+        500: '#2CB0ED',
+        600: '#1991D2',
+        700: '#1280BF',
+        800: '#0B68A2',
+        900: '#035287',
+      },
+      purple: {
+        100: '#B4B4FD',
+        200: '#9E9EFA',
+        300: '#8989F5',
+        400: '#6F61EF',
+        500: '#513EE0',
+        600: '#4825D4',
+        700: '#391BB1',
+        800: '#260D96',
+        900: '#180381',
+      },
+    }
   },
   variants: {},
   plugins: []

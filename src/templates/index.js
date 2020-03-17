@@ -22,8 +22,8 @@ const IndexPage = ({ data }) => {
 				description={yoast_meta.yoast_wpseo_metadesc} 
 			/>
 			<HomeHero
-				tagline={acf.hero.hero_tagline}
-				logoSrc={acf.hero.hero_logo.localFile.publicURL}
+				taglineLineOne={acf.hero.hero_tagline_line_one}
+				taglineLineTwo={acf.hero.hero_tagline_line_two}
 			/>
 			<FeaturedServices
 				title={acf.services.services_title}
