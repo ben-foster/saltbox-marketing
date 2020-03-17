@@ -74,7 +74,8 @@ export const query = graphql`
 					# 		}
 					# 	}
 					# }
-					hero_tagline
+					hero_tagline_line_one
+					hero_tagline_line_two
 					hero_logo {
 						localFile {
 							publicURL
