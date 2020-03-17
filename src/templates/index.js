@@ -76,17 +76,6 @@ export const query = graphql`
 					# }
 					hero_tagline_line_one
 					hero_tagline_line_two
-					hero_logo {
-						localFile {
-							publicURL
-							extension
-							childImageSharp {
-								fluid(maxWidth: 500, quality: 100) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
-					}
 				}
 				services {
 					services_title
