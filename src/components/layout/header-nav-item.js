@@ -7,7 +7,7 @@ const HeaderNavItem = ({ item }) => {
         <div className="relative">
             <Link
                 to={item.url.replace("http://saltbox-wordpress.flywheelsites.com", "")}
-                className="p-4"
+                className="p-4 text-white font-normal"
                 key={item.title}
                 onMouseEnter={() => item.child_items ? setShowSubNav(true) : null}
                 onMouseLeave={() => item.child_items ? setShowSubNav(false) : null}

@@ -64,6 +64,26 @@ blockquote cite p {
     @apply mb-2 leading-tight text-gray-700;
 }
 
+.bg-purple-to-dark {
+    background-image: linear-gradient(135deg, #8989F5 0%, #260D96 100%);
+}
+
+.bg-teal-to-dark {
+    background-image: linear-gradient(165.29deg, #91FDF2 0.03%, #0FB2B8 100.03%);
+}
+
+.bg-blue-to-dark {
+    background-image: linear-gradient(315deg, #4825D4 0.05%, #81DEFD 100.05%);
+}
+
+.bg-teal-to-blue {
+    background-image: linear-gradient(153.4deg, #62F4EA -0.08%, #4825D4 99.92%);
+}
+
+.button-shadow {
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1), -4px -8px 12px rgba(255, 255, 255, 0.08);
+}
+
 .blog-post-body p {
     line-height: 2.75;
 }

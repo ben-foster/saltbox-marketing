@@ -22,6 +22,7 @@ const IndexPage = ({ data }) => {
 				description={yoast_meta.yoast_wpseo_metadesc} 
 			/>
 			<HomeHero
+				background={acf.hero.hero_background_image}
 				taglineLineOne={acf.hero.hero_tagline_line_one}
 				taglineLineTwo={acf.hero.hero_tagline_line_two}
 			/>
@@ -65,15 +66,17 @@ export const query = graphql`
 			path
 			acf {
 				hero {
-					# hero_background_image {
-					# 	localFile {
-					# 		childImageSharp {
-					# 			resolutions(width: 1800) {
-					# 				...GatsbyImageSharpResolutions_withWebp
-					# 			}
-					# 		}
-					# 	}
-					# }
+					hero_background_image {
+						localFile {
+							publicURL
+							extension
+							childImageSharp {
+								resolutions(width: 1800) {
+									...GatsbyImageSharpResolutions_withWebp
+								}
+							}
+						}
+					}
 					hero_tagline_line_one
 					hero_tagline_line_two
 				}

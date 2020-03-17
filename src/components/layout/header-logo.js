@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import logo from "../../images/saltbox-logo-horizontal-color.png"
+import logo from "../../images/saltbox-logo-horizontal-white.svg"
 
 const HeaderLogo = () => (
     <div className="flex-grow-0">
