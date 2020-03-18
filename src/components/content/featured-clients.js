@@ -4,13 +4,13 @@ import { StaticQuery, graphql, Link } from "gatsby";
 import ClientLogo from "./client-logo";
 
 const FeaturedClients = (props) => {
-    const { title, description } = props;
+    const { title, description, className } = props;
     return (
-        <div>
+        <div className={className}>
             <div className="container mx-auto flex flex-col flex-no-wrap items-center p-12">
-                { title && <h2>{title}</h2>}
+                { title && <h2 className="font-bold text-3xl text-gray-500">{title}</h2>}
                 { description && <p>{description}</p>}
-                <div className="flex-grow flex flex-row flex-wrap justify-end p-4">  
+                <div className="flex flex-row flex-wrap p-4">  
                     <StaticQuery
                         query={graphql`
                             query FeaturedClientsQuery {

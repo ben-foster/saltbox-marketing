@@ -10,8 +10,16 @@ h1,h2,h3,h4,h5,a,span {
 }
 
 p, ol, ul {
-    @apply leading-loose tracking-wider mb-6 font-light;
+    @apply leading-loose tracking-wider mb-6;
     font-family: "Ubuntu";
+}
+
+.mono {
+    font-family: "Ubuntu Mono";
+}
+
+.slab {
+    font-family: "Roboto Slab";
 }
 
 a {

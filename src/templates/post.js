@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby";
 
 import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
+import Hero from "../components/content/hero";
 
 const Post = ({ data }) => {
     const { title, content, author, acf, yoast_meta } = data.wordpressPost;
@@ -12,8 +13,8 @@ const Post = ({ data }) => {
                 title={yoast_meta.yoast_wpseo_title} 
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
-            <div className="max-w-3xl mx-auto flex items-center pt-32 px-20">
-                <div className="flex flex-col w-full">
+            <Hero>
+                <div className="max-w-3xl mx-auto flex items-center pt-32 px-20">
                     <h1 className="leading-normal">{title}</h1>
                     { acf.subheader && (
                         <p className="text-2xl font-light text-gray-500 italic leading-snug pt-2 mb-8">{acf.subheader}</p>
@@ -27,6 +28,10 @@ const Post = ({ data }) => {
                             <span>{author.name}</span>
                         </Link>
                     </p>
+                </div>
+            </Hero>
+            <div className="max-w-3xl mx-auto flex items-center pt-32 px-20">
+                <div className="flex flex-col w-full">
                     <div className="blog-post-body" dangerouslySetInnerHTML={{ __html: content }}></div>    
                 </div>
             </div>
