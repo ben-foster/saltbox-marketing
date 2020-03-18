@@ -13,26 +13,28 @@ const Post = ({ data }) => {
                 title={yoast_meta.yoast_wpseo_title} 
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
-            <Hero>
-                <div className="max-w-3xl mx-auto flex items-center pt-32 px-20">
-                    <h1 className="leading-normal">{title}</h1>
-                    { acf.subheader && (
-                        <p className="text-2xl font-light text-gray-500 italic leading-snug pt-2 mb-8">{acf.subheader}</p>
-                    )}
-                    <p className="text-sm mb-3">
-                        {"by "}
-                        <Link 
-                            to={author.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}
-                            className="no-underline"    
-                        >
-                            <span>{author.name}</span>
-                        </Link>
-                    </p>
-                </div>
-            </Hero>
-            <div className="max-w-3xl mx-auto flex items-center pt-32 px-20">
-                <div className="flex flex-col w-full">
-                    <div className="blog-post-body" dangerouslySetInnerHTML={{ __html: content }}></div>    
+            <div className="bg-gray-100">
+                <Hero className="pb-48">
+                    <div className="max-w-3xl mx-auto flex flex-col items-center pt-32 px-20">
+                        <h1 className="leading-normal text-white">{title}</h1>
+                        { acf.subheader && (
+                            <p className="text-2xl font-light text-white italic leading-snug pt-2 mb-8">{acf.subheader}</p>
+                        )}
+                        <p className="text-sm mb-3 text-white self-start">
+                            {"by "}
+                            <Link 
+                                to={author.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}
+                                className="no-underline"    
+                            >
+                                <span className="text-white">{author.name}</span>
+                            </Link>
+                        </p>
+                    </div>
+                </Hero>
+                <div className="max-w-3xl mx-auto -mt-40 relative z-10 flex flex-col bg-white items-center py-16 px-20 rounded-lg shadow-lg">
+                    <div className=" w-full">
+                        <div className="blog-post-body" dangerouslySetInnerHTML={{ __html: content }}></div>    
+                    </div>
                 </div>
             </div>
         </Layout>
