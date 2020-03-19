@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
+import placeholder from "../images/placeholder.png";
 
 const Post = ({ data }) => {
     const { title, content, author, acf, yoast_meta } = data.wordpressPost;
@@ -15,18 +16,19 @@ const Post = ({ data }) => {
             />
             <div className="bg-gray-100">
                 <Hero className="pb-48">
-                    <div className="max-w-3xl mx-auto flex flex-col items-center pt-32 px-20">
+                    <div className="max-w-3xl mx-auto flex flex-col items-center pt-48 px-20">
                         <h1 className="leading-normal text-white">{title}</h1>
                         { acf.subheader && (
                             <p className="text-2xl font-light text-white italic leading-snug pt-2 mb-8">{acf.subheader}</p>
                         )}
-                        <p className="text-sm mb-3 text-white self-start">
-                            {"by "}
+                        <p className="flex flex-row text-sm mb-3 self-start items-center">
+                            <img className="w-12 h-12 mr-3 rounded-full shadow-md" src={placeholder} alt=""/>
+                            <span className="text-white pr-1">by</span>
                             <Link 
                                 to={author.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}
-                                className="no-underline"    
+                                className="no-underline text-white hover:text-gray-100"
                             >
-                                <span className="text-white">{author.name}</span>
+                                <span className="text-white hover:text-gray-100">{author.name}</span>
                             </Link>
                         </p>
                     </div>

@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import FeaturedImage from "../lib/featured-image";
 
 const ServicePreview = ({ service }) => (
-    <div className="flex flex-col w-84 px-6 py-8 m-2 shadow-lg rounded-lg bg-white">
+    <div className="flex flex-col px-6 py-8 m-2 shadow-md rounded-lg bg-white">
         {/* Featured Image */}
         <div className="flex flex-col xl:flex-row w-full h-32">
             <Link 
