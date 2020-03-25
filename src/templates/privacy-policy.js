@@ -12,10 +12,12 @@ const PrivacyPolicy = ({ data }) => {
                 title={yoast_meta.yoast_wpseo_title} 
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
-            <div className="container mx-auto flex items-center p-20">
-                <div className="flex flex-col text-gray-800">
-                    <h1 className="leading-normal">{title}</h1>
-                    <div dangerouslySetInnerHTML={{ __html: content }}></div>
+            <div className="bg-gray-100">
+                <div className="container mx-auto flex items-center p-20">
+                    <div className="flex flex-col text-gray-800">
+                        <h1 className="leading-normal">{title}</h1>
+                        <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                    </div>
                 </div>
             </div>
         </Layout>
