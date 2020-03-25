@@ -7,8 +7,11 @@ const ContactForm = () => {
         <form 
             name="Contact" 
             netlify
+            netlify-honeypot="bot-field"
             className="flex flex-col py-6"
         >
+            <input type="hidden" name="form-name" value="Contact" />
+            <input type="hidden" name="bot-field" />
             <label 
                 for="name"
                 className="flex flex-col text-sm text-gray-100 uppercase font-bold"
