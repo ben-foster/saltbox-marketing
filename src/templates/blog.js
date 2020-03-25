@@ -5,7 +5,7 @@ import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
 import BlogPosts from "../components/content/blog-posts";
 
-const Resources = ({ data }) => {
+const Blog = ({ data }) => {
     const { title, content, yoast_meta } = data.wordpressPage;
     return (
         <Layout>
@@ -46,4 +46,4 @@ export const query = graphql`
 	}
 `
 
-export default Resources;
+export default Blog;

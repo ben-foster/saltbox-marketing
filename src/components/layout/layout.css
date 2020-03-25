@@ -1,7 +1,7 @@
 @tailwind base;
 
 html {
-    @apply text-gray-800 antialiased leading-tight font-sans;
+    @apply bg-blue-900 text-gray-800 antialiased leading-tight font-sans;
     font-size: 18px;
 }
 

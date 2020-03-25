@@ -121,7 +121,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	const servicesTemplate = path.resolve(`./src/templates/services.js`)
 	const contactTemplate = path.resolve(`./src/templates/contact.js`)
 	const teamTemplate = path.resolve(`./src/templates/team.js`)
-	const resourcesTemplate = path.resolve(`./src/templates/resources.js`)
+	const blogTemplate = path.resolve(`./src/templates/blog.js`)
 	const caseStudiesTemplate = path.resolve(`./src/templates/case-studies.js`)
 	const petsTemplate = path.resolve(`./src/templates/pets.js`)
 	const privacyPolicyTemplate = path.resolve(`./src/templates/privacy-policy.js`)
@@ -156,10 +156,10 @@ exports.createPages = async ({ graphql, actions }) => {
 				component: slash(teamTemplate),
 				context: { ...edge.node },
 			})
-		} else if(path === "/resources/") {
+		} else if(path === "/blog/") {
 			createPage({
 				path,
-				component: slash(resourcesTemplate),
+				component: slash(blogTemplate),
 				context: { ...edge.node },
 			})
 		} else if(path === "/case-studies/") {
