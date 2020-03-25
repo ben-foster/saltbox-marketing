@@ -9,8 +9,8 @@ const FeaturedPosts = (props) => {
         <div className="bg-blue-100 py-12 lg:py-20">
             <div className="container mx-auto flex flex-col lg:flex-row flex-no-wrap items-center p-12">
                 <div className="flex flex-col w-1/3">
-                    { title && <h2 className="w-32 text-5xl text-white font-bold">{title}</h2>}
-                    { description && <p className="text-white">{description}</p>}
+                    { title && <h2 className="w-32 text-5xl text-white font-bold" dangerouslySetInnerHTML={{ __html: title }}></h2>}
+                    { description && <p className="text-white" dangerouslySetInnerHTML={{ __html: description }}></p>}
                 </div>
                 <div className="flex-grow flex flex-row flex-wrap justify-end">  
                     <StaticQuery

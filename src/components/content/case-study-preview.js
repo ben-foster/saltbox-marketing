@@ -5,7 +5,7 @@ import FeaturedImage from "../lib/featured-image";
 import placeholder from "../../images/placeholder.png";
 
 const CaseStudyPreview = ({ caseStudy }) => (
-    <div className="flex flex-col items-center bg-white w-full p-12 rounded-lg z-10 shadow-lg">
+    <div className="flex flex-col items-center bg-white w-full p-12 rounded-lg z-10 shadow">
         <h3 className="mt-0">{caseStudy.title}</h3>
         <p>{caseStudy.excerpt}</p>
         <div className="flex flex-col md:flex-row w-full">

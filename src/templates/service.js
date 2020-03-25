@@ -16,13 +16,15 @@ const Service = ({ data }) => {
             <Hero>
                 <div className="container mx-auto flex items-center p-20">
                     <div className="flex flex-col text-gray-800">
-                        <h1 className="leading-normal">{title}</h1>
+                        <h1 className="leading-normal" dangerouslySetInnerHTML={{ __html: title }}></h1>
                     </div>
                 </div>
             </Hero>
-            <div className="container mx-auto flex items-center p-20">
-                <div className="flex flex-col text-gray-800">
-                    <div dangerouslySetInnerHTML={{ __html: content }}></div>
+            <div className="bg-gray-100">
+                <div className="container mx-auto flex items-center p-20">
+                    <div className="flex flex-col text-gray-800">
+                        <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                    </div>
                 </div>
             </div>
         </Layout>

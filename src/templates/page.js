@@ -20,9 +20,11 @@ const Page = ({ data }) => {
                     </div>
                 </div>
             </Hero>
-            <div className="container mx-auto flex items-center p-20">
-                <div className="flex flex-col text-gray-800">
-                    <div dangerouslySetInnerHTML={{ __html: content }}></div>
+            <div className="bg-gray-100">
+                <div className="container mx-auto flex items-center p-20">
+                    <div className="flex flex-col text-gray-800">
+                        <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                    </div>
                 </div>
             </div>
         </Layout>

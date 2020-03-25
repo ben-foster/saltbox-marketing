@@ -9,7 +9,7 @@ const Hero = ({ children, className, fillColor }) => {
             className={`relative z-0 ${className}`}
         >
             { children }
-            <CurveBottom fillColor="text-gray-100" />
+            <CurveBottom fillColor={ fillColor ? fillColor : "text-gray-100" } />
         </div>
     );
 };

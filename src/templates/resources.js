@@ -1,9 +1,9 @@
 import React from "react";
-import { graphql } from "gatsby";
 
 import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
+import BlogPosts from "../components/content/blog-posts";
 
 const Resources = ({ data }) => {
     const { title, content, yoast_meta } = data.wordpressPage;
@@ -14,15 +14,18 @@ const Resources = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
             <Hero>
-                <div className="container mx-auto flex items-center p-20">
+                <div className="container mx-auto flex items-center p-20 pt-32">
                     <div className="flex flex-col text-gray-800">
-                        <h1 className="leading-normal">{title}</h1>
+                        <h1 className="leading-normal font-bold text-white" dangerouslySetInnerHTML={{ __html: title }}></h1>
                     </div>
                 </div>
             </Hero>
-            <div className="container mx-auto flex items-center p-20">
-                <div className="flex flex-col text-gray-800">
-                    <div dangerouslySetInnerHTML={{ __html: content }}></div>
+            <div className="bg-gray-100">
+                <div className="container mx-auto flex items-center py-20 px-8">
+                    <div className="flex flex-col text-gray-800">
+                        <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                        <BlogPosts />
+                    </div>
                 </div>
             </div>
         </Layout>

@@ -52,6 +52,7 @@ const IndexPage = ({ data }) => {
 			<ContactUs
 				title={acf.contact_us.contact_us_title}
 				description={acf.contact_us.contact_us_description}
+				fillColor="text-blue-100"
 			/>
 		</Layout>
 	)

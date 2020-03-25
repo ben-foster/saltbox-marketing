@@ -13,17 +13,14 @@ const TeamMember = ({ data }) => {
                 title={yoast_meta.yoast_wpseo_title} 
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
-            <div 
-                style={{ backgroundImage: `linear-gradient(153.43deg, #62F4EA -0.08%, #4825D4 99.92%)` }}
-                className="relative z-0"
-            >
+            <Hero>
                 <div className="container mx-auto flex items-center p-20">
                     <div className="flex flex-col text-gray-800">
                         <h1 className="leading-normal">{title}</h1>
                         <div dangerouslySetInnerHTML={{ __html: content }}></div>
                     </div>
                 </div>
-            </div>
+            </Hero>
         </Layout>
     )
 }
