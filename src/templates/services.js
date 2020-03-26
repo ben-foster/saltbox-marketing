@@ -42,6 +42,9 @@ export const query = graphql`
                 yoast_wpseo_title
                 yoast_wpseo_metadesc
             }
+            acf {
+                subheader
+            }
 		}
 	}
 `
