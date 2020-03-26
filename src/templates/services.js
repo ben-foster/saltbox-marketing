@@ -6,7 +6,7 @@ import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
 
 const Services = ({ data }) => {
-    const { title, content, yoast_meta } = data.wordpressPage;
+    const { title, content, acf, yoast_meta } = data.wordpressPage;
     return (
         <Layout>
             <SEO 
