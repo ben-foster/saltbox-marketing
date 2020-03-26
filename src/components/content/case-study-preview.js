@@ -43,7 +43,7 @@ const CaseStudyPreview = ({ caseStudy }) => (
             </div>
         </div>
         <div className="pt-12">
-            <Link className="mono font-bold text-blue-700" to={caseStudy.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}>
+            <Link className="font-bold text-blue-700" to={caseStudy.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}>
                 Learn more
             </Link>
         </div>

@@ -5,6 +5,7 @@ import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
 import placeholder from "../images/placeholder.png";
+import FeaturedPosts from "../components/content/featured-posts";
 
 const Post = ({ data }) => {
     const { title, content, author, acf, yoast_meta } = data.wordpressPost;
@@ -38,6 +39,7 @@ const Post = ({ data }) => {
                         <div className="blog-post-body" dangerouslySetInnerHTML={{ __html: content }}></div>    
                     </div>
                 </div>
+                <FeaturedPosts />
             </div>
         </Layout>
     )

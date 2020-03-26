@@ -25,7 +25,7 @@ const Contact = ({ data }) => {
             <div className="bg-gray-100">
                 <div className="container mx-auto flex items-center p-20">
                     <div className="flex flex-col w-full text-gray-800 relative pb-64">
-                        <div className="absolute right-0 bottom-0 flex flex-col p-16 bg-blue-900 rounded-lg shadow">
+                        <div className="absolute bottom-0 flex flex-col p-16 bg-blue-900 rounded-lg shadow">
                             <h2 className="text-white font-bold text-center">Get In Touch</h2>
                             <ContactForm />
                         </div>

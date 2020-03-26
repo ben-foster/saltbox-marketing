@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 const PostPreview = ({ post }) => (
     <div className="p-4">
-        <div className="flex flex-col w-80 h-88 p-6 bg-white rounded-lg shadow">
+        <div className="flex flex-col w-80 h-96 p-6 bg-white rounded-lg shadow">
             {/* Category */}
             <div className="flex flex-row items-center">
                 <img className="w-8 h-8 mr-4" src="http://saltbox-wordpress.flywheelsites.com/wp-content/uploads/2020/01/ppc-icon-color.svg" alt=""/>
@@ -32,6 +32,9 @@ const PostPreview = ({ post }) => (
                 dangerouslySetInnerHTML={{ __html: post.excerpt }}
                 className="text-xs"
             />
+            <Link className="font-bold text-blue-700 w-full text-center mt-auto" to={post.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}>
+                Learn more
+            </Link>
         </div>
     </div>
 );

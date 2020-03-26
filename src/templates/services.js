@@ -1,9 +1,13 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 
 import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
+import FeaturedServices from "../components/content/featured-services";
+import WhySaltbox from "../components/content/why-saltbox";
+import HowToGetStarted from "../components/content/how-to-get-started";
+import ContactUs from "../components/content/contact-us";
 
 const Services = ({ data }) => {
     const { title, content, acf, yoast_meta } = data.wordpressPage;
@@ -14,19 +18,22 @@ const Services = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
             <Hero>
-                <div className="container mx-auto flex items-center p-20">
+                <div className="container mx-auto flex items-center p-20 pt-32">
                     <div className="flex flex-col w-full md:w-2/3 text-white">
                         <h1 className="leading-normal font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
-                        <p dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                     </div>
                 </div>
             </Hero>
             <div className="bg-gray-100">
-                <div className="container mx-auto flex items-center p-20">
-                    <div className="flex flex-col text-gray-800">
-                        <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                <div className="container mx-auto flex items-center py-20">
+                    <div className="flex flex-col w-full">
+                        <p className="w-full px-6 md:p-0 md:w-128 mx-auto text-base md:text-lg" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
+                        <FeaturedServices title="Our Services" />
+                        <WhySaltbox />
+                        <HowToGetStarted />
                     </div>
                 </div>
+                <ContactUs title="Get Started Today" fillColor="text-gray-100" />
             </div>
         </Layout>
     )

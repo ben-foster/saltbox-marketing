@@ -27,8 +27,7 @@ a {
 }
 
 p a {
-    @apply underline font-normal text-sm;
-    font-family: "Roboto Slab";
+    @apply underline font-normal;
 }
 
 p a:hover,
@@ -95,7 +94,6 @@ blockquote cite p {
 .blog-post-body p {
     line-height: 2.75;
 }
-
 
 @tailwind components;
 @tailwind utilities;
