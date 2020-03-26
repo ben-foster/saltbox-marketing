@@ -6,7 +6,7 @@ import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
 
 const Service = ({ data }) => {
-    const { title, content, yoast_meta } = data.wordpressWpServices;
+    const { title, content, acf, yoast_meta } = data.wordpressWpServices;
     return (
         <Layout>
             <SEO 
@@ -14,9 +14,10 @@ const Service = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
             <Hero>
-                <div className="container mx-auto flex items-center p-20">
-                    <div className="flex flex-col text-gray-800">
-                        <h1 className="leading-normal" dangerouslySetInnerHTML={{ __html: title }}></h1>
+                <div className="container mx-auto flex items-center p-20 pt-32">
+                    <div className="flex flex-col w-full md:w-2/3 text-white">
+                        <h1 className="leading-normal font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
+                        <p dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                     </div>
                 </div>
             </Hero>
@@ -40,6 +41,9 @@ export const query = graphql`
 			yoast_meta {
                 yoast_wpseo_title
                 yoast_wpseo_metadesc
+            }
+            acf {
+                subheader
             }
 		}
 	}

@@ -15,8 +15,9 @@ const Services = ({ data }) => {
             />
             <Hero>
                 <div className="container mx-auto flex items-center p-20">
-                    <div className="flex flex-col text-gray-800">
-                        <h1 className="leading-normal">{title}</h1>
+                    <div className="flex flex-col w-full md:w-2/3 text-white">
+                        <h1 className="leading-normal font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
+                        <p dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                     </div>
                 </div>
             </Hero>

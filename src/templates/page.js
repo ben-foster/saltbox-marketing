@@ -6,7 +6,7 @@ import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
 
 const Page = ({ data }) => {
-    const { title, content, yoast_meta } = data.wordpressPage;
+    const { title, content, acf, yoast_meta } = data.wordpressPage;
     return (
         <Layout>
             <SEO 
@@ -16,7 +16,8 @@ const Page = ({ data }) => {
             <Hero>
                 <div className="container mx-auto flex items-center p-20">
                     <div className="flex flex-col text-gray-800">
-                        <h1 className="leading-normal">{title}</h1>
+                        <h1 className="leading-normal" dangerouslySetInnerHTML={{ __html: title }}></h1>
+                        <p dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                     </div>
                 </div>
             </Hero>
@@ -40,6 +41,9 @@ export const query = graphql`
 			yoast_meta {
                 yoast_wpseo_title
                 yoast_wpseo_metadesc
+            }
+            acf {
+                subheader
             }
 		}
 	}
