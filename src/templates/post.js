@@ -39,7 +39,7 @@ const Post = ({ data }) => {
                         <div className="blog-post-body" dangerouslySetInnerHTML={{ __html: content }}></div>    
                     </div>
                 </div>
-                <div className="container mx-auto">
+                <div className="container mx-auto py-16">
                     <FeaturedPosts />
                 </div>
             </div>

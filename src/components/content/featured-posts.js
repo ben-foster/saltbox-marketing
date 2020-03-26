@@ -6,7 +6,7 @@ import PostPreview from "./post-preview";
 const FeaturedPosts = () => {
     return (
         <div className="flex flex-col w-full">
-            <h4 className="font-bold text-3xl text-gray-500 text-center">Featured Posts</h4>
+            <h4 className="font-bold text-3xl text-gray-500 text-center mb-10">Featured Posts</h4>
             <div className="flex flex-row flex-wrap">
                 <StaticQuery
                     query={graphql`
