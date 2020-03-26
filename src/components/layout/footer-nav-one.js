@@ -29,7 +29,7 @@ const FooterNavOne = () => {
                 const { items } = data.allWordpressMenusMenusItems.edges[0].node
                 return items.map(item => (
                     <Link
-                        to={item.url.replace("http://saltbox-wordpress.flywheelsites.com", "")}
+                        to={item.url.replace("https://wordpress.saltbox.solutions", "")}
                         className="p-3 text-sm text-white font-normal hover:text-gray-200 focus:text-gray-200"
                         key={item.title}
                     >

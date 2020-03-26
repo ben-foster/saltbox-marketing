@@ -6,7 +6,7 @@ const WhitepaperPreview = ({ whitepaper }) => (
     <div className="flex flex-col w-64 p-4">
         {/* Featured Image */}
         <div className="w-full h-32 rounded overflow-hidden">
-            <Link to={whitepaper.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}>
+            <Link to={whitepaper.link.replace("https://wordpress.saltbox.solutions", "")}>
                 <FeaturedImage 
                     featuredImage={whitepaper.featured_media}
                     className="object-cover"
@@ -16,7 +16,7 @@ const WhitepaperPreview = ({ whitepaper }) => (
         {/* Title */}
         <div className="flex justify-center items-center w-full h-20">
             <h3 className="text-center mb-2">
-                <Link to={whitepaper.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}>
+                <Link to={whitepaper.link.replace("https://wordpress.saltbox.solutions", "")}>
                     {whitepaper.title}
                 </Link>
             </h3>

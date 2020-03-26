@@ -25,7 +25,7 @@ const Post = ({ data }) => {
                         <img className="w-12 h-12 mr-3 rounded-full shadow-md" src={placeholder} alt=""/>
                         <span className="text-white pr-1">by</span>
                         <Link 
-                            to={author.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}
+                            to={author.link.replace("https://wordpress.saltbox.solutions", "")}
                             className="no-underline text-white hover:text-gray-100"
                         >
                             <span className="text-white hover:text-gray-100" dangerouslySetInnerHTML={{ __html: author.name }}></span>
@@ -39,7 +39,9 @@ const Post = ({ data }) => {
                         <div className="blog-post-body" dangerouslySetInnerHTML={{ __html: content }}></div>    
                     </div>
                 </div>
-                <FeaturedPosts />
+                <div className="container mx-auto">
+                    <FeaturedPosts />
+                </div>
             </div>
         </Layout>
     )

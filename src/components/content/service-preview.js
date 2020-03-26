@@ -8,7 +8,7 @@ const ServicePreview = ({ service }) => (
         <div className="flex flex-col xl:flex-row w-full h-32">
             <Link 
                 className="w-full h-full flex items-center justify-center"
-                to={service.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}
+                to={service.link.replace("https://wordpress.saltbox.solutions", "")}
             >
                 <FeaturedImage 
                     featuredImage={service.featured_media}
@@ -19,7 +19,7 @@ const ServicePreview = ({ service }) => (
                 <h3 className="mt-4 xl:mt-0 mb-2 xl:pl-2 w-48 text-center xl:text-left">
                     <Link 
                         className="font-bold text-xl" 
-                        to={service.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}
+                        to={service.link.replace("https://wordpress.saltbox.solutions", "")}
                         dangerouslySetInnerHTML={{ __html: service.title }}
                     />
                 </h3>
@@ -29,7 +29,7 @@ const ServicePreview = ({ service }) => (
             dangerouslySetInnerHTML={{ __html: service.excerpt }}
             className="pt-3 xl:pt-0 pb-2 px-2 text-gray-700 text-sm"
         />
-        <Link className="w-full text-blue-800 text-center font-bold" to={service.link.replace("http://saltbox-wordpress.flywheelsites.com", "")}>
+        <Link className="w-full text-blue-800 text-center font-bold" to={service.link.replace("https://wordpress.saltbox.solutions", "")}>
             Learn More
         </Link>
     </div>
