@@ -27,6 +27,9 @@ const Pets = () => {
                                             }
                                         }
                                     }
+                                    acf {
+                                        job_title
+                                    }
                                 } 
                             }
                         }

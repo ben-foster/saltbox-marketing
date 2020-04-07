@@ -12,31 +12,7 @@ const FeaturedServices = (props) => {
                 { description && <p>{description}</p>}
                 <div className="flex flex-col md:flex-row">  
                     <StaticQuery
-                        query={graphql`
-                            query FeaturedServicesQuery {
-                                allWordpressWpServices(limit: 3, filter: {categories: {elemMatch: {slug: {eq: "featured"}}}}, sort: {order: ASC, fields: title}){
-                                    edges {
-                                        node {
-                                            title
-                                            link
-                                            excerpt
-                                            featured_media {
-                                                alt_text
-                                                localFile {
-                                                    publicURL
-                                                    extension
-                                                    childImageSharp {
-                                                        fluid(maxWidth: 500, quality: 100) {
-                                                            ...GatsbyImageSharpFluid
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        } 
-                                    }
-                                }
-                            }
-                        `}
+                        query={FEATURED_SERVICES_QUERY}
                         render={data => {
                             const { edges: services } = data.allWordpressWpServices
                             return services.map(({ node: service }) => (
@@ -49,5 +25,31 @@ const FeaturedServices = (props) => {
         </div>
     );
 };
+
+export const FEATURED_SERVICES_QUERY = graphql`
+    query FeaturedServicesQuery {
+        allWordpressWpServices(limit: 3, filter: {categories: {elemMatch: {slug: {eq: "featured"}}}}, sort: {order: ASC, fields: title}){
+            edges {
+                node {
+                    title
+                    link
+                    excerpt
+                    featured_media {
+                        alt_text
+                        localFile {
+                            publicURL
+                            extension
+                            childImageSharp {
+                                fluid(maxWidth: 500, quality: 100) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    }
+`;
 
 export default FeaturedServices;

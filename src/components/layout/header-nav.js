@@ -5,7 +5,7 @@ import HeaderNavItem from './header-nav-item';
 
 const HeaderNav = () => {
     return (
-        <div className="flex flex-row flex-grow flex-wrap justify-center">  
+        <div className="flex flex-col md:flex-row flex-grow justify-center w-full md:w-auto">  
             <StaticQuery
                 query={graphql`
                     query HeaderQuery {

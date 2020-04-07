@@ -4,10 +4,10 @@ import { Link } from "gatsby"
 const HeaderNavItem = ({ item }) => {
     const [ showSubNav, setShowSubNav ] = useState(false);
     return (
-        <div className="relative">
+        <div className="relative w-full md:w-auto">
             <Link
                 to={item.url.replace("https://wordpress.saltbox.solutions", "")}
-                className="p-4 text-white font-normal"
+                className="w-full flex items-center justify-center bg-blue-900 md:bg-transparent md:w-auto p-4 text-white font-normal"
                 key={item.title}
                 onMouseEnter={() => item.child_items ? setShowSubNav(true) : null}
                 onMouseLeave={() => item.child_items ? setShowSubNav(false) : null}
@@ -16,7 +16,7 @@ const HeaderNavItem = ({ item }) => {
             </Link>
             { item.child_items && (
                 <div 
-                    className={`absolute flex flex-col w-64 py-3 mt-3 bg-white rounded-lg shadow ${ showSubNav ? "" : "hidden" }`}
+                    className={`absolute hidden ${ showSubNav ? "md:flex" : "" } flex-col w-64 py-3 mt-0 bg-white rounded-lg shadow`}
                     onMouseEnter={() => item.child_items ? setShowSubNav(true) : null}
                     onMouseLeave={() => item.child_items ? setShowSubNav(false) : null}
                 >

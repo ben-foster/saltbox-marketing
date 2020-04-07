@@ -23,12 +23,10 @@ const Contact = ({ data }) => {
                 </div>
             </Hero>
             <div className="bg-gray-100">
-                <div className="container mx-auto flex items-center p-20">
-                    <div className="flex flex-col w-full text-gray-800 relative pb-64">
-                        <div className="absolute bottom-0 flex flex-col p-16 bg-blue-900 rounded-lg shadow">
-                            <h2 className="text-white font-bold text-center">Get In Touch</h2>
-                            <ContactForm />
-                        </div>
+                <div className="container mx-auto flex items-center pt-10 pb-20">
+                    <div className="flex flex-col w-96 mx-auto text-gray-800">
+                        <p>Please fill out the form below, and we will reach out via email to schedule a discovery call.</p>
+                        <ContactForm />
                     </div>
                 </div>
             </div>

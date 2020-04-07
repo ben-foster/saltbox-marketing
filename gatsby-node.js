@@ -117,15 +117,14 @@ exports.createPages = async ({ graphql, actions }) => {
 		allWordpressWpTeamMembers, 
 	} = result.data
 
-	const homeTemplate = path.resolve(`./src/templates/index.js`)
-	const servicesTemplate = path.resolve(`./src/templates/services.js`)
-	const contactTemplate = path.resolve(`./src/templates/contact.js`)
-	const teamTemplate = path.resolve(`./src/templates/team.js`)
-	const blogTemplate = path.resolve(`./src/templates/blog.js`)
-	const caseStudiesTemplate = path.resolve(`./src/templates/case-studies.js`)
-	const petsTemplate = path.resolve(`./src/templates/pets.js`)
-	const privacyPolicyTemplate = path.resolve(`./src/templates/privacy-policy.js`)
-	const pageTemplate = path.resolve(`./src/templates/page.js`)
+	const homeTemplate = path.resolve(`./src/templates/index.js`);
+	const servicesTemplate = path.resolve(`./src/templates/services.js`);
+	const contactTemplate = path.resolve(`./src/templates/contact.js`);
+	const teamTemplate = path.resolve(`./src/templates/team.js`);
+	const blogTemplate = path.resolve(`./src/templates/blog.js`);
+	const privacyPolicyTemplate = path.resolve(`./src/templates/privacy-policy.js`);
+	const aboutTemplate = path.resolve(`./src/templates/about.js`);
+	const pageTemplate = path.resolve(`./src/templates/page.js`);
 
 	allWordpressPage.edges.forEach(edge => {
 		const path = edge.node.path;
@@ -163,21 +162,21 @@ exports.createPages = async ({ graphql, actions }) => {
 				context: { ...edge.node },
 			})
 		} else if(path === "/case-studies/") {
-			createPage({
-				path,
-				component: slash(caseStudiesTemplate),
-				context: { ...edge.node },
-			})
+			
+		} else if(path === "/whitepapers/") {
+			
 		} else if(path === "/pets/") {
-			createPage({
-				path,
-				component: slash(petsTemplate),
-				context: { ...edge.node },
-			})
+			
 		} else if(path === "/privacy-policy/") {
 			createPage({
 				path,
 				component: slash(privacyPolicyTemplate),
+				context: { ...edge.node },
+			})
+		} else if(path === "/about/") {
+			createPage({
+				path,
+				component: slash(aboutTemplate),
 				context: { ...edge.node },
 			})
 		} else {

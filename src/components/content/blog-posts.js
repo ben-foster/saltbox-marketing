@@ -20,16 +20,17 @@ const BlogPosts = () => {
                                         link
                                     }
                                     date(formatString: "MM/DD/YYYY")
-                                    # featured_media {
-                                    #     alt_text
-                                    #     localFile {
-                                    #         childImageSharp {
-                                    #             fluid(maxWidth: 500, quality: 100) {
-                                    #                 ...GatsbyImageSharpFluid
-                                    #             }
-                                    #         }
-                                    #     }
-                                    # }
+                                    categories {
+                                        name
+                                        link
+                                        acf {
+                                            icon {
+                                                localFile {
+                                                    publicURL
+                                                }
+                                            }
+                                        }
+                                    }
                                 } 
                             }
                         }

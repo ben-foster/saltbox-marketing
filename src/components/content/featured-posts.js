@@ -7,7 +7,7 @@ const FeaturedPosts = () => {
     return (
         <div className="flex flex-col w-full">
             <h4 className="font-bold text-3xl text-gray-500 text-center mb-10">Featured Posts</h4>
-            <div className="flex flex-row flex-wrap">
+            <div className="flex flex-row flex-wrap justify-center">
                 <StaticQuery
                     query={graphql`
                         query FeaturedPostsQuery {
@@ -22,23 +22,24 @@ const FeaturedPosts = () => {
                                             link
                                         }
                                         date(formatString: "MM/DD/YYYY")
-                                        # featured_media {
-                                        #     alt_text
-                                        #     localFile {
-                                        #         childImageSharp {
-                                        #             fluid(maxWidth: 500, quality: 100) {
-                                        #                 ...GatsbyImageSharpFluid
-                                        #             }
-                                        #         }
-                                        #     }
-                                        # }
+                                        categories {
+                                            name
+                                            link
+                                            acf {
+                                                icon {
+                                                    localFile {
+                                                        publicURL
+                                                    }
+                                                }
+                                            }
+                                        }
                                     } 
                                 }
                             }
                         }
                     `}
                     render={data => {
-                        const { edges: posts } = data.allWordpressPost
+                        const { edges: posts } = data.allWordpressPost;
                         return posts.map(({ node: post }) => (
                             <PostPreview post={post} />
                         ))}

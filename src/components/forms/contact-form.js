@@ -1,7 +1,7 @@
 import React from "react";
 import { navigate } from "gatsby-link";
 
-const ContactForm = () => {
+const ContactForm = ({ onDark }) => {
     const [state, setState] = React.useState({})
 
     const encode = (data) => (
@@ -36,45 +36,45 @@ const ContactForm = () => {
             action="/thank-you/"
             data-netlify="true"
             netlify-honeypot="bot-field"
-            className="flex flex-col py-6"
+            className="flex flex-col py-6 w-full"
             onSubmit={handleSubmit}
         >
             <input type="hidden" name="bot-field" onChange={handleChange} />
             <label 
                 for="name"
-                className="flex flex-col text-sm text-gray-100 uppercase font-bold"
+                className={`flex flex-col w-full text-sm ${onDark ? "text-gray-100" : "text-gray-800"} uppercase font-bold`}
             >
                 Your Name 
                 <input 
                     type="text" 
                     name="name"
-                    className="p-2 mt-1 mb-4 w-64 border-2 border-white text-gray-800 rounded shadow-inner hover:shadow-none focus:shadow hover:border-teal-200 focus:border-teal-200 outline-none"
+                    className={`p-2 mt-1 mb-4 w-full ${onDark ? "border-2" : "border"} border-white text-gray-800 rounded ${onDark ? "shadow-inner hover:shadow-none focus:shadow" : "shadow-sm hover:shadow focus:shadow"} hover:border-teal-200 focus:border-teal-200 outline-none`}
                     required
                     onChange={handleChange}
                 />
             </label>
             <label 
                 for="email"
-                className="flex flex-col text-sm text-gray-100 uppercase font-bold"
+                className={`flex flex-col w-full text-sm ${onDark ? "text-gray-100" : "text-gray-800"} uppercase font-bold`}
             >
                 Your Email 
                 <input 
                     type="text" 
                     name="email"
-                    className="p-2 mt-1 mb-4 w-64 border-2 border-white text-gray-800 rounded shadow-inner hover:shadow-none focus:shadow hover:border-teal-200 focus:border-teal-200 outline-none"
+                    className={`p-2 mt-1 mb-4 w-full ${onDark ? "border-2" : "border"} border-white text-gray-800 rounded ${onDark ? "shadow-inner hover:shadow-none focus:shadow" : "shadow-sm hover:shadow focus:shadow"} hover:border-teal-200 focus:border-teal-200 outline-none`}
                     required
                     onChange={handleChange}
                 />
             </label>
             <label 
                 for="company"
-                className="flex flex-col text-sm text-gray-100 uppercase font-bold"
+                className={`flex flex-col w-full text-sm ${onDark ? "text-gray-100" : "text-gray-800"} uppercase font-bold`}
             >
                 Company Name 
                 <input 
                     type="text" 
                     name="company"
-                    className="p-2 mt-1 mb-4 w-64 border-2 border-white text-gray-800 rounded shadow-inner hover:shadow-none focus:shadow hover:border-teal-200 focus:border-teal-200 outline-none"
+                    className={`p-2 mt-1 mb-4 w-full ${onDark ? "border-2" : "border"} border-white text-gray-800 rounded ${onDark ? "shadow-inner hover:shadow-none focus:shadow" : "shadow-sm hover:shadow focus:shadow"} hover:border-teal-200 focus:border-teal-200 outline-none`}
                     required 
                     onChange={handleChange}
                 />
@@ -149,7 +149,7 @@ const ContactForm = () => {
 
             <button 
                 type="submit"
-                className="py-3 px-6 mt-4 border-2 border-teal-400 bg-teal-400 text-white font-bold rounded shadow hover:shadow-inner focus:shadow-inner hover:bg-teal-600 focus:bg-teal-600 outline-none"
+                className="py-3 px-6 mt-4 border-2 border-teal-400 bg-teal-400 text-white font-bold rounded shadow hover:shadow-inner focus:shadow-inner hover:bg-teal-600 focus:bg-teal-600 focus:outline-none"
             >
                 Get In Touch
             </button>
