@@ -5,6 +5,9 @@ import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
 import ContactUs from "../components/content/contact-us";
+import FeaturedImage from "../components/lib/featured-image";
+import WhySaltbox from "../components/content/why-saltbox";
+import HowToGetStarted from "../components/content/how-to-get-started";
 
 const Service = ({ data }) => {
     const { title, content, acf, yoast_meta } = data.wordpressWpServices;
@@ -22,10 +25,41 @@ const Service = ({ data }) => {
                 </div>
             </Hero>
             <div className="bg-gray-100">
-                <div className="container mx-auto flex items-center p-20">
+                <div className="container mx-auto flex items-center pt-20 pb-12">
                     <div className="flex flex-col w-full">
                         <p className="w-full px-6 md:p-0 md:w-128 mx-auto text-base md:text-lg" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                     </div>
+                </div>
+                <div className="container mx-auto flex flex-col md:flex-row justify-center pb-12">
+                    <div className="flex items-center justify-center w-full md:w-auto p-12">
+                        <FeaturedImage featuredImage={acf.subservice_one_image} />
+                    </div>
+                    <div className="flex flex-col items-start justify-center w-full md:w-1/3 pb-8 md:pb-0">
+                        <h2 className="font-bold text-3xl te" dangerouslySetInnerHTML={{ __html: acf.subservice_one_title }}></h2>
+                        <div className="max-w-sm" dangerouslySetInnerHTML={{ __html: acf.subservice_one_description }}></div>
+                    </div>
+                </div>
+                <div className="container mx-auto flex flex-col md:flex-row justify-center pb-12">
+                    <div className="flex flex-col items-start justify-center w-full md:w-1/3 pb-8 md:pb-0">
+                        <h2 className="font-bold text-3xl te" dangerouslySetInnerHTML={{ __html: acf.subservice_two_title }}></h2>
+                        <div className="max-w-sm" dangerouslySetInnerHTML={{ __html: acf.subservice_two_description }}></div>
+                    </div>
+                    <div className="flex items-center justify-center w-full md:w-auto p-12">
+                        <FeaturedImage featuredImage={acf.subservice_two_image} />
+                    </div>
+                </div>
+                <div className="container mx-auto flex flex-col md:flex-row justify-center pb-12">
+                    <div className="flex items-center justify-center w-full md:w-auto p-12">
+                        <FeaturedImage featuredImage={acf.subservice_three_image} />
+                    </div>
+                    <div className="flex flex-col items-start justify-center w-full md:w-1/3 pb-8 md:pb-0">
+                        <h2 className="font-bold text-3xl te" dangerouslySetInnerHTML={{ __html: acf.subservice_three_title }}></h2>
+                        <div className="max-w-sm" dangerouslySetInnerHTML={{ __html: acf.subservice_three_description }}></div>
+                    </div>
+                </div>
+                <div className="container mx-auto">
+                    <WhySaltbox />
+                    <HowToGetStarted />
                 </div>
                 <ContactUs title="Get Started Today" fillColor="text-gray-100" />
             </div>
