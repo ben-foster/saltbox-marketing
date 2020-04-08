@@ -20,7 +20,7 @@ const Post = ({ data }) => {
             />
             <Hero className="pb-48">
                 <div className="max-w-3xl mx-auto flex flex-col items-center pt-32 md:pt-48 px-12 md:px-20">
-                    <h1 className="leading-normal text-white text-3xl md:text-4xl" dangerouslySetInnerHTML={{ __html: title }}></h1>
+                    <h1 className="text-white text-3xl md:text-4xl font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
                     { acf.subheader && (
                         <p className="text-xl md:text-2xl font-light text-white italic leading-snug pt-2 mb-8" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                     )}
@@ -37,8 +37,8 @@ const Post = ({ data }) => {
                 </div>
             </Hero>
             <div className="bg-gray-100">
-                <div className="w-11/12 md:w-auto md:max-w-3xl mx-auto -mt-40 relative z-10 flex flex-col bg-white items-center py-16 px-12 md:px-24 rounded-lg shadow-lg">
-                    <div className=" w-full">
+                <div className="w-11/12 md:w-auto md:max-w-2xl mx-auto -mt-40 relative z-10 flex flex-col bg-white items-center py-12 md:py-16 px-12 md:px-24 rounded-lg shadow-lg">
+                    <div className="w-full">
                         <div className="blog-post-body" dangerouslySetInnerHTML={{ __html: content }}></div>    
                     </div>
                 </div>

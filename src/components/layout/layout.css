@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,a,span,button,ul,ol,p {
 }
 
 p {
-    @apply leading-loose mb-6;
+    @apply leading-loose mb-4;
 }
 
 .mono {
@@ -51,15 +51,20 @@ h3 {
 }
 
 ul, ol {
-    @apply ml-8 list-outside;
+    @apply ml-6 list-outside;
 }
 
 ul {
-    @apply list-disc mt-6 mb-10;
+    @apply list-disc mt-2 mb-10;
 }
 
 ul ul, ul ol, ol ul, ol ol {
     @apply my-0;
+}
+
+ul ul li, ul ol li, ol ul li, ol ol li {
+    @apply mt-1;
+    list-style: circle;
 }
 
 ol {
@@ -67,7 +72,7 @@ ol {
 }
 
 ul li, ol li {
-    @apply leading-normal mt-3 pl-4;
+    @apply leading-normal mt-3 pl-1;
 }
 
 blockquote cite p {
@@ -99,15 +104,15 @@ blockquote cite p {
 }
 
 .blog-post-body h2 {
-    @apply mt-12 mb-8;
+    @apply mt-6 mb-4 font-bold text-gray-900 text-3xl;
 }
 
 .blog-post-body h3 {
-    @apply  mt-10 mb-6;
+    @apply  mt-10 mb-6 font-bold;
 }
 
 .blog-post-body figure {
-    @apply mx-auto my-12 flex items-center justify-center;
+    @apply mx-auto my-12 flex flex-col items-center justify-center;
 }
 
 .blog-post-body img {
