@@ -36,8 +36,8 @@ const Post = ({ data }) => {
                     </p>
                 </div>
             </Hero>
-            <div className="bg-gray-100">
-                <div className="w-11/12 md:w-auto md:max-w-2xl mx-auto -mt-40 relative z-10 flex flex-col bg-white items-center py-12 md:py-16 px-12 md:px-24 rounded-lg shadow-lg">
+            <div className="bg-white">
+                <div className="w-11/12 md:w-auto md:max-w-3xl mx-auto -mt-40 relative z-10 flex flex-col bg-white items-center py-8 md:py-16 px-8 md:px-16 rounded-lg shadow-lg">
                     <div className="w-full">
                         <div className="blog-post-body" dangerouslySetInnerHTML={{ __html: content }}></div>    
                     </div>

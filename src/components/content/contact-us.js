@@ -1,10 +1,9 @@
 import React from "react";
 
 import ContactForm from "../forms/contact-form";
-import CurveTop from "../svg/curve-top";
 
 const ContactUs = (props) => {
-    const { title, description, fillColor } = props;
+    const { title, description } = props;
     return (
         <div className="bg-blue-800 relative">
             <div className="container mx-auto flex flex-col flex-no-wrap items-center px-12 pt-32 pb-16">
@@ -14,7 +13,6 @@ const ContactUs = (props) => {
                     <ContactForm onDark />
                 </div>
             </div>
-            <CurveTop fillColor={ fillColor ? fillColor : "text-blue-100"} />
         </div>
     );
 };

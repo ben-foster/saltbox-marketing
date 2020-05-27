@@ -1,46 +1,35 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import FeaturedImage from "../lib/featured-image";
 
 const CaseStudyPreview = ({ caseStudy }) => {
-    console.log(caseStudy);
     return (
-        <div className="flex flex-col items-center bg-white w-full max-w-4xl mx-auto p-12 rounded-lg z-10 shadow">
+        <div className="flex flex-col items-center bg-blue-800 w-full max-w-4xl mx-auto p-12 rounded-lg z-10 shadow-lg">
             {/* <h3 className="mt-0">{caseStudy.title}</h3>
             <p>{caseStudy.excerpt}</p> */}
             <div className="flex flex-col w-full">
                 <div className="flex flex-row items-center justify-center mx-auto">
                     <div className="flex flex-row items-center px-6 py-2">
-                        <svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 21L13.6701 10.3299L21.4791 18.3579L36.5085 3M36.5085 3H26.8995M36.5085 3V12.7732" stroke="#7BC47F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <div className="flex flex-col items-center justify-center w-full p-2">
-                            <span className="mono text-green-500 text-5xl" dangerouslySetInnerHTML={{ __html: caseStudy.acf.metric_one_number }}></span>
-                            <span className="mono text-gray-600 text-sm w-40 text-center" dangerouslySetInnerHTML={{ __html: caseStudy.acf.metric_one_title }}></span>
+                        <div className="flex flex-col items-center justify-center w-full p-2 mb-8">
+                            <span className="mono text-white text-5xl" dangerouslySetInnerHTML={{ __html: caseStudy.acf.metric_one_number }}></span>
+                            <span className="mono text-gray-100 text-sm w-40 text-center" dangerouslySetInnerHTML={{ __html: caseStudy.acf.metric_one_title }}></span>
                         </div>
                     </div>
                     <div className="flex flex-row items-center px-6 py-2">
-                        <svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 21L13.6701 10.3299L21.4791 18.3579L36.5085 3M36.5085 3H26.8995M36.5085 3V12.7732" stroke="#7BC47F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <div className="flex flex-col items-center justify-center w-full p-2">
-                            <span className="mono text-green-500 text-5xl" dangerouslySetInnerHTML={{ __html: caseStudy.acf.metric_two_number }}></span>
-                            <span className="mono text-gray-600 text-sm w-40 text-center" dangerouslySetInnerHTML={{ __html: caseStudy.acf.metric_two_title }}></span>
+                        <div className="flex flex-col items-center justify-center w-full p-2 mb-8">
+                            <span className="mono text-white text-5xl" dangerouslySetInnerHTML={{ __html: caseStudy.acf.metric_two_number }}></span>
+                            <span className="mono text-gray-100 text-sm w-40 text-center" dangerouslySetInnerHTML={{ __html: caseStudy.acf.metric_two_title }}></span>
                         </div>
                     </div>
                     <div className="flex flex-row items-center px-6 py-2">
-                        <svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 21L13.6701 10.3299L21.4791 18.3579L36.5085 3M36.5085 3H26.8995M36.5085 3V12.7732" stroke="#7BC47F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <div className="flex flex-col items-center justify-center w-full p-2">
-                            <span className="mono text-green-500 text-5xl" dangerouslySetInnerHTML={{ __html: caseStudy.acf.metric_three_number }}></span>
-                            <span className="mono text-gray-600 text-sm w-40 text-center" dangerouslySetInnerHTML={{ __html: caseStudy.acf.metric_three_title }}></span>
+                        <div className="flex flex-col items-center justify-center w-full p-2 mb-8">
+                            <span className="mono text-white text-5xl" dangerouslySetInnerHTML={{ __html: caseStudy.acf.metric_three_number }}></span>
+                            <span className="mono text-gray-100 text-sm w-40 text-center" dangerouslySetInnerHTML={{ __html: caseStudy.acf.metric_three_title }}></span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center items-center w-full">
+            <div className="flex justify-center items-center w-full bg-white rounded shadow-inner-lg">
                 <div className="flex flex-col items-center justify-center">
                     <blockquote className="pt-6 px-20 text-sm w-full text-center" dangerouslySetInnerHTML={{ __html: caseStudy.acf.testimonial}}></blockquote>
                     <div className="flex justify-center">

@@ -26,12 +26,12 @@ const IndexPage = ({ data }) => {
 			<FeaturedServices
 				title={acf.services.services_title}
 				description={acf.services.services_description}
-				className="bg-gray-100"
+				className="bg-white"
 			/> 
 			<FeaturedClients
 				title={acf.clients.featured_clients_title}
 				description={acf.clients.clients_description}
-				className="bg-gray-100"
+				className="bg-white"
 			/>
 			<FeaturedCaseStudies
 				title={acf.case_studies.case_studies_title}
@@ -52,7 +52,6 @@ const IndexPage = ({ data }) => {
 			<ContactUs
 				title={acf.contact_us.contact_us_title}
 				description={acf.contact_us.contact_us_description}
-				fillColor="text-blue-100"
 			/>
 		</Layout>
 	)

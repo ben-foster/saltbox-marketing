@@ -2,12 +2,11 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 
 import CaseStudyPreview from "./case-study-preview";
-import CurveBottom from "../svg/curve-bottom";
 
 const FeaturedCaseStudies = (props) => {
     const { title, description } = props;
     return (
-        <div className="bg-gray-100 relative">
+        <div className="bg-white relative">
             <div className="container mx-auto flex flex-col flex-no-wrap items-center">
                 { title && <h2 className="font-bold text-3xl text-gray-500">{title}</h2>}
                 { description && <p>{description}</p>}
@@ -64,7 +63,6 @@ const FeaturedCaseStudies = (props) => {
                     />
                 </div>
             </div>
-            <CurveBottom className="h-24 md:h-48 z-0" fillColor="text-blue-100" />
         </div>
     );
 };

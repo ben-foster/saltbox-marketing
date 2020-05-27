@@ -5,11 +5,10 @@ import CurveBottom from "../svg/curve-bottom";
 const Hero = ({ children, className, fillColor }) => {
     return (
         <div 
-            style={{ backgroundImage: `linear-gradient(153.43deg, #62F4EA -0.08%, #4825D4 99.92%)` }}
-            className={`relative z-0 ${className}`}
+            className={`relative z-0 bg-dark-blue-to-blue-vertical ${className}`}
         >
             { children }
-            <CurveBottom fillColor={ fillColor ? fillColor : "text-gray-100" } />
+            <CurveBottom fillColor={ fillColor ? fillColor : "text-white" } />
         </div>
     );
 };

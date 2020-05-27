@@ -45,6 +45,16 @@ module.exports = {
 			}
 		},
 		{
+			resolve: `gatsby-plugin-page-progress`,
+			options: {
+				includePaths: [{ regex: `/blog/` }],
+				excludePaths: [{ regex: `/blog/?$` }, ],
+				height: 3,
+				prependToBody: false,
+				color: `#3CE7E1`
+			}
+		},
+		{
 			resolve: `gatsby-source-wordpress`,
 			options: {
 				/*

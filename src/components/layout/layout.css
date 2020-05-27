@@ -91,6 +91,10 @@ blockquote cite p {
     background-image: linear-gradient(315deg, #4825D4 0.05%, #81DEFD 100.05%);
 }
 
+.bg-dark-blue-to-blue-vertical {
+    background-image: linear-gradient(180deg, #035287 0%, #0B68A2 100%);;
+}
+
 .bg-teal-to-blue {
     background-image: linear-gradient(153.4deg, #62F4EA -0.08%, #4825D4 99.92%);
 }
@@ -108,7 +112,7 @@ blockquote cite p {
 }
 
 .blog-post-body h3 {
-    @apply  mt-10 mb-6 font-bold;
+    @apply  mt-10 mb-6 font-bold text-gray-800;
 }
 
 .blog-post-body figure {
@@ -125,6 +129,28 @@ blockquote cite p {
 
 .blog-post-body figure figcaption {
     @apply text-xs mt-4 italic;
+}
+
+@responsive {
+    .text-shadow {
+      text-shadow: 0 2px 4px rgba(0,0,0,0.10);
+    }
+  
+    .text-shadow-md {
+      text-shadow: 0 4px 8px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.08);
+    }
+  
+    .text-shadow-lg {
+      text-shadow: 0 15px 30px rgba(0,0,0,0.11), 0 5px 15px rgba(0,0,0,0.08);
+    }
+  
+    .text-shadow-none {
+      text-shadow: none;
+    }
+}
+
+.shadow-inner-lg {
+    box-shadow: inset 0px 2px 8px 0 rgba(0, 0, 0, 0.2)
 }
 
 @tailwind components;
