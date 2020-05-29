@@ -8,7 +8,7 @@ const FeaturedCaseStudies = (props) => {
     return (
         <div className="bg-white relative">
             <div className="container mx-auto flex flex-col flex-no-wrap items-center">
-                { title && <h2 className="font-bold text-3xl text-gray-500">{title}</h2>}
+                { title && <h2 className="font-bold">{title}</h2>}
                 { description && <p>{description}</p>}
                 <div className="flex w-full p-4">  
                     <StaticQuery

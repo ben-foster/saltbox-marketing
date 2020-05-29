@@ -15,13 +15,13 @@ const Blog = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
             <Hero>
-                <div className="container mx-auto flex items-center p-20 pt-32">
-                    <div className="flex flex-col text-gray-800">
-                        <h1 className="leading-normal font-bold text-white" dangerouslySetInnerHTML={{ __html: title }}></h1>
+                <div className="container mx-auto flex items-center p-16 pt-40 pb-32">
+                    <div className="w-full flex flex-col text-white">
+                        <h1 className="text-center font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
                     </div>
                 </div>
             </Hero>
-            <div className="bg-gray-100">
+            <div className="bg-white">
                 <div className="container mx-auto flex items-center py-20 px-8">
                     <div className="flex flex-col text-gray-800">
                         <div dangerouslySetInnerHTML={{ __html: content }}></div>

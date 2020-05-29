@@ -6,10 +6,10 @@ import PostPreview from "./post-preview";
 const HomeFeaturedPosts = (props) => {
     const { title, description } = props;
     return (
-        <div className="bg-blue-100 py-12">
+        <div className="bg-white py-12">
             <div className="container mx-auto flex flex-col flex-no-wrap items-center">
-                <div className="flex flex-col text-center mb-6">
-                    { title && <h2 className="w-full text-5xl text-white font-bold" dangerouslySetInnerHTML={{ __html: title }}></h2>}
+                <div className="flex flex-col">
+                    { title && <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>}
                     { description && <p className="text-white" dangerouslySetInnerHTML={{ __html: description }}></p>}
                 </div>
                 <div className="flex-grow flex flex-col md:flex-row md:flex-wrap justify-start">  
@@ -34,6 +34,18 @@ const HomeFeaturedPosts = (props) => {
                                                     icon {
                                                         localFile {
                                                             publicURL
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            featured_media {
+                                                alt_text
+                                                localFile {
+                                                    publicURL
+                                                    extension
+                                                    childImageSharp {
+                                                        fluid(maxWidth: 500, quality: 100) {
+                                                            ...GatsbyImageSharpFluid
                                                         }
                                                     }
                                                 }

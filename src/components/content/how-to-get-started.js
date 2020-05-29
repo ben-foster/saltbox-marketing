@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 const HowToGetStarted = () => {
     return (
         <div className="flex flex-col mb-8">
-            <h2 className="text-gray-500 font-bold text-3xl text-center mb-10">How to Get Started</h2>
+            <h2 className="font-bold text-center">How to Get Started</h2>
             <div className="flex flex-col md:flex-row mb-6 justify-center p-2 md:p-0">
                 <div className="flex flex-col bg-white rounded-lg px-5 py-8 mb-4 md:mb-0 md:mr-4 w-full md:w-64 shadow relative z-4">
                     <span className="flex items-center justify-center text-5xl font-bold text-purple-200">1.</span>

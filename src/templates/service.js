@@ -18,13 +18,13 @@ const Service = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
             <Hero>
-                <div className="container mx-auto flex items-center p-20 pt-32">
-                    <div className="flex flex-col w-full md:w-2/3 text-white">
-                        <h1 className="leading-normal font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
+                <div className="container mx-auto flex items-center pt-40 py-32">
+                    <div className="flex flex-col w-full text-white">
+                        <h1 className="text-center font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
                     </div>
                 </div>
             </Hero>
-            <div className="bg-gray-100">
+            <div className="bg-white">
                 <div className="container mx-auto flex items-center pt-20 pb-12">
                     <div className="flex flex-col w-full">
                         <p className="w-full px-6 md:p-0 md:w-128 mx-auto text-base md:text-lg" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>

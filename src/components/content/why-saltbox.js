@@ -7,7 +7,7 @@ import clockIcon from "../../images/clock-icon.svg";
 const WhySaltbox = () => {
     return (
         <div className="flex flex-col my-8">
-            <h2 className="text-gray-500 font-bold text-3xl text-center">Why Work with Saltbox?</h2>
+            <h2 className="font-bold text-center">Why Work with Saltbox?</h2>
             <div className="flex flex-col md:flex-row">
                 <div className="flex flex-col w-full md:w-1/3 p-10">
                     <img src={clockIcon} alt="" className="my-4" />

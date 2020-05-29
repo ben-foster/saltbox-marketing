@@ -124,6 +124,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	const blogTemplate = path.resolve(`./src/templates/blog.js`);
 	const privacyPolicyTemplate = path.resolve(`./src/templates/privacy-policy.js`);
 	const aboutTemplate = path.resolve(`./src/templates/about.js`);
+	const careersTemplate = path.resolve(`./src/templates/careers.js`);
 	const pageTemplate = path.resolve(`./src/templates/page.js`);
 
 	allWordpressPage.edges.forEach(edge => {
@@ -149,12 +150,6 @@ exports.createPages = async ({ graphql, actions }) => {
 				component: slash(contactTemplate),
 				context: { ...edge.node },
 			})
-		} else if(path === "/team/") {
-			createPage({
-				path,
-				component: slash(teamTemplate),
-				context: { ...edge.node },
-			})
 		} else if(path === "/blog/") {
 			createPage({
 				path,
@@ -177,6 +172,12 @@ exports.createPages = async ({ graphql, actions }) => {
 			createPage({
 				path,
 				component: slash(aboutTemplate),
+				context: { ...edge.node },
+			})
+		} else if(path === "/careers/") {
+			createPage({
+				path,
+				component: slash(careersTemplate),
 				context: { ...edge.node },
 			})
 		} else {

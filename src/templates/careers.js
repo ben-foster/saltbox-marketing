@@ -14,8 +14,8 @@ const Page = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
             <Hero>
-                <div className="container mx-auto flex items-center p-16 pt-40 pb-32">
-                    <div className="flex flex-col text-white">
+                <div className="container mx-auto flex items-center p-20 pt-40 pb-32">
+                    <div className="flex flex-col w-full text-white text-center">
                         <h1 className="font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
                         { acf.subheader && (
                             <p dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
@@ -27,8 +27,10 @@ const Page = ({ data }) => {
                 <div className="container mx-auto flex items-center p-20">
                     <div className="flex flex-col text-gray-800">
                         <div dangerouslySetInnerHTML={{ __html: content }}></div>
+
                     </div>
                 </div>
+                <a href="/c/Saltbox-Solutions/Jobs?absolute=1&amp;hiring_company=9d9be086" id="jobs_widget_company_link" target="_blank">Job listings at Saltbox Solutions</a><script src="https://www.ziprecruiter.com/jobs-widget/v1/a364066d/all"></script><a href="https://www.ziprecruiter.com/" id="jobs_widget_link_split" target="_blank">Listing by ZipRecruiter</a>
             </div>
         </Layout>
     )

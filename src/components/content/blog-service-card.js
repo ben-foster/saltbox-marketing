@@ -29,10 +29,10 @@ const BlogServiceCard = ({ categoryName }) => {
                             />
                         </div>
                         <div className="flex-grow flex flex-col">
-                            <h4 className="text-xl text-gray-600 mb-2" dangerouslySetInnerHTML={{ __html: service.title }}></h4>
+                            <h4 className="text-xl mb-2" dangerouslySetInnerHTML={{ __html: service.title }}></h4>
                             <div className="text-sm text-gray-600" dangerouslySetInnerHTML={{ __html: service.excerpt }}></div>
-                            <Link className="text-gray-500 text-sm font-bold" to={service.link.replace("https://wordpress.saltbox.solutions", "")}>
-                                Learn more
+                            <Link className="text-blue-800 hover:text-teal-500 text-sm font-bold" to={service.link.replace("https://wordpress.saltbox.solutions", "")}>
+                                Learn more &rarr;
                             </Link>
                         </div>
                     </div>

@@ -16,7 +16,7 @@ const Whitepaper = ({ data }) => {
             <Hero>
                 <div className="container mx-auto flex items-center p-20">
                     <div className="flex flex-col text-gray-800">
-                        <h1 className="leading-normal">{title}</h1>
+                        <h1>{title}</h1>
                     </div>
                 </div>
             </Hero>

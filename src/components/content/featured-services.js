@@ -8,7 +8,7 @@ const FeaturedServices = (props) => {
     return (
         <div className={className}>
             <div className="container mx-auto flex flex-col flex-no-wrap items-center p-12">
-                { title && <h2 className="font-bold text-3xl text-gray-500 mb-12">{title}</h2>}
+                { title && <h2 className="font-bold mb-12">{title}</h2>}
                 { description && <p>{description}</p>}
                 <div className="flex flex-col md:flex-row">  
                     <StaticQuery

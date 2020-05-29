@@ -4,6 +4,8 @@ import { graphql } from "gatsby";
 import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
+import TeamMembers from "../components/content/team-members";
+import Pets from "../components/content/pets";
 
 const Page = ({ data }) => {
     const { title, content, acf, yoast_meta } = data.wordpressPage;
@@ -14,17 +16,31 @@ const Page = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
             <Hero>
-                <div className="container mx-auto flex items-center p-20 pt-32">
-                    <div className="flex flex-col text-white">
-                        <h1 className="leading-normal font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
-                        <p dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
+                <div className="container mx-auto flex items-center p-16 pt-40 pb-32">
+                    <div className="w-full flex flex-col text-white">
+                        <h1 className="text-center font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
+                        { acf.subheader && (
+                            <p dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
+                        )}   
                     </div>
                 </div>
             </Hero>
-            <div className="bg-gray-100">
-                <div className="max-w-3xl mx-auto flex items-center p-20">
+            <div id="story" className="bg-white">
+                <div className="max-w-4xl mx-auto flex items-center p-16">
                     <div className="flex flex-col text-gray-800">
                         <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                    </div>
+                </div>
+                <div id="team" className="container mx-auto flex items-center p-16">
+                    <div className="flex flex-col text-gray-800">
+                        <h2>Our Team</h2>
+                        <TeamMembers />
+                    </div>
+                </div>
+                <div id="pets" className="container mx-auto flex items-center p-16">
+                    <div className="flex flex-col text-gray-800">
+                        <h2>Our Pets</h2>
+                        <Pets />
                     </div>
                 </div>
             </div>

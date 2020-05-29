@@ -48,7 +48,8 @@ const ContactForm = ({ onDark }) => {
                 <input 
                     type="text" 
                     name="name"
-                    className={`p-2 mt-1 mb-4 w-full ${onDark ? "border-2" : "border"} border-white text-gray-800 rounded ${onDark ? "shadow-inner hover:shadow-none focus:shadow" : "shadow-sm hover:shadow focus:shadow"} hover:border-teal-200 focus:border-teal-200 outline-none`}
+                    placeholder="Your Name"
+                    className={`p-2 mt-1 mb-4 w-full ${onDark ? "border-2" : "border"} border-teal-100 text-gray-800 rounded ${onDark ? "shadow-inner hover:shadow-none focus:shadow" : "shadow-sm hover:shadow focus:shadow"} hover:border-teal-500 focus:border-teal-200 outline-none`}
                     required
                     onChange={handleChange}
                 />
@@ -61,7 +62,8 @@ const ContactForm = ({ onDark }) => {
                 <input 
                     type="text" 
                     name="email"
-                    className={`p-2 mt-1 mb-4 w-full ${onDark ? "border-2" : "border"} border-white text-gray-800 rounded ${onDark ? "shadow-inner hover:shadow-none focus:shadow" : "shadow-sm hover:shadow focus:shadow"} hover:border-teal-200 focus:border-teal-200 outline-none`}
+                    placeholder="you@company.com"
+                    className={`p-2 mt-1 mb-4 w-full ${onDark ? "border-2" : "border"} border-teal-100 text-gray-800 rounded ${onDark ? "shadow-inner hover:shadow-none focus:shadow" : "shadow-sm hover:shadow focus:shadow"} hover:border-teal-500 focus:border-teal-200 outline-none`}
                     required
                     onChange={handleChange}
                 />
@@ -74,7 +76,8 @@ const ContactForm = ({ onDark }) => {
                 <input 
                     type="text" 
                     name="company"
-                    className={`p-2 mt-1 mb-4 w-full ${onDark ? "border-2" : "border"} border-white text-gray-800 rounded ${onDark ? "shadow-inner hover:shadow-none focus:shadow" : "shadow-sm hover:shadow focus:shadow"} hover:border-teal-200 focus:border-teal-200 outline-none`}
+                    placeholder="Company Name"
+                    className={`p-2 mt-1 mb-4 w-full ${onDark ? "border-2" : "border"} border-teal-100 text-gray-800 rounded ${onDark ? "shadow-inner hover:shadow-none focus:shadow" : "shadow-sm hover:shadow focus:shadow"} hover:border-teal-500 focus:border-teal-200 outline-none`}
                     required 
                     onChange={handleChange}
                 />

@@ -8,9 +8,9 @@ const FeaturedClients = (props) => {
     return (
         <div className={className}>
             <div className="container mx-auto flex flex-col flex-no-wrap items-center p-12">
-                { title && <h2 className="font-bold text-3xl text-gray-500">{title}</h2>}
+                { title && <h2 className="font-bold">{title}</h2>}
                 { description && <p>{description}</p>}
-                <div className="flex flex-row flex-wrap p-4">  
+                <div className="flex flex-row flex-wrap w-full">  
                     <StaticQuery
                         query={graphql`
                             query FeaturedClientsQuery {

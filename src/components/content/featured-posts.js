@@ -6,7 +6,7 @@ import PostPreview from "./post-preview";
 const FeaturedPosts = () => {
     return (
         <div className="flex flex-col w-full">
-            <h4 className="font-bold text-3xl text-gray-500 text-center mb-10">Featured Posts</h4>
+            <h2>Featured Posts</h2>
             <div className="flex flex-row flex-wrap justify-center">
                 <StaticQuery
                     query={graphql`
@@ -29,6 +29,18 @@ const FeaturedPosts = () => {
                                                 icon {
                                                     localFile {
                                                         publicURL
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        featured_media {
+                                            alt_text
+                                            localFile {
+                                                publicURL
+                                                extension
+                                                childImageSharp {
+                                                    fluid(maxWidth: 500, quality: 100) {
+                                                        ...GatsbyImageSharpFluid
                                                     }
                                                 }
                                             }

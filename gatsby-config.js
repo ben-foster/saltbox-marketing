@@ -6,6 +6,9 @@ module.exports = {
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
+		`gatsby-transformer-sharp`,
+		`gatsby-plugin-sharp`,
+		`gatsby-image`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -13,9 +16,6 @@ module.exports = {
 				path: `${__dirname}/src/images`,
 			},
 		},
-		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
-		`gatsby-image`,
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
@@ -42,16 +42,6 @@ module.exports = {
 					`Ubuntu\+Mono\:400` // you can also specify font weights and styles
 				],
 				display: `swap`
-			}
-		},
-		{
-			resolve: `gatsby-plugin-page-progress`,
-			options: {
-				includePaths: [{ regex: `/blog/` }],
-				excludePaths: [{ regex: `/blog/?$` }, ],
-				height: 3,
-				prependToBody: false,
-				color: `#3CE7E1`
 			}
 		},
 		{

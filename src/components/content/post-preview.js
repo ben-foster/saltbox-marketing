@@ -6,10 +6,13 @@ const PostPreview = ({ post }) => {
     
     return (
         <div className="p-4 w-full md:w-1/2 xl:w-1/3">
-            <div className="flex flex-col h-96 p-6 bg-white rounded-lg shadow">
+            <div 
+                className="flex flex-col h-96 p-6 bg-white rounded-lg shadow"
+                // style={{ backgroundImage: `url(${ post.featured_media.localFile.publicURL})`}}
+            >
                 {/* Category */}
                 <div className="flex flex-row items-center">
-                    <img className="w-8 md:w-6 lg:w-8 h-8 md:h-6 lg:h-8 mr-4" src={ category.acf.icon.localFile.publicURL } alt={category.name} />
+                    <img className="w-4 h-4 mr-4" src={ category.acf.icon.localFile.publicURL } alt={category.name} />
                     <h4 className="uppercase text-blue-800 text-sm md:text-xs lg:text-sm" dangerouslySetInnerHTML={{ __html: category.name }}></h4>
                 </div>
                 {/* Title */}
@@ -25,9 +28,8 @@ const PostPreview = ({ post }) => {
                     <Link 
                         to={post.link.replace("https://wordpress.saltbox.solutions", "")}
                         className="no-underline text-xs"
-                    >
-                        <span dangerouslySetInnerHTML={{ __html: post.date }}></span>
-                    </Link>
+                        dangerouslySetInnerHTML={{ __html: post.date }}
+                    />
                 </p>
                 {/* Excerpt */}
                 <div 

@@ -1,7 +1,7 @@
 @tailwind base;
 
 html {
-    @apply bg-blue-900 text-gray-800 antialiased leading-tight font-sans;
+    @apply bg-blue-900 text-gray-800 antialiased font-sans;
     font-size: 18px;
 }
 
@@ -38,12 +38,16 @@ p a:visited {
     @apply text-gray-700;
 }
 
+h1,h2,h3,h4,h5 {
+    @apply w-full;
+}
+
 h1 {
-    @apply text-4xl tracking-tight;
+    @apply text-4xl tracking-tight leading-tight;
 }
 
 h2 {
-    @apply text-2xl pt-2 mb-2;
+    @apply text-2xl pt-2 mb-8 font-bold text-center;
 }
 
 h3 {
@@ -108,7 +112,7 @@ blockquote cite p {
 }
 
 .blog-post-body h2 {
-    @apply mt-6 mb-4 font-bold text-gray-900 text-3xl;
+    @apply mt-6 mb-4 text-3xl text-left;
 }
 
 .blog-post-body h3 {
