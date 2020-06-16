@@ -1,5 +1,5 @@
 import React from "react";
-import { StaticQuery, graphql, Link } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 
 import ClientLogo from "./client-logo";
 
@@ -14,7 +14,7 @@ const FeaturedClients = (props) => {
                     <StaticQuery
                         query={graphql`
                             query FeaturedClientsQuery {
-                                allWordpressWpClients(limit: 12, filter: {categories: {elemMatch: {slug: {eq: "featured"}}}}, sort: {order: DESC, fields: date}){
+                                allWordpressWpClients(limit: 12, filter: {categories: {elemMatch: {slug: {eq: "featured"}}}}, sort: {order: ASC, fields: date}){
                                     edges {
                                         node {
                                             title
@@ -23,11 +23,11 @@ const FeaturedClients = (props) => {
                                                 localFile {
                                                     extension
                                                     publicURL
-                                                    childImageSharp {
-                                                        fluid(maxWidth: 500, quality: 100) {
-                                                            ...GatsbyImageSharpFluid
-                                                        }
-                                                    }
+                                                    # childImageSharp {
+                                                    #     fluid(maxWidth: 500, quality: 100) {
+                                                    #         ...GatsbyImageSharpFluid
+                                                    #     }
+                                                    # }
                                                 }
                                             }
                                         } 

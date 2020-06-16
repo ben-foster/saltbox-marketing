@@ -28,7 +28,7 @@ const FeaturedServices = (props) => {
 
 export const FEATURED_SERVICES_QUERY = graphql`
     query FeaturedServicesQuery {
-        allWordpressWpServices(limit: 3, filter: {categories: {elemMatch: {slug: {eq: "featured"}}}}, sort: {order: ASC, fields: title}){
+        allWordpressWpServices(limit: 3, filter: {categories: {elemMatch: {slug: {eq: "featured"}}}}, sort: {order: ASC, fields: date}){
             edges {
                 node {
                     title

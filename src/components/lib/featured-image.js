@@ -21,7 +21,7 @@ const FeaturedImage = ({ featuredImage, className, style }) => {
             )
         )
     ) : (
-        <div className={`${className} w-full h-full object-cover bg-blue-200`} />
+        <div className={`w-full h-full object-cover bg-blue-200 ${className}`} />
     ))
 }
 

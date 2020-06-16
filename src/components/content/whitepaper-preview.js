@@ -1,31 +1,34 @@
 import React from "react";
-import { Link } from "gatsby";
+
+import WhitepaperForm from "../forms/whitepaper-form";
 import FeaturedImage from "../lib/featured-image";
 
 const WhitepaperPreview = ({ whitepaper }) => (
-    <div className="flex flex-col w-64 p-4">
-        {/* Featured Image */}
-        <div className="w-full h-32 rounded overflow-hidden">
-            <Link to={whitepaper.link.replace("https://wordpress.saltbox.solutions", "")}>
-                <FeaturedImage 
-                    featuredImage={whitepaper.featured_media}
-                    className="object-cover"
-                />
-            </Link>
-        </div>
-        {/* Title */}
-        <div className="flex justify-center items-center w-full h-20">
-            <h3 className="text-center mb-2">
-                <Link to={whitepaper.link.replace("https://wordpress.saltbox.solutions", "")}>
-                    {whitepaper.title}
-                </Link>
+    <div className="flex flex-col lg:flex-row justify-between items-center w-full">
+        <div className="flex flex-col flex-grow w-full max-w-xl">
+            {/* Title */}
+            <h3 className="text-left normal-case text-2xl font-bold mt-1">
+                {whitepaper.title}
             </h3>
+            {/* Excerpt */}
+            <div 
+                dangerouslySetInnerHTML={{ __html: whitepaper.excerpt }}
+                className="text-sm"
+            />
+            {/* Form */}
+            <div className="w-full max-w-xl">
+                <WhitepaperForm 
+                    whitepaper={whitepaper}
+                />
+            </div>
         </div>
-        {/* Excerpt */}
-        <div 
-            dangerouslySetInnerHTML={{ __html: whitepaper.excerpt }}
-            className="text-xs"
-        />
+        <div className="w-full md:w-1/2 lg:w-1/3">
+            {/* Featured Image */}
+            <FeaturedImage 
+                featuredImage={whitepaper.featured_media}
+                className="object-cover shadow-lg"
+            />
+        </div>
     </div>
 );
 

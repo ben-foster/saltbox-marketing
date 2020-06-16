@@ -1,7 +1,7 @@
 @tailwind base;
 
 html {
-    @apply bg-blue-900 text-gray-800 antialiased font-sans;
+    @apply bg-blue-900 text-gray-800 antialiased font-sans overflow-x-hidden;
     font-size: 18px;
 }
 
@@ -83,6 +83,76 @@ blockquote cite p {
     @apply mb-2 leading-tight text-gray-700;
 }
 
+form {
+    @apply flex flex-col py-6 w-full;
+}
+
+form label {
+    @apply flex flex-col w-full text-sm text-gray-800 uppercase font-bold;
+}
+
+form input {
+    @apply p-2 mt-1 mb-4 w-full border border-teal-100 text-gray-800 rounded shadow outline-none;        
+}
+
+form input:hover {
+    @apply shadow border-teal-500;
+}
+
+form input:focus {
+    @apply shadow border-teal-200;
+}
+
+form input:disabled {
+    @apply bg-gray-100 border-gray-300;
+}
+
+form button[type=submit] {
+    @apply py-3 px-6 mt-4 border-2 border-teal-500 bg-teal-500 text-white font-bold rounded shadow;
+}
+
+form button[type=submit]:hover,
+form button[type=submit]:focus {
+    @apply shadow-inner bg-teal-600 outline-none;
+}
+
+form button[type=submit]:disabled {
+    @apply bg-gray-100 border-gray-300;
+}
+
+form.on-dark label {
+    @apply text-gray-100;
+}
+
+form.on-dark input {
+    @apply border-2 shadow-inner;
+}
+
+form.on-dark input:hover {
+    @apply shadow-none;
+}
+
+form.on-dark input:focus {
+    @apply shadow;
+}
+
+form.on-dark input:disabled {
+    @apply bg-gray-100 border-gray-300;
+}
+
+/* form.on-dark button[type=submit] {
+    
+}
+
+form.on-dark button[type=submit]:hover,
+form.on-dark button[type=submit]:focus {
+    
+}
+
+form.on-dark button[type=submit]:disabled {
+
+} */
+
 .bg-purple-to-dark {
     background-image: linear-gradient(135deg, #8989F5 0%, #260D96 100%);
 }
@@ -156,6 +226,40 @@ blockquote cite p {
 .shadow-inner-lg {
     box-shadow: inset 0px 2px 8px 0 rgba(0, 0, 0, 0.2)
 }
+
+/* Begin Flickity slider prev/next button */
+
+.flickity-button {
+    background: transparent;
+}
+
+.flickity-prev-next-button {
+    width: 100px;
+    height: 100px;
+}
+
+.flickity-button-icon {
+    @apply fill-current text-blue-900;
+}
+
+.flickity-button:disabled {
+    display: none;
+}
+
+.flickity-prev-next-button {
+    @apply absolute;
+    bottom: 50%;
+}
+
+.flickity-prev-next-button.previous {
+    left: 0;
+}
+
+.flickity-prev-next-button.next {
+    right: 0;
+}
+
+/* End Flickity slider prev/next button */
 
 @tailwind components;
 @tailwind utilities;

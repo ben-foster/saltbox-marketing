@@ -4,8 +4,9 @@ import { graphql } from "gatsby";
 import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
+import JobListings from "../components/content/job-listings";
 
-const Page = ({ data }) => {
+const Careers = ({ data }) => {
     const { title, content, acf, yoast_meta } = data.wordpressPage;
     return (
         <Layout>
@@ -27,10 +28,9 @@ const Page = ({ data }) => {
                 <div className="container mx-auto flex items-center p-20">
                     <div className="flex flex-col text-gray-800">
                         <div dangerouslySetInnerHTML={{ __html: content }}></div>
-
+						<JobListings />
                     </div>
                 </div>
-                <a href="/c/Saltbox-Solutions/Jobs?absolute=1&amp;hiring_company=9d9be086" id="jobs_widget_company_link" target="_blank">Job listings at Saltbox Solutions</a><script src="https://www.ziprecruiter.com/jobs-widget/v1/a364066d/all"></script><a href="https://www.ziprecruiter.com/" id="jobs_widget_link_split" target="_blank">Listing by ZipRecruiter</a>
             </div>
         </Layout>
     )
@@ -53,4 +53,4 @@ export const query = graphql`
 	}
 `
 
-export default Page;
+export default Careers;

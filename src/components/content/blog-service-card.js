@@ -22,18 +22,18 @@ const BlogServiceCard = ({ categoryName }) => {
 
                 return (
                     <div className="flex flex-col md:flex-row px-12 py-8">
-                        <div className="flex flex-col flex-grow-0 items-center justify-start mr-12">
-                            <FeaturedImage 
-                                featuredImage={service.featured_media}
-                                className="object-contain w-32"
-                            />
-                        </div>
                         <div className="flex-grow flex flex-col">
                             <h4 className="text-xl mb-2" dangerouslySetInnerHTML={{ __html: service.title }}></h4>
                             <div className="text-sm text-gray-600" dangerouslySetInnerHTML={{ __html: service.excerpt }}></div>
                             <Link className="text-blue-800 hover:text-teal-500 text-sm font-bold" to={service.link.replace("https://wordpress.saltbox.solutions", "")}>
                                 Learn more &rarr;
                             </Link>
+                        </div>
+                        <div className="flex flex-col flex-grow-0 items-center justify-start ml-12">
+                            <FeaturedImage 
+                                featuredImage={service.featured_media}
+                                className="object-contain w-32"
+                            />
                         </div>
                     </div>
                 );

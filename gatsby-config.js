@@ -136,6 +136,7 @@ module.exports = {
 					`**/whitepapers`,
 					`**/team_members`,
 					`**/pets`,
+					`**/job_listings`,
 				],
 				// Blacklisted routes using glob patterns
 				excludedRoutes: [],

@@ -7,6 +7,7 @@ import HomeHero from "../components/content/home-hero";
 import FeaturedServices from "../components/content/featured-services";
 import FeaturedClients from "../components/content/featured-clients";
 import FeaturedCaseStudies from "../components/content/featured-case-studies";
+import FeaturedWhitepaper from "../components/content/featured-whitepaper";
 import HomeFeaturedPosts from "../components/content/home-featured-posts";
 import ContactUs from "../components/content/contact-us";
 
@@ -41,10 +42,10 @@ const IndexPage = ({ data }) => {
 				title={acf.testimonials.testimonials_title}
 				description={acf.testimonials.testimonials_description}
 			/> */}
-			{/* <FeaturedWhitepaper
+			<FeaturedWhitepaper
 				title={acf.whitepaper.whitepaper_title}
 				description={acf.whitepaper.whitepaper_description}
-			/> */}
+			/>
 			<HomeFeaturedPosts
 				title={acf.recent_posts.recent_posts_title}
 				description={acf.recent_posts.recent_posts_description}

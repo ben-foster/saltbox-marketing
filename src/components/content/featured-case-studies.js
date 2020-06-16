@@ -1,16 +1,32 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
+import Flickity from "react-flickity-component";
 
 import CaseStudyPreview from "./case-study-preview";
+
+const flickityOptions = {
+    initialIndex: 0,
+    prevNextButtons: true,
+    pageDots: false,
+    wrapAround: true,
+    draggable: true
+}
 
 const FeaturedCaseStudies = (props) => {
     const { title, description } = props;
     return (
         <div className="bg-white relative">
-            <div className="container mx-auto flex flex-col flex-no-wrap items-center">
+            <div className="flex flex-col flex-no-wrap items-center">
                 { title && <h2 className="font-bold">{title}</h2>}
                 { description && <p>{description}</p>}
-                <div className="flex w-full p-4">  
+                <Flickity
+                    className={'container mx-auto relative carousel outline-none overflow-hidden'} // default ''
+                    elementType={'div'} // default 'div'
+                    options={flickityOptions} // takes flickity options {}
+                    disableImagesLoaded={false} // default false
+                    reloadOnUpdate // default false
+                    static // default false
+                >  
                     <StaticQuery
                         query={graphql`
                             query FeaturedCaseStudiesQuery {
@@ -61,7 +77,7 @@ const FeaturedCaseStudies = (props) => {
                             ))}
                         }
                     />
-                </div>
+                </Flickity>
             </div>
         </div>
     );

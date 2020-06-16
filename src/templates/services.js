@@ -27,7 +27,7 @@ const Services = ({ data }) => {
             <div className="bg-white">
                 <div className="container mx-auto flex items-center py-20">
                     <div className="flex flex-col w-full">
-                        <p className="w-full px-6 md:p-0 md:w-128 mx-auto text-base md:text-lg" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
+                        <p className="w-full px-6 mx-auto text-base" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                         <FeaturedServices title="Our Services" />
                         <WhySaltbox />
                         <HowToGetStarted />
