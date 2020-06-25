@@ -15,8 +15,8 @@ const Page = ({ data }) => {
             />
             <Hero>
                 <div className="container mx-auto flex items-center p-16 pt-40 pb-32">
-                    <div className="flex flex-col text-white">
-                        <h1 className="font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
+                    <div className="flex flex-col text-white text-center w-full">
+                        <h1 className="font-bold text-center" dangerouslySetInnerHTML={{ __html: title }}></h1>
                         { acf.subheader && (
                             <p dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                         )}
@@ -25,7 +25,7 @@ const Page = ({ data }) => {
             </Hero>
             <div className="bg-white">
                 <div className="container mx-auto flex items-center p-20">
-                    <div className="flex flex-col text-gray-800">
+                    <div className="flex flex-col text-gray-800 w-full text-center">
                         <div dangerouslySetInnerHTML={{ __html: content }}></div>
                     </div>
                 </div>

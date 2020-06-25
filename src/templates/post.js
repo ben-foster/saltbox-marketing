@@ -10,6 +10,7 @@ import BlogServiceCard from "../components/content/blog-service-card";
 
 const Post = ({ data }) => {
     const { title, content, author, categories, acf, yoast_meta } = data.wordpressPost;
+    const featuredServices = data.allWordpressWpServices;
     const category = categories.find(category => category.name !== "Featured");
 
     return (
@@ -52,6 +53,7 @@ const Post = ({ data }) => {
                 </div>
                 <div className="max-w-3xl mx-auto mt-16">
                     <BlogServiceCard 
+                        featuredServices={featuredServices}
                         categoryName={category.name}
                     />
                 </div>
@@ -95,6 +97,27 @@ export const query = graphql`
                 yoast_wpseo_metadesc
             }
 		}
+        allWordpressWpServices(limit: 3, filter: {categories: {elemMatch: {slug: {eq: "featured"}}}}, sort: {order: ASC, fields: date}){
+            edges {
+                node {
+                    title
+                    link
+                    excerpt
+                    featured_media {
+                        alt_text
+                        localFile {
+                            publicURL
+                            extension
+                            childImageSharp {
+                                fluid(maxWidth: 500, quality: 100) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+        }
 	}
 `
 

@@ -39,7 +39,7 @@ const Page = ({ data }) => {
                 </div>
                 <div id="pets" className="container mx-auto flex items-center p-16">
                     <div className="flex flex-col text-gray-800">
-                        <h2>Our Pets</h2>
+                        <h2>Our Support Staff</h2>
                         <Pets />
                     </div>
                 </div>

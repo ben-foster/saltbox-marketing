@@ -140,6 +140,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	const caseStudyTemplate = path.resolve(`./src/templates/case-study.js`)
 	const teamMemberTemplate = path.resolve(`./src/templates/team-member.js`)
 	const jobListingTemplate = path.resolve(`./src/templates/job-listing.js`)
+	const thankYouTemplate = path.resolve(`./src/templates/thank-you.js`)
 
 	allWordpressPage.edges.forEach(edge => {
 		const path = edge.node.path;
@@ -192,6 +193,12 @@ exports.createPages = async ({ graphql, actions }) => {
 			createPage({
 				path,
 				component: slash(careersTemplate),
+				context: { ...edge.node },
+			})
+		} else if(path === "/thank-you/") {
+			createPage({
+				path,
+				component: slash(thankYouTemplate),
 				context: { ...edge.node },
 			})
 		} else {

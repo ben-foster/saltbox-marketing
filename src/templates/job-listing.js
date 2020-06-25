@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
+import { graphql } from "gatsby";
 
 const JobListing = ({ data }) => {
-    const jobListing = data.wordpressWpJobListing;
+    const jobListing = data.wordpressWpJobListings;
     
     return (
         <div>

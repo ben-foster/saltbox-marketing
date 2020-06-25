@@ -26,7 +26,7 @@ const WhitepaperPreview = ({ whitepaper }) => (
             {/* Featured Image */}
             <FeaturedImage 
                 featuredImage={whitepaper.featured_media}
-                className="object-cover shadow-lg"
+                className="object-cover"
             />
         </div>
     </div>
