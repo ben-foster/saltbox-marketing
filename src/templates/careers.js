@@ -17,7 +17,7 @@ const Careers = ({ data }) => {
             <Hero>
                 <div className="container mx-auto flex items-center p-20 pt-40 pb-32">
                     <div className="flex flex-col w-full text-white text-center">
-                        <h1 className="font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
+                        <h1 className="font-bold mb-4" dangerouslySetInnerHTML={{ __html: title }}></h1>
                         { acf.subheader && (
                             <p dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                         )}

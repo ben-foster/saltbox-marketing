@@ -32,28 +32,28 @@ const Service = ({ data }) => {
                 </div>
                 <div className="container mx-auto flex flex-col md:flex-row justify-center pb-12">
                     <div className="flex items-center justify-center w-full md:w-auto p-12">
-                        <FeaturedImage featuredImage={acf.subservice_one_image} />
+                        <FeaturedImage className="w-128 rounded shadow-lg" featuredImage={acf.subservice_one_image} />
                     </div>
                     <div className="flex flex-col items-start justify-center w-full md:w-1/3 pb-8 md:pb-0">
-                        <h2 className="font-bold text-3xl te" dangerouslySetInnerHTML={{ __html: acf.subservice_one_title }}></h2>
+                        <h2 className="font-bold text-3xl text-left" dangerouslySetInnerHTML={{ __html: acf.subservice_one_title }}></h2>
                         <div className="max-w-sm" dangerouslySetInnerHTML={{ __html: acf.subservice_one_description }}></div>
                     </div>
                 </div>
                 <div className="container mx-auto flex flex-col md:flex-row justify-center pb-12">
                     <div className="flex flex-col items-start justify-center w-full md:w-1/3 pb-8 md:pb-0">
-                        <h2 className="font-bold text-3xl te" dangerouslySetInnerHTML={{ __html: acf.subservice_two_title }}></h2>
+                        <h2 className="font-bold text-3xl text-left" dangerouslySetInnerHTML={{ __html: acf.subservice_two_title }}></h2>
                         <div className="max-w-sm" dangerouslySetInnerHTML={{ __html: acf.subservice_two_description }}></div>
                     </div>
                     <div className="flex items-center justify-center w-full md:w-auto p-12">
-                        <FeaturedImage featuredImage={acf.subservice_two_image} />
+                        <FeaturedImage className="w-128 rounded shadow-lg" featuredImage={acf.subservice_two_image} />
                     </div>
                 </div>
                 <div className="container mx-auto flex flex-col md:flex-row justify-center pb-12">
                     <div className="flex items-center justify-center w-full md:w-auto p-12">
-                        <FeaturedImage featuredImage={acf.subservice_three_image} />
+                        <FeaturedImage className="w-128 rounded shadow-lg" featuredImage={acf.subservice_three_image} />
                     </div>
                     <div className="flex flex-col items-start justify-center w-full md:w-1/3 pb-8 md:pb-0">
-                        <h2 className="font-bold text-3xl te" dangerouslySetInnerHTML={{ __html: acf.subservice_three_title }}></h2>
+                        <h2 className="font-bold text-3xl text-left" dangerouslySetInnerHTML={{ __html: acf.subservice_three_title }}></h2>
                         <div className="max-w-sm" dangerouslySetInnerHTML={{ __html: acf.subservice_three_description }}></div>
                     </div>
                 </div>
