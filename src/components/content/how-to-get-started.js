@@ -5,8 +5,8 @@ const HowToGetStarted = () => {
     return (
         <div className="flex flex-col mb-8">
             <h2 className="font-bold text-center">How to Get Started</h2>
-            <div className="flex flex-col lg:flex-row mb-6 items-center lg:items-start lg:justify-center p-2 md:p-0">
-                <div className="flex flex-col items-center bg-white rounded-lg px-5 py-8 mb-4 w-full max-w-sm">
+            <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-center p-2 md:p-0">
+                <div className="flex flex-col items-center bg-white rounded-lg px-5 py-8 mb-2 w-full max-w-sm">
                     <div className="flex items-center justify-center rounded-full bg-blue-800 w-10 h-10">
                         <span className="flex items-center justify-center text-2xl font-bold text-white">1</span>
                     </div>
@@ -17,7 +17,7 @@ const HowToGetStarted = () => {
                         <p className="text-sm"><Link to="/contact">Contact us</Link> to let us know how we can help you</p>
                     </div>
                 </div>
-                <div className="flex flex-col items-center bg-white rounded-lg px-5 py-8 mb-4 w-full max-w-sm">
+                <div className="flex flex-col items-center bg-white rounded-lg px-5 py-8 mb-2 w-full max-w-sm">
                     <div className="flex items-center justify-center rounded-full bg-blue-800 w-10 h-10">
                         <span className="flex items-center justify-center text-2xl font-bold text-white">2</span>
                     </div>
@@ -28,7 +28,7 @@ const HowToGetStarted = () => {
                         <p className="text-sm">We'll schedule a discovery call to talk about your business and goals</p>
                     </div>
                 </div>
-                <div className="flex flex-col items-center bg-white rounded-lg px-5 py-8 mb-4 w-full max-w-sm">
+                <div className="flex flex-col items-center bg-white rounded-lg px-5 py-8 mb-2 w-full max-w-sm">
                     <div className="flex items-center justify-center rounded-full bg-blue-800 w-10 h-10">
                         <span className="flex items-center justify-center text-2xl font-bold text-white">3</span>
                     </div>
@@ -39,7 +39,7 @@ const HowToGetStarted = () => {
                         <p className="text-sm">We'll then perform a free strategy analysis using your current SEO and PPC data</p>
                     </div>
                 </div>
-                <div className="flex flex-col items-center bg-white rounded-lg px-5 py-8 mb-4 w-full max-w-sm">
+                <div className="flex flex-col items-center bg-white rounded-lg px-5 py-8 mb-2 w-full max-w-sm">
                     <div className="flex items-center justify-center rounded-full bg-blue-800 w-10 h-10">
                         <span className="flex items-center justify-center text-2xl font-bold text-white">4</span>
                     </div>
