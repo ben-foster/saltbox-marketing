@@ -7,7 +7,7 @@ function SEO({ description, lang, meta, title }) {
 		<Helmet
 			htmlAttributes={{ lang }}
 			title={title}
-			titleTemplate={`%s | Saltbox Solutions`}
+			titleTemplate={`%s`}
 			meta={[
 				{
 					name: `description`,
