@@ -10,6 +10,7 @@ import FeaturedCaseStudies from "../components/content/featured-case-studies";
 import FeaturedWhitepaper from "../components/content/featured-whitepaper";
 import HomeFeaturedPosts from "../components/content/home-featured-posts";
 import ContactUs from "../components/content/contact-us";
+import WhySaltbox from "../components/content/why-saltbox";
 
 const IndexPage = ({ data }) => {
 	const { acf, yoast_meta } = data.wordpressPage;
@@ -34,6 +35,11 @@ const IndexPage = ({ data }) => {
 				description={acf.clients.clients_description}
 				className="bg-white"
 			/>
+			<div className="bg-white">
+				<div className="container mx-auto">
+					<WhySaltbox />
+				</div>
+			</div>
 			<FeaturedCaseStudies
 				title={acf.case_studies.case_studies_title}
 				description={acf.case_studies.case_studies_description}

@@ -13,6 +13,12 @@ const NetlifyForm = ({ name, action, inputs, buttonCTA, onDark, noAttr }) => {
     const handleChange = (e) => {
       setState({ ...state, [e.target.name]: e.target.value })
     }
+
+    const handleSelectChange = (e) => {
+        e.target.classList.add("text-gray-800")
+
+        setState({ ...state, [e.target.name]: e.target.value })
+    }
   
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -40,19 +46,57 @@ const NetlifyForm = ({ name, action, inputs, buttonCTA, onDark, noAttr }) => {
             netlify-honeypot="bot-field"
         >
             <input type="hidden" name="bot-field" onChange={handleChange} />
-            { inputs.map(({ name, type, label, placeholder, required }) => (
-                <label key={name} htmlFor={name}>
-                    { label }
-                    <input 
-                        type={type}
-                        name={name}
-                        id={name}
-                        placeholder={placeholder}
-                        required={required}
-                        onChange={handleChange}
-                    />
-                </label>
-            ))}
+            { inputs.map(({ name, type, label, placeholder, required, options }) => {
+                if(type !== "select" && type !== "textarea") {
+					return (
+						<label key={name} htmlFor={name}>
+							{ label }
+							<input 
+								type={type}
+								name={name}
+								id={name}
+								placeholder={placeholder}
+								required={required}
+								onChange={handleChange}
+							/>
+						</label>
+					)
+				} else if(type === "select") {
+					return (
+						<label key={name} htmlFor={name}>
+							{ label }
+							<select
+								name={name}
+								id={name}
+								placeholder={placeholder}
+								required={required}
+                                onChange={handleSelectChange}
+                                className="text-gray-400"
+							>
+								<option disabled="disabled" selected="selected"> -- Select an option --</option>
+								{ options.map(({ value, text }) => (
+									<option value={value}>{text}</option>
+								))}
+							</select>
+						</label>
+					)
+				} else if(type === "textarea") {
+					return (
+						<label key={name} htmlFor={name}>
+							{ label }
+							<textarea 
+								type={type}
+								name={name}
+								id={name}
+								placeholder={placeholder}
+								required={required}
+                                onChange={handleChange}
+                                rows="4"
+							/>
+						</label>
+					)
+				}
+            })}
             <button 
                 type="submit"
             >

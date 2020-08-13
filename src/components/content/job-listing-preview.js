@@ -14,7 +14,9 @@ const JobListingPreview = ({ jobListing }) => {
                 <div className="flex flex-grow-0 justify-center items-center w-full sm:w-1/3 lg:w-48 p-8 sm:p-4 lg:p-8">
                     <Link 
                         className="w-full h-full flex items-center justify-start"
-                        to={jobListing.link.replace("https://wordpress.saltbox.solutions", "")}
+                        to="/contact"
+                        // TODO: create link to actual job listing page
+                        // to={jobListing.link.replace("https://wordpress.saltbox.solutions", "")}
                     >
                         <FeaturedImage 
                             featuredImage={jobListing.featured_media}
@@ -27,24 +29,28 @@ const JobListingPreview = ({ jobListing }) => {
                     <h3 className="text-left text-xl font-bold normal-case mt-4 mb-2">
                         <Link 
                             className="font-bold"
-                            to={jobListing.link.replace("https://wordpress.saltbox.solutions", "")}
+                            to="/contact"
+                            // TODO: create link to actual job listing page
+                            // to={jobListing.link.replace("https://wordpress.saltbox.solutions", "")}
                             dangerouslySetInnerHTML={{ __html: jobListing.title }}
                         />
                     </h3>
                     {/* Date */}
-                    <p className="text-xs text-left mb-2">
-                        <Link 
-                            to={jobListing.link.replace("https://wordpress.saltbox.solutions", "")}
-                            className="no-underline text-xs"
-                            dangerouslySetInnerHTML={{ __html: jobListing.date }}
-                        />
-                    </p>
+                    <p 
+                        className="text-xs text-left mb-2 no-underline text-xs" 
+                        dangerouslySetInnerHTML={{ __html: jobListing.date }}
+                    />
                     {/* Excerpt */}
                     <div 
                         dangerouslySetInnerHTML={{ __html: jobListing.excerpt }}
                         className="text-sm"
                     />
-                    <Link className="flex flex-grow-0 font-bold text-blue-800 hover:text-teal-500 w-full text-left mt-auto text-sm" to={jobListing.link.replace("https://wordpress.saltbox.solutions", "")}>
+                    <Link 
+                        className="flex flex-grow-0 font-bold text-blue-800 hover:text-teal-500 w-full text-left mt-auto text-sm" 
+                        to="/contact"
+                        // TODO: create link to actual job listing page
+                        // to={jobListing.link.replace("https://wordpress.saltbox.solutions", "")}
+                    >
                         Apply now &rarr;
                     </Link>
                 </div>

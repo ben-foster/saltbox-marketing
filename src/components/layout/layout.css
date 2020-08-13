@@ -91,19 +91,27 @@ form label {
     @apply flex flex-col w-full text-sm text-gray-800 uppercase font-bold;
 }
 
-form input {
-    @apply p-2 mt-1 mb-4 w-full border border-teal-100 text-gray-800 rounded shadow outline-none;        
+form input,
+form select,
+form textarea {
+    @apply text-sm p-2 mt-1 mb-4 w-full border border-teal-100 text-gray-800 rounded shadow outline-none;        
 }
 
-form input:hover {
+form input:hover,
+form select:hover,
+form textarea:hover {
     @apply shadow border-teal-500;
 }
 
-form input:focus {
+form input:focus,
+form select:focus,
+form textarea:focus {
     @apply shadow border-teal-200;
 }
 
-form input:disabled {
+form input:disabled,
+form select:disabled,
+form textarea:disabled {
     @apply bg-gray-100 border-gray-300;
 }
 
@@ -124,19 +132,27 @@ form.on-dark label {
     @apply text-gray-100;
 }
 
-form.on-dark input {
+form.on-dark input,
+form.on-dark select,
+form.on-dark textarea {
     @apply border-2 shadow-inner;
 }
 
-form.on-dark input:hover {
+form.on-dark input:hover,
+form.on-dark select:hover,
+form.on-dark textarea:hover {
     @apply shadow-none;
 }
 
-form.on-dark input:focus {
+form.on-dark input:focus,
+form.on-dark select:focus,
+form.on-dark textarea:focus {
     @apply shadow;
 }
 
-form.on-dark input:disabled {
+form.on-dark input:disabled,
+form.on-dark select:disabled,
+form.on-dark textarea:disabled {
     @apply bg-gray-100 border-gray-300;
 }
 

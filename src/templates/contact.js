@@ -28,12 +28,11 @@ const Contact = ({ data }) => {
             </Hero>
             <div className="bg-white">
                 <div className="container mx-auto flex flex-col items-center pt-10 pb-20">
-                    <div className="flex flex-col w-96 mx-auto text-gray-800 mb-20">
+                    <div className="flex flex-col w-96 mx-auto text-gray-800 mb-8">
                         <p>Please fill out the form below, and we will reach out via email to schedule a discovery call.</p>
                         <ContactForm />
                     </div>
                     <FeaturedClients title="Trusted by" />
-                    <HowToGetStarted />
                 </div>
             </div>
         </Layout>

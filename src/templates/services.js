@@ -27,7 +27,7 @@ const Services = ({ data }) => {
             <div className="bg-white">
                 <div className="container mx-auto flex items-center py-20">
                     <div className="flex flex-col w-full">
-                        <div className="max-w-4xl mx-auto flex items-center px-16 text-gray-800">
+                        <div className="max-w-4xl mx-auto flex items-center px-16 py-8 text-gray-800">
                             <p className="w-full" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                         </div>
                         <FeaturedServices title="Our Services" />

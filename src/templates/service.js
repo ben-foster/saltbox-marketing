@@ -26,8 +26,8 @@ const Service = ({ data }) => {
             </Hero>
             <div className="bg-white">
                 <div className="container mx-auto flex items-center pt-20 pb-12">
-                    <div className="flex flex-col w-full">
-                        <p className="w-full px-6 md:p-0 md:w-128 mx-auto text-base md:text-lg" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
+                    <div className="max-w-4xl mx-auto flex items-center px-16 py-8 text-gray-800">
+                        <p className="w-full" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                     </div>
                 </div>
                 <div className="container mx-auto flex flex-col md:flex-row justify-center pb-12">

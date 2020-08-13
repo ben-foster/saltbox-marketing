@@ -15,7 +15,7 @@ const WhitepaperForm = ({ whitepaper, buttonCTA, onDark, noAttr }) => {
     return (
         <NetlifyForm 
             name="Whitepaper"
-            action={whitepaper.link.replace("https://wordpress.saltbox.solutions", "")}
+            action={whitepaper.acf.whitepaper_download.link}
             inputs={inputs}
             buttonCTA={buttonCTA ? buttonCTA : "View the Whitepaper"}
             onDark={onDark}

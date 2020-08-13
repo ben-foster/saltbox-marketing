@@ -23,6 +23,34 @@ const inputs = [
         placeholder: "Company Name",
         required: true,
     },
+    {
+        name: "inquiry_type",
+        type: "select",
+        label: "Your Intent",
+        placeholder: "",
+        required: false,
+        options: [
+            {
+                value: "Inquire about services",
+                text: "Inquire about services",
+            },
+            {
+                value: "Apply for a job",
+                text: "Apply for a job",
+            },
+            {
+                value: "Other",
+                text: "Other",
+            },
+        ]
+    },
+    {
+        name: "message",
+        type: "textarea",
+        label: "Message",
+        placeholder: "Your message",
+        required: false,
+    },
 ]
 
 const ContactForm = ({ buttonCTA, onDark, noAttr }) => {

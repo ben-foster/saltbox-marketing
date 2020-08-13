@@ -31,6 +31,11 @@ const FeaturedWhitepapers = (props) => {
                                                 }
                                             }
                                         }
+                                        acf {
+                                            whitepaper_download {
+                                                link
+                                            }
+                                        }
                                     } 
                                 }
                             }

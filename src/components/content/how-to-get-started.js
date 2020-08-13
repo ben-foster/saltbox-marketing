@@ -51,7 +51,6 @@ const HowToGetStarted = () => {
                     </div>
                 </div>
             </div>
-            <p className="text-xs text-gray-700 px-12">PS - Don't be surprised if we end up suggesting you do not work with us. We sometimes analyze client data and recommend the pursuit of other marketing investments for growth outside of SEO or PPC. This process is designed to figure out if we can help and provide our honest recommendations - not sell.</p>
         </div>
     );
 };
