@@ -7,7 +7,7 @@ const FeaturedServices = (props) => {
     const { title, description, className } = props;
     return (
         <div className={className}>
-            <div className="container mx-auto flex flex-col flex-no-wrap items-center p-12">
+            <div className="mx-auto flex flex-col flex-no-wrap items-center p-12">
                 { title && <h2 className="font-bold mb-12">{title}</h2>}
                 { description && <p>{description}</p>}
                 <div className="flex flex-col md:flex-row">  
@@ -32,6 +32,7 @@ export const FEATURED_SERVICES_QUERY = graphql`
             edges {
                 node {
                     title
+                    slug
                     link
                     excerpt
                     featured_media {
