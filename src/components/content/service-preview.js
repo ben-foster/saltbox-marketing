@@ -77,13 +77,13 @@ class ServicePreview extends Component {
                         to={service.link.replace("https://wordpress.saltbox.solutions", "")}
                     >
                         { service.title === "Web Analytics Solutions" && (
-                            <AnalyticsAnimation className="w-96 h-auto mx-auto" animateOnHover={animateOnHover} />
+                            <AnalyticsAnimation className="w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} />
                         )}
                         { service.title === "Pay-per-Click Advertising" && (
-                            <PPCAnimation className="w-96 h-auto mx-auto" animateOnHover={animateOnHover} />
+                            <PPCAnimation className="w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} />
                         )}
                         { service.title === "Search Engine Optimization" && (
-                            <SEOAnimation className="w-96 h-auto mx-auto" animateOnHover={animateOnHover} />
+                            <SEOAnimation className="w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} />
                         )}
                         {}
                     </Link>
