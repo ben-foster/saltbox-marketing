@@ -10,7 +10,7 @@ function seoAnimationCallback() {
 }
 
 var options = {
-	root: document.querySelector('#SEO_Animated'),
+	root: window.document.querySelector('#SEO_Animated'),
 	rootMargin: '0px',
 	threshold: 0.4
 }

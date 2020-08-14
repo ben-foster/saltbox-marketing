@@ -10,7 +10,7 @@ function analyticsAnimationCallback() {
 }
 
 var options = {
-	root: document.querySelector('#Web_Analytics_Solutions_Animated'),
+	root: window.document.querySelector('#Web_Analytics_Solutions_Animated'),
 	rootMargin: '0px',
 	threshold: 0.4
 }

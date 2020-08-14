@@ -10,7 +10,7 @@ function ppcAnimationCallback() {
 }
 
 var options = {
-	root: document.querySelector('#PPC_Animated'),
+	root: window.document.querySelector('#PPC_Animated'),
 	rootMargin: '0px',
 	threshold: 0.4
 }
