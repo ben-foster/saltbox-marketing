@@ -1,6 +1,6 @@
 import React from "react";
 
-const SEOAnimation = ({ className }) => {
+const SEOAnimation = ({ className, animateOnHover }) => {
     if(!animateOnHover) require("../script/seo-animation-intersection.js");
     return (  
         <svg className={className} width="628" height="353" viewBox="0 0 628 353" fill="none" xmlns="http://www.w3.org/2000/svg">
