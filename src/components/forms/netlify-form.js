@@ -51,7 +51,10 @@ const NetlifyForm = ({ name, action, inputs, buttonCTA, onDark, noAttr }) => {
                 sessionHistory: form.querySelector("#sessionHistory" + form.getAttribute("name")).value,
             }),
         })
-            .then(() => window.location.replace(form.getAttribute('action')))
+            .then(() => {
+                window.history.pushState({}, window.document.title)
+                window.location.replace(form.getAttribute('action'));
+            })
             .catch((error) => alert(error))
     }
 
