@@ -4,7 +4,7 @@ import FeaturedImage from "../lib/featured-image";
 
 const CaseStudyPreview = ({ caseStudy }) => {
     return (
-        <div className="flex flex-col items-center bg-blue-800 h-128 w-full max-w-4xl mx-16 p-4 md:p-12 rounded-lg z-10 shadow-lg">
+        <div className="flex flex-col items-center bg-blue-800 h-auto md:h-128 w-11/12 md:w-full max-w-4xl mx-16 p-4 md:p-12 rounded-lg z-10 shadow-lg">
             {/* <h3 className="mt-0">{caseStudy.title}</h3>
             <p>{caseStudy.excerpt}</p> */}
             <div className="flex flex-col md:flex-row items-start justify-center w-full mx-auto mb-4">
