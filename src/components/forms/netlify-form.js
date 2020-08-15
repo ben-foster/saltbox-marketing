@@ -26,19 +26,19 @@ const NetlifyForm = ({ name, action, inputs, buttonCTA, onDark, noAttr }) => {
 
         setState({ 
             ...state, 
-            firstTouchSource: form.querySelector("#firstTouchSource" + form.name).value,
-            firstTouchMedium: form.querySelector("#firstTouchMedium" + form.name).value,
-            firstTouchCampaign: form.querySelector("#firstTouchCampaign" + form.name).value,
-            firstTouchContent: form.querySelector("#firstTouchContent" + form.name).value,
-            firstTouchTerm: form.querySelector("#firstTouchTerm" + form.name).value,
-            firstTouchGclid: form.querySelector("#firstTouchGclid" + form.name).value,
-            lastTouchSource: form.querySelector("#lastTouchSource" + form.name).value,
-            lastTouchMedium: form.querySelector("#lastTouchMedium" + form.name).value,
-            lastTouchCampaign: form.querySelector("#lastTouchCampaign" + form.name).value,
-            lastTouchContent: form.querySelector("#lastTouchContent" + form.name).value,
-            lastTouchTerm: form.querySelector("#lastTouchTerm" + form.name).value,
-            lastTouchGclid: form.querySelector("#lastTouchGclid" + form.name).value,
-            sessionHistory: form.querySelector("#sessionHistory" + form.name).value,
+            firstTouchSource: form.querySelector("#firstTouchSource" + form.getAttribute("name")).value,
+            firstTouchMedium: form.querySelector("#firstTouchMedium" + form.getAttribute("name")).value,
+            firstTouchCampaign: form.querySelector("#firstTouchCampaign" + form.getAttribute("name")).value,
+            firstTouchContent: form.querySelector("#firstTouchContent" + form.getAttribute("name")).value,
+            firstTouchTerm: form.querySelector("#firstTouchTerm" + form.getAttribute("name")).value,
+            firstTouchGclid: form.querySelector("#firstTouchGclid" + form.getAttribute("name")).value,
+            lastTouchSource: form.querySelector("#lastTouchSource" + form.getAttribute("name")).value,
+            lastTouchMedium: form.querySelector("#lastTouchMedium" + form.getAttribute("name")).value,
+            lastTouchCampaign: form.querySelector("#lastTouchCampaign" + form.getAttribute("name")).value,
+            lastTouchContent: form.querySelector("#lastTouchContent" + form.getAttribute("name")).value,
+            lastTouchTerm: form.querySelector("#lastTouchTerm" + form.getAttribute("name")).value,
+            lastTouchGclid: form.querySelector("#lastTouchGclid" + form.getAttribute("name")).value,
+            sessionHistory: form.querySelector("#sessionHistory" + form.getAttribute("name")).value,
          })
 
         fetch('/', {
