@@ -31,17 +31,17 @@ const Service = ({ data }) => {
                                 <>
                                     { title === "Web Analytics Solutions" && (
                                         <div ref={ref} className="z-50 -mt-16 -mb-48">
-                                            <AnalyticsAnimation className="w-72 md:w-256 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                            <AnalyticsAnimation className="w-72 md:w-1/2 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
                                         </div>
                                     )}
                                     { title === "Pay-per-Click Advertising" && (
                                         <div ref={ref} className="z-50 -mt-16 -mb-48">
-                                            <PPCAnimation className="w-72 md:w-256 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                            <PPCAnimation className="w-72 md:w-1/2 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
                                         </div>
                                     )}
                                     { title === "Search Engine Optimization" && (
                                         <div ref={ref} className="z-50 -mt-16 -mb-48">
-                                            <SEOAnimation className="w-72 md:w-256 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                            <SEOAnimation className="w-72 md:w-1/2 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
                                         </div>
                                     )}
                                 </>

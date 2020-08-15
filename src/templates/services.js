@@ -25,12 +25,16 @@ const Services = ({ data }) => {
                 </div>
             </Hero>
             <div className="bg-white">
-                <div className="container mx-auto flex items-center py-20">
+                <div className="container mx-auto flex items-center pt-20">
                     <div className="flex flex-col w-full">
                         <div className="max-w-4xl mx-auto flex items-center px-6 md:px-16 text-gray-800">
                             <p className="w-full" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                         </div>
-                        <FeaturedServices title="Our Services" />
+                    </div>
+                </div>
+                <FeaturedServices title="Our Services" />
+                <div className="container mx-auto flex items-center">
+                    <div className="flex flex-col w-full">
                         <WhySaltbox />
                         <HowToGetStarted />
                     </div>
