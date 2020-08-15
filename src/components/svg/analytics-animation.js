@@ -1,11 +1,19 @@
 import React, { useEffect } from "react";
 
-const AnalyticsAnimation = ({ className, animateOnHover }) => {
-	useEffect(() => {
-		if(!animateOnHover) require("../script/analytics-animation-intersection.js");
-	});
+const AnalyticsAnimation = ({ className, animateOnHover, inView }) => {
+	(!animateOnHover && inView) && useEffect(() => {
+		var elem = document.getElementById("Top_Box_1_fill_width");
+		var parentElem = document.getElementById("Web_Analytics_Solutions_Animated");
+		var lastAnimationElem = document.getElementById("Pie_Large_with_Label_turn_opaque");
+		lastAnimationElem.onend = () => document.getElementById("Web_Analytics_Solutions_Animated").classList.remove("on");
+		if(!parentElem.classList.contains("on")){
+			parentElem.classList.add("on");
+			elem.beginElement();
+		}
+	})
+
 	return (
-		<svg className={className} onHover={ animateOnHover ? "document.getElementById('Top_Box_1_fill_width').beginElement()" : ""} width="628" height="353" viewBox="0 0 628 353" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg className={className} width="628" height="353" viewBox="0 0 628 353" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g id="Web_Analytics_Solutions_Animated">
 				<rect width="628" height="353" fill="white"/>
 				<rect id="Rectangle 126" width="628" height="353" fill="#EDF2F7"/>
@@ -244,7 +252,7 @@ const AnalyticsAnimation = ({ className, animateOnHover }) => {
 						begin="Bottom_Box_1_fill_width.end"
 						from="0"
 						to="1" 
-						dur="1s"
+						dur="0.6s"
 						fill="freeze" 
 					/>
 					<circle id="Middle Indicator 1" cx="69" cy="151" r="3" fill="#5BD0FB"/>
@@ -268,7 +276,7 @@ const AnalyticsAnimation = ({ className, animateOnHover }) => {
 						begin="Bottom_Box_1_fill_width.end"
 						from="0"
 						to="1" 
-						dur="1s"
+						dur="0.6s"
 						fill="freeze" 
 					/>
 					<circle id="Middle Indicator 2" cx="187" cy="151" r="3" fill="#5BD0FB"/>
@@ -292,7 +300,7 @@ const AnalyticsAnimation = ({ className, animateOnHover }) => {
 						begin="Bottom_Box_1_fill_width.end"
 						from="0"
 						to="1" 
-						dur="1s"
+						dur="0.6s"
 						fill="freeze" 
 					/>
 					<circle id="Middle Indicator 3" cx="301" cy="151" r="3" fill="#5BD0FB"/>
@@ -316,7 +324,7 @@ const AnalyticsAnimation = ({ className, animateOnHover }) => {
 						begin="Bottom_Box_1_fill_width.end"
 						from="0"
 						to="1" 
-						dur="1s"
+						dur="0.6s"
 						fill="freeze" 
 					/>
 					<circle id="Middle Indicator 4" cx="417" cy="151" r="3" fill="#5BD0FB"/>
@@ -340,7 +348,7 @@ const AnalyticsAnimation = ({ className, animateOnHover }) => {
 						begin="Bottom_Box_1_fill_width.end"
 						from="0"
 						to="1" 
-						dur="1s"
+						dur="0.6s"
 						fill="freeze" 
 					/>
 					<circle id="Middle Indicator 5" cx="534" cy="151" r="3" fill="#5BD0FB"/>

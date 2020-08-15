@@ -23,9 +23,9 @@ const Hamburger = ({ className }) => {
             onClick={showOrHideMobileNav}
         >
             <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 16H16" className="stroke-current text-white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M2 9H16" className="stroke-current text-white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M2 2H16" className="stroke-current text-white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 16H16" className="stroke-current text-white" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M2 9H16" className="stroke-current text-white" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M2 2H16" className="stroke-current text-white" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
         </button>
     );

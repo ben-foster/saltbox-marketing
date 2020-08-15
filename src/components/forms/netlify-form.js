@@ -108,91 +108,91 @@ const NetlifyForm = ({ name, action, inputs, buttonCTA, onDark, noAttr }) => {
                         type="hidden" 
                         name="firstTouchSource"
                         id={`firstTouchSource${name.replace(/\s/g, '')}`}
-                        class="firstTouchSource"
+                        className="firstTouchSource"
                         onChange={handleChange}
                     />
                     <input 
                         type="hidden" 
                         name="firstTouchMedium"
                         id={`firstTouchMedium${name.replace(/\s/g, '')}`}
-                        class="firstTouchMedium"
+                        className="firstTouchMedium"
                         onChange={handleChange}
                     />
                     <input 
                         type="hidden" 
                         name="firstTouchCampaign"
                         id={`firstTouchCampaign${name.replace(/\s/g, '')}`}
-                        class="firstTouchCampaign"
+                        className="firstTouchCampaign"
                         onChange={handleChange}
                     />
                     <input 
                         type="hidden" 
                         name="firstTouchContent"
                         id={`firstTouchContent${name.replace(/\s/g, '')}`}
-                        class="firstTouchContent"
+                        className="firstTouchContent"
                         onChange={handleChange}
                     />
                     <input 
                         type="hidden" 
                         name="firstTouchTerm"
                         id={`firstTouchTerm${name.replace(/\s/g, '')}`}
-                        class="firstTouchTerm"
+                        className="firstTouchTerm"
                         onChange={handleChange}
                     />
                     <input 
                         type="hidden" 
                         name="firstTouchGclid"
                         id={`firstTouchGclid${name.replace(/\s/g, '')}`}
-                        class="firstTouchGclid"
+                        className="firstTouchGclid"
                         onChange={handleChange}
                     />
                     <input 
                         type="hidden" 
                         name="lastTouchSource"
                         id={`lastTouchSource${name.replace(/\s/g, '')}`}
-                        class="lastTouchSource"
+                        className="lastTouchSource"
                         onChange={handleChange}
                     />
                     <input 
                         type="hidden" 
                         name="lastTouchMedium"
                         id={`lastTouchMedium${name.replace(/\s/g, '')}`}
-                        class="lastTouchMedium"
+                        className="lastTouchMedium"
                         onChange={handleChange}
                     />
                     <input 
                         type="hidden" 
                         name="lastTouchCampaign"
                         id={`lastTouchCampaign${name.replace(/\s/g, '')}`}
-                        class="lastTouchCampaign"
+                        className="lastTouchCampaign"
                         onChange={handleChange}
                     />
                     <input 
                         type="hidden" 
                         name="lastTouchContent"
                         id={`lastTouchContent${name.replace(/\s/g, '')}`}
-                        class="lastTouchContent"
+                        className="lastTouchContent"
                         onChange={handleChange}
                     />
                     <input 
                         type="hidden" 
                         name="lastTouchTerm"
                         id={`lastTouchTerm${name.replace(/\s/g, '')}`}
-                        class="lastTouchTerm"
+                        className="lastTouchTerm"
                         onChange={handleChange}
                     />
                     <input 
                         type="hidden" 
                         name="lastTouchGclid"
                         id={`lastTouchGclid${name.replace(/\s/g, '')}`}
-                        class="lastTouchGclid"
+                        className="lastTouchGclid"
                         onChange={handleChange}
                     />
                     <input 
                         type="hidden" 
                         name="sessionHistory"
                         id={`sessionHistory${name.replace(/\s/g, '')}`}
-                        class="sessionHistory"
+                        className="sessionHistory"
                         onChange={handleChange}
                     />
                 </>

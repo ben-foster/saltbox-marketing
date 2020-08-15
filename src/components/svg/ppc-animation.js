@@ -1,10 +1,17 @@
 import React, { useEffect } from "react";
 
-const PPCAnimation = ({ className, animateOnHover }) => {
-    useEffect(() => {
-        if(!animateOnHover) require("../script/ppc-animation-intersection.js");
-    });
-    return (  
+const PPCAnimation = ({ className, animateOnHover, inView }) => {
+    (!animateOnHover && inView) && useEffect(() => {
+		var elem = document.getElementById("Organic_Results_translate");
+		var parentElem = document.getElementById("PPC_Animated");
+		var lastAnimationElem = document.getElementById("Ad_Indicator_turn_opaque");
+		lastAnimationElem.onend = () => document.getElementById("PPC_Animated").classList.remove("on");
+		if(!parentElem.classList.contains("on")){
+			parentElem.classList.add("on");
+			elem.beginElement();
+		}
+	})
+    return (
         <svg className={className} width="628" height="353" viewBox="0 0 628 353" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="PPC_Animated">
                 <rect id="Background" width="628" height="353" fill="#EDF2F7"/>

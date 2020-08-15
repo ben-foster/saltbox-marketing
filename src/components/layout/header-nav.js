@@ -30,7 +30,7 @@ const HeaderNav = () => {
                 render={data => {
                     const { items } = data.allWordpressMenusMenusItems.edges[0].node
                     return items.map(item => (
-                        <HeaderNavItem item={item} />
+                        <HeaderNavItem item={item} key={item.slug} />
                     ))}
                 }
             />

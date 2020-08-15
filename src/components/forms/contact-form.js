@@ -26,7 +26,7 @@ const inputs = [
     {
         name: "inquiry_type",
         type: "select",
-        label: "Your Intent",
+        label: "Reason",
         placeholder: "",
         required: false,
         options: [

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
+import { InView } from "react-intersection-observer"
 
 import AnalyticsAnimation from "../svg/analytics-animation";
 import PPCAnimation from "../svg/ppc-animation";
 import SEOAnimation from "../svg/seo-animation";
-
 
 class ServicePreview extends Component {
 	constructor(props) {
@@ -76,16 +76,27 @@ class ServicePreview extends Component {
                         className="w-full h-full flex items-center justify-start"
                         to={service.link.replace("https://wordpress.saltbox.solutions", "")}
                     >
-                        { service.title === "Web Analytics Solutions" && (
-                            <AnalyticsAnimation className="w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} />
-                        )}
-                        { service.title === "Pay-per-Click Advertising" && (
-                            <PPCAnimation className="w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} />
-                        )}
-                        { service.title === "Search Engine Optimization" && (
-                            <SEOAnimation className="w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} />
-                        )}
-                        {}
+                        <InView rootMargin="-250px">
+                            {({ inView, ref, entry }) => (
+                                <>
+                                    { service.title === "Web Analytics Solutions" && (
+                                        <div ref={ref}>
+                                            <AnalyticsAnimation className="w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                        </div>
+                                    )}
+                                    { service.title === "Pay-per-Click Advertising" && (
+                                        <div ref={ref}>
+                                            <PPCAnimation className="w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                        </div>
+                                    )}
+                                    { service.title === "Search Engine Optimization" && (
+                                        <div ref={ref}>
+                                            <SEOAnimation className="w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                        </div>
+                                    )}
+                                </>
+                            )}
+                        </InView>
                     </Link>
                     <div className="flex justify-start items-start w-full h-full">
                         <h3 className="mt-6 mb-4 w-full text-center">
