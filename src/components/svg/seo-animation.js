@@ -73,7 +73,7 @@ const SEOAnimation = ({ className, animateOnHover, inView }) => {
                         from="10 204"
                         to="10 0"
                         begin="Client_Search_Result_pull_out.end"
-                        dur="2.8s"
+                        dur="2s"
                         repeatCount="0"
                         fill="freeze"
                     />
@@ -148,7 +148,7 @@ const SEOAnimation = ({ className, animateOnHover, inView }) => {
                             from="0 -141"
                             to="0 -78"
                             begin="Organic_Result_2_move_down.end"
-                            dur="0.7s"
+                            dur="0.5s"
                             repeatCount="0"
                             fill="freeze"
                         />
@@ -159,7 +159,7 @@ const SEOAnimation = ({ className, animateOnHover, inView }) => {
                             from="0 -78"
                             to="0 0"
                             begin="Client_Search_Result_settle_in.end"
-                            dur="1.2s"
+                            dur="0.8s"
                             repeatCount="0"
                             fill="freeze"
                         />
@@ -186,7 +186,7 @@ const SEOAnimation = ({ className, animateOnHover, inView }) => {
                             from="0 -141"
                             to="0 -78"
                             begin="Organic_Result_3_move_down.end"
-                            dur="0.7s"
+                            dur="0.5s"
                             repeatCount="0"
                             fill="freeze"
                         />
@@ -197,7 +197,7 @@ const SEOAnimation = ({ className, animateOnHover, inView }) => {
                             from="0 -78"
                             to="0 0"
                             begin="Client_Search_Result_settle_in.end"
-                            dur="1.2s"
+                            dur="0.8s"
                             repeatCount="0"
                             fill="freeze"
                         />
@@ -224,7 +224,7 @@ const SEOAnimation = ({ className, animateOnHover, inView }) => {
                             from="0 -141"
                             to="0 -78"
                             begin="Organic_Result_4_move_down.end"
-                            dur="0.7s"
+                            dur="0.5s"
                             repeatCount="0"
                             fill="freeze"
                         />
@@ -235,7 +235,7 @@ const SEOAnimation = ({ className, animateOnHover, inView }) => {
                             from="0 -78"
                             to="0 0"
                             begin="Client_Search_Result_settle_in.end"
-                            dur="1.2s"
+                            dur="0.8s"
                             repeatCount="0"
                             fill="freeze"
                         />
@@ -262,7 +262,7 @@ const SEOAnimation = ({ className, animateOnHover, inView }) => {
                             from="0 -141"
                             to="0 -78"
                             begin="Client_Search_Result_move_up.begin"
-                            dur="0.7s"
+                            dur="0.5s"
                             repeatCount="0"
                             fill="freeze"
                         />
@@ -273,7 +273,7 @@ const SEOAnimation = ({ className, animateOnHover, inView }) => {
                             from="0 -78"
                             to="0 0"
                             begin="Client_Search_Result_settle_in.end"
-                            dur="1.2s"
+                            dur="0.8s"
                             repeatCount="0"
                             fill="freeze"
                         />

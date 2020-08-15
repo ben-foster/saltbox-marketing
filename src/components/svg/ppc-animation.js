@@ -140,7 +140,7 @@ const PPCAnimation = ({ className, animateOnHover, inView }) => {
                         from="0 -102"
                         to="0 0"
                         begin="indefinite"
-                        dur="1.5s"
+                        dur="1s"
                         repeatCount="0"
                         fill="freeze"
                     />
