@@ -25,21 +25,10 @@ const NetlifyForm = ({ name, action, inputs, buttonCTA, onDark, noAttr }) => {
         const form = e.target;
 
         setState({ 
-            ...state, 
-            firstTouchSource: form.querySelector("#firstTouchSource" + form.getAttribute("name")).value,
-            firstTouchMedium: form.querySelector("#firstTouchMedium" + form.getAttribute("name")).value,
-            firstTouchCampaign: form.querySelector("#firstTouchCampaign" + form.getAttribute("name")).value,
-            firstTouchContent: form.querySelector("#firstTouchContent" + form.getAttribute("name")).value,
-            firstTouchTerm: form.querySelector("#firstTouchTerm" + form.getAttribute("name")).value,
-            firstTouchGclid: form.querySelector("#firstTouchGclid" + form.getAttribute("name")).value,
-            lastTouchSource: form.querySelector("#lastTouchSource" + form.getAttribute("name")).value,
-            lastTouchMedium: form.querySelector("#lastTouchMedium" + form.getAttribute("name")).value,
-            lastTouchCampaign: form.querySelector("#lastTouchCampaign" + form.getAttribute("name")).value,
-            lastTouchContent: form.querySelector("#lastTouchContent" + form.getAttribute("name")).value,
-            lastTouchTerm: form.querySelector("#lastTouchTerm" + form.getAttribute("name")).value,
-            lastTouchGclid: form.querySelector("#lastTouchGclid" + form.getAttribute("name")).value,
-            sessionHistory: form.querySelector("#sessionHistory" + form.getAttribute("name")).value,
+            ...state,
          })
+
+         console.log(state)
 
         fetch('/', {
             method: 'POST',
@@ -47,9 +36,22 @@ const NetlifyForm = ({ name, action, inputs, buttonCTA, onDark, noAttr }) => {
             body: encode({
                 'form-name': form.getAttribute('name'),
                 ...state,
+                firstTouchSource: form.querySelector("#firstTouchSource" + form.getAttribute("name")).value,
+                firstTouchMedium: form.querySelector("#firstTouchMedium" + form.getAttribute("name")).value,
+                firstTouchCampaign: form.querySelector("#firstTouchCampaign" + form.getAttribute("name")).value,
+                firstTouchContent: form.querySelector("#firstTouchContent" + form.getAttribute("name")).value,
+                firstTouchTerm: form.querySelector("#firstTouchTerm" + form.getAttribute("name")).value,
+                firstTouchGclid: form.querySelector("#firstTouchGclid" + form.getAttribute("name")).value,
+                lastTouchSource: form.querySelector("#lastTouchSource" + form.getAttribute("name")).value,
+                lastTouchMedium: form.querySelector("#lastTouchMedium" + form.getAttribute("name")).value,
+                lastTouchCampaign: form.querySelector("#lastTouchCampaign" + form.getAttribute("name")).value,
+                lastTouchContent: form.querySelector("#lastTouchContent" + form.getAttribute("name")).value,
+                lastTouchTerm: form.querySelector("#lastTouchTerm" + form.getAttribute("name")).value,
+                lastTouchGclid: form.querySelector("#lastTouchGclid" + form.getAttribute("name")).value,
+                sessionHistory: form.querySelector("#sessionHistory" + form.getAttribute("name")).value,
             }),
         })
-            .then(() => navigate(form.getAttribute('action')))
+            .then(() => window.location.replace(form.getAttribute('action')))
             .catch((error) => alert(error))
     }
 
