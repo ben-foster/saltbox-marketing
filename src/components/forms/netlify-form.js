@@ -11,7 +11,7 @@ const NetlifyForm = ({ name, action, inputs, buttonCTA, onDark, noAttr }) => {
     )
 
     const handleChange = (e) => {
-      setState({ ...state, [e.target.name]: e.target.value })
+        setState({ ...state, [e.target.name]: e.target.value })
     }
 
     const handleSelectChange = (e) => {
@@ -22,7 +22,25 @@ const NetlifyForm = ({ name, action, inputs, buttonCTA, onDark, noAttr }) => {
   
     const handleSubmit = (e) => {
         e.preventDefault()
-        const form = e.target
+        const form = e.target;
+
+        setState({ 
+            ...state, 
+            firstTouchSource: form.querySelector("#firstTouchSource" + form.name).value,
+            firstTouchMedium: form.querySelector("#firstTouchMedium" + form.name).value,
+            firstTouchCampaign: form.querySelector("#firstTouchCampaign" + form.name).value,
+            firstTouchContent: form.querySelector("#firstTouchContent" + form.name).value,
+            firstTouchTerm: form.querySelector("#firstTouchTerm" + form.name).value,
+            firstTouchGclid: form.querySelector("#firstTouchGclid" + form.name).value,
+            lastTouchSource: form.querySelector("#lastTouchSource" + form.name).value,
+            lastTouchMedium: form.querySelector("#lastTouchMedium" + form.name).value,
+            lastTouchCampaign: form.querySelector("#lastTouchCampaign" + form.name).value,
+            lastTouchContent: form.querySelector("#lastTouchContent" + form.name).value,
+            lastTouchTerm: form.querySelector("#lastTouchTerm" + form.name).value,
+            lastTouchGclid: form.querySelector("#lastTouchGclid" + form.name).value,
+            sessionHistory: form.querySelector("#sessionHistory" + form.name).value,
+         })
+
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

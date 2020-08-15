@@ -24,7 +24,7 @@ const inputs = [
         required: true,
     },
     {
-        name: "inquiry_type",
+        name: "inquiryType",
         type: "select",
         label: "Reason",
         placeholder: "",
