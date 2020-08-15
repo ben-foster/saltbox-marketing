@@ -46,7 +46,7 @@ const NetlifyForm = ({ name, action, inputs, buttonCTA, onDark, noAttr }) => {
             netlify-honeypot="bot-field"
         >
             <input type="hidden" name="bot-field" onChange={handleChange} />
-            { inputs.map(({ inputName, type, label, placeholder, required, options }) => {
+            { inputs.map(({ name: inputName, type, label, placeholder, required, options }) => {
                 if(type !== "select" && type !== "textarea") {
 					return (
 						<label key={inputName} htmlFor={inputName}>
