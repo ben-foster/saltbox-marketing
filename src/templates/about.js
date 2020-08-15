@@ -26,18 +26,18 @@ const Page = ({ data }) => {
                 </div>
             </Hero>
             <div id="story" className="bg-white">
-                <div className="max-w-4xl mx-auto flex items-center p-16">
-                    <div className="flex flex-col text-gray-800">
+                <div className="max-w-4xl mx-auto flex items-center px-6 py-16 md:p-16">
+                    <div className="flex flex-col text-gray-800 text-sm md:text-base">
                         <div dangerouslySetInnerHTML={{ __html: content }}></div>
                     </div>
                 </div>
-                <div id="team" className="container mx-auto flex items-center p-16">
+                <div id="team" className="container mx-auto flex items-center p-16 pt-8 md:pt-16">
                     <div className="flex flex-col text-gray-800">
                         <h2>Our Team</h2>
                         <TeamMembers />
                     </div>
                 </div>
-                <div id="pets" className="container mx-auto flex items-center p-16">
+                <div id="pets" className="container mx-auto flex items-center p-16 pt-8 md:pt-16">
                     <div className="flex flex-col text-gray-800">
                         <h2>Our Support Staff</h2>
                         <Pets />

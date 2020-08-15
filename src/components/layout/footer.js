@@ -16,15 +16,15 @@ const Footer = () => (
 				</Link>
 			</div>
 			<div className="flex flex-col items-start justify-start w-full md:w-1/4">
-				<h4 className="px-3 py-1 text-xs font-bold text-white uppercase">Services</h4>
+				<h4 className="px-3 py-1 text-xs font-bold text-white text-center md:text-left uppercase">Services</h4>
 				<FooterNavOne />
 			</div>
 			<div className="flex flex-col items-start justify-start w-full md:w-1/4">
-				<h4 className="px-3 py-1 text-xs font-bold text-white uppercase">Company</h4>
+				<h4 className="px-3 py-1 text-xs font-bold text-white text-center md:text-left uppercase">Company</h4>
 				<FooterNavTwo />
 			</div>
 			<div className="flex flex-col items-start justify-start w-full md:w-1/4">
-				<h4 className="px-3 py-1 text-xs font-bold text-white uppercase">Resources</h4>
+				<h4 className="px-3 py-1 text-xs font-bold text-white text-center md:text-left uppercase">Resources</h4>
 				<FooterNavThree />
 			</div>
 		</div>

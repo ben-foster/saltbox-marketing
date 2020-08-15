@@ -1,7 +1,7 @@
 @tailwind base;
 
 html {
-    @apply bg-blue-900 text-gray-800 antialiased font-sans overflow-x-hidden;
+    @apply bg-white text-gray-800 antialiased font-sans overflow-x-hidden;
     font-size: 18px;
 }
 
@@ -194,11 +194,11 @@ form.on-dark button[type=submit]:disabled {
 }
 
 .blog-post-body p {
-    @apply leading-loose;
+    @apply text-sm leading-loose;
 }
 
 .blog-post-body h2 {
-    @apply mt-6 mb-4 text-3xl text-left;
+    @apply mt-6 mb-4 text-2xl text-left;
 }
 
 .blog-post-body h3 {
@@ -219,6 +219,25 @@ form.on-dark button[type=submit]:disabled {
 
 .blog-post-body figure figcaption {
     @apply text-xs mt-4 italic;
+}
+
+.blog-post-body ul li,
+.blog-post-body ol li {
+    @apply text-sm;
+}
+
+@media (min-width:768px) {
+    .blog-post-body p {
+        @apply text-base;
+    }
+
+    .blog-post-body h2 {
+        @apply text-3xl;
+    }
+    .blog-post-body ul li,
+    .blog-post-body ol li {
+        @apply text-base;
+    }
 }
 
 @responsive {

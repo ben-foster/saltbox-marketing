@@ -43,7 +43,7 @@ const Post = ({ data }) => {
                         <div className="blog-post-body" dangerouslySetInnerHTML={{ __html: content }}></div>    
                     </div>
                 </div>
-                <div className="max-w-3xl mx-auto mt-16">
+                <div className="w-11/12 max-w-3xl mx-auto mt-16">
                     <BlogAuthorCard 
                         name={author.name}
                         jobTitle={author.acf.job_title}

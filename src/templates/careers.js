@@ -15,7 +15,7 @@ const Careers = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
             <Hero>
-                <div className="container mx-auto flex items-center p-20 pt-40 pb-32">
+                <div className="container mx-auto flex items-center px-8 md:p-20 pt-40 pb-32">
                     <div className="flex flex-col w-full text-white text-center">
                         <h1 className="font-bold mb-4" dangerouslySetInnerHTML={{ __html: title }}></h1>
                         { acf.subheader && (
@@ -25,9 +25,9 @@ const Careers = ({ data }) => {
                 </div>
             </Hero>
             <div className="bg-white">
-                <div className="container mx-auto flex items-center p-20">
+                <div className="container mx-auto flex items-center px-6 py-16 md:p-20">
                     <div className="flex flex-col text-gray-800">
-                        <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                        <div className="mb-6" dangerouslySetInnerHTML={{ __html: content }}></div>
 						<JobListings />
                     </div>
                 </div>

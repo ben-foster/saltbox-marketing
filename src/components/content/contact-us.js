@@ -9,7 +9,7 @@ const ContactUs = (props) => {
             <div className="container mx-auto flex flex-col flex-no-wrap items-center px-12 py-16">
                 { title && <h2 className="text-white font-bold text-4xl" dangerouslySetInnerHTML={{ __html: title }}></h2>}
                 { description && <p dangerouslySetInnerHTML={{ __html: description }}></p>}
-                <div className="w-80">
+                <div className="w-72 md:w-80">
                     <ContactForm onDark />
                 </div>
             </div>

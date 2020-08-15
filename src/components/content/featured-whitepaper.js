@@ -7,7 +7,7 @@ const FeaturedWhitepapers = (props) => {
     const { title, description } = props;
     return (
         <div className="bg-white">
-            <div className="container mx-auto flex flex-col flex-no-wrap items-center p-12 py-20">
+            <div className="container mx-auto flex flex-col flex-no-wrap items-center px-6 md:px-12 py-20">
                 { title && <h2 className="mb-16">{title}</h2>}
                 { description && <p>{description}</p>}
                 <StaticQuery

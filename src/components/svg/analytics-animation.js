@@ -331,7 +331,7 @@ const AnalyticsAnimation = ({ className, animateOnHover, inView }) => {
 					<rect id="Middle Box 4" x="423" y="147" width="22" height="8" fill="#5BD0FB"/>
 				</g>
 				<g id="Middle_YoY_5">
-					<animate 
+					<animate
 						id="Middle_YoY_5_be_transparent" 
 						attributeType="xml"
 						attributeName="fill-opacity" 
@@ -341,7 +341,7 @@ const AnalyticsAnimation = ({ className, animateOnHover, inView }) => {
 						to="0"
 						fill="freeze" 
 					/>
-					<animate 
+					<animate
 						id="Middle_YoY_5_turn_opaque" 
 						attributeType="xml"
 						attributeName="fill-opacity" 

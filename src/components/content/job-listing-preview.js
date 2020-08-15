@@ -2,11 +2,10 @@ import React from "react";
 import { Link } from "gatsby";
 
 import FeaturedImage from "../lib/featured-image";
-import { fromPromise } from "apollo-boost";
 
 const JobListingPreview = ({ jobListing }) => {
     return (
-        <div className="p-0 sm:p-4 w-full">
+        <div className="p-0 sm:p-4 mb-4 w-full">
             <div 
                 className="flex flex-col md:flex-row w-full max-w-3xl mx-auto p-6 bg-white rounded-lg shadow"
             >
@@ -20,7 +19,7 @@ const JobListingPreview = ({ jobListing }) => {
                     >
                         <FeaturedImage 
                             featuredImage={jobListing.featured_media}
-                            className="object-contain w-full"
+                            className="object-contain w-24 mx-auto md:w-full"
                         />
                     </Link>
                 </div>

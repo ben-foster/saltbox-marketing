@@ -70,28 +70,28 @@ class ServicePreview extends Component {
         }
 
         return(
-            <div id={service.slug} className="flex flex-col w-full md:w-1/3 px-2 pt-8 xl:pt-4 pb-8 m-2" onMouseEnter={mouseEnterScript}>
+            <div id={service.slug} className="flex flex-col w-full md:w-1/3 px-2 pt-8 xl:pt-4 pb-8" onMouseEnter={mouseEnterScript}>
                 <div className="flex flex-col w-full">
                     <Link 
                         className="w-full h-full flex items-center justify-start"
                         to={service.link.replace("https://wordpress.saltbox.solutions", "")}
                     >
-                        <InView rootMargin="-250px">
+                        <InView rootMargin="-250px 0px -250px 0px">
                             {({ inView, ref, entry }) => (
                                 <>
                                     { service.title === "Web Analytics Solutions" && (
-                                        <div ref={ref}>
-                                            <AnalyticsAnimation className="w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                        <div ref={ref} className="w-full">
+                                            <AnalyticsAnimation className="w-72 md:w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
                                         </div>
                                     )}
                                     { service.title === "Pay-per-Click Advertising" && (
-                                        <div ref={ref}>
-                                            <PPCAnimation className="w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                        <div ref={ref} className="w-full">
+                                            <PPCAnimation className="w-72 md:w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
                                         </div>
                                     )}
                                     { service.title === "Search Engine Optimization" && (
-                                        <div ref={ref}>
-                                            <SEOAnimation className="w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                        <div ref={ref} className="w-full">
+                                            <SEOAnimation className="w-72 md:w-96 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
                                         </div>
                                     )}
                                 </>
@@ -101,7 +101,7 @@ class ServicePreview extends Component {
                     <div className="flex justify-start items-start w-full h-full">
                         <h3 className="mt-6 mb-4 w-full text-center">
                             <Link
-                                className="font-bold text-lg" 
+                                className="font-bold text-2xl md:text-lg" 
                                 to={service.link.replace("https://wordpress.saltbox.solutions", "")}
                                 dangerouslySetInnerHTML={{ __html: service.title }}
                             />
@@ -110,7 +110,7 @@ class ServicePreview extends Component {
                 </div>
                 <div 
                     dangerouslySetInnerHTML={{ __html: service.excerpt }}
-                    className="pt-3 xl:pt-0 pb-2 text-gray-700 text-sm text-center"
+                    className="pt-3 xl:pt-0 pb-2 px-3 text-gray-700 text-base md:text-sm text-left md:text-center"
                 />
                 <Link className="w-full text-blue-800 hover:text-teal-500 text-center font-bold text-sm" to={service.link.replace("https://wordpress.saltbox.solutions", "")}>
                     Learn More &rarr;

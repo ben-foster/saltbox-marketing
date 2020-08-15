@@ -6,7 +6,7 @@ import PostPreview from "./post-preview";
 const HomeFeaturedPosts = (props) => {
     const { title, description } = props;
     return (
-        <div className="bg-white py-12">
+        <div className="bg-white pt-6 pb-10 md:py-12">
             <div className="container mx-auto flex flex-col flex-no-wrap items-center">
                 <div className="flex flex-col">
                     { title && <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>}

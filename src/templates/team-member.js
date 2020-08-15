@@ -14,12 +14,12 @@ const TeamMember = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
             <Hero noCurve>
-                <div className="max-w-4xl mx-auto flex flex-col items-center pt-40 pb-6">
+                <div className="max-w-4xl mx-auto flex flex-col items-center pt-32 md:pt-40 pb-6">
                     <div className="flex flex-col w-full text-white text-center items-center">
-                        <div className="w-full text-left">
+                        <div className="w-full text-left mb-4 md:mb-0 pl-4 md:pl-0">
                             <Link to="/about/#team">&larr; Back to Team</Link>
                         </div>
-                        <div className="w-64 h-64 p-2 mt-2 shadow-md rounded-full bg-white">
+                        <div className="w-48 md:w-64 h-48 md:h-64 p-1 md:p-2 mt-4 md:mt-2 shadow-md rounded-full bg-white">
                             <img src={featured_media.localFile.publicURL} alt={featured_media.alt_text} className="w-full h-full rounded-full shadow-inner" />
                         </div>
                         <h1 className="font-bold mt-4" dangerouslySetInnerHTML={{ __html: title }}></h1>

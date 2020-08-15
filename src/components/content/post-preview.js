@@ -45,7 +45,7 @@ const PostPreview = ({ post }) => {
                         className="text-sm"
                     /> */}
                     <Link className="font-bold text-blue-800 hover:text-teal-500 w-full text-left mt-auto text-sm" to={post.link.replace("https://wordpress.saltbox.solutions", "")}>
-                        Learn more &rarr;
+                        Read more &rarr;
                     </Link>
                 </div>
             </div>
