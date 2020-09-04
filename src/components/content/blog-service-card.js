@@ -24,7 +24,7 @@ const BlogServiceCard = ({ featuredServices, categoryName }) => {
                     Learn more &rarr;
                 </Link>
             </div>
-            <div className="flex flex-col flex-grow-0 items-center justify-start md:ml-12 order-first">
+            <div className="flex flex-col flex-grow-0 items-center justify-start md:ml-12 order-first md:order-last">
                 <FeaturedImage 
                     featuredImage={service.featured_media}
                     className="object-contain w-16 md:w-32 mb-8"
