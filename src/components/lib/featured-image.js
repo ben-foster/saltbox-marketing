@@ -12,12 +12,21 @@ const FeaturedImage = ({ featuredImage, className, style }) => {
             />
         ) : (
             featuredImage.localFile.publicURL && (
-                <img
-                    src={featuredImage.localFile.publicURL}
-                    alt={featuredImage.alt_text}
-                    className={className}
-                    style={style}
-                />
+                process.env.GATSBY_ENV == 'dev' ? (
+                    <img
+                        src={featuredImage.localFile.publicURL}
+                        alt={featuredImage.alt_text}
+                        className={className}
+                        style={style}
+                    />
+                ) : (
+                    <img
+                        data-src={featuredImage.localFile.publicURL}
+                        alt={featuredImage.alt_text}
+                        className={`lozad ${className}`}
+                        style={style}
+                    />
+                )
             )
         )
     ) : (
