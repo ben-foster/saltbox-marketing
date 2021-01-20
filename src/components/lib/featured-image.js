@@ -1,6 +1,8 @@
 import React from "react";
 import Img from "gatsby-image";
 
+import placeholder from '../../images/placeholder.png';
+
 const FeaturedImage = ({ featuredImage, className, style }) => { 
     return ( featuredImage ? (
         featuredImage.localFile.childImageSharp ? (
@@ -12,7 +14,7 @@ const FeaturedImage = ({ featuredImage, className, style }) => {
             />
         ) : (
             featuredImage.localFile.publicURL && (
-                process.env.GATSBY_ENV == 'dev' ? (
+                process.env.GATSBY_ENV !== 'prod' ? (
                     <img
                         src={featuredImage.localFile.publicURL}
                         alt={featuredImage.alt_text}
@@ -21,6 +23,7 @@ const FeaturedImage = ({ featuredImage, className, style }) => {
                     />
                 ) : (
                     <img
+                        src={placeholder}
                         data-src={featuredImage.localFile.publicURL}
                         alt={featuredImage.alt_text}
                         className={`lozad ${className}`}

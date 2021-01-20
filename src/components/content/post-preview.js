@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 import FeaturedImage from "../lib/featured-image";
+import placeholder from '../../images/placeholder.png';
 
 const PostPreview = ({ post }) => {
     const category = post.categories.find(category => category.name !== "Featured");
@@ -20,7 +21,13 @@ const PostPreview = ({ post }) => {
                 <div className="p-4">
                     {/* Category */}
                     <div className="flex flex-row items-center">
-                        <img className="w-4 h-4 mr-4" src={ category.acf.icon.localFile.publicURL } alt={category.name} />
+                        {
+                            process.env.GATSBY_ENV !== 'prod' ? (
+                                <img src={ category.acf.icon.localFile.publicURL } alt={category.name} className="w-4 h-4 mr-4" />
+                            ) : (
+                                <img src={placeholder} data-src={ category.acf.icon.localFile.publicURL } alt={category.name} className="lozad w-4 h-4 mr-4" />
+                            )
+                        }
                         <h4 className="uppercase text-blue-800 text-sm md:text-xs lg:text-sm" dangerouslySetInnerHTML={{ __html: category.name }}></h4>
                     </div>
                     {/* Title */}

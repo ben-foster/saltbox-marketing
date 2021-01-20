@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 import logo from "../../images/saltbox-logo-horizontal-white.svg";
+import placeholder from '../../images/placeholder.png';
 import FooterNavOne from "./footer-nav-one";
 import FooterNavTwo from "./footer-nav-two";
 import FooterNavThree from "./footer-nav-three";
@@ -12,7 +13,13 @@ const Footer = () => (
 		<div className="container pt-8 pb-12 mx-auto flex flex-col md:flex-row">
 			<div className="flex flex-col items-center justify-center w-full md:w-1/4">
 				<Link to="/">
-					<img className="w-40 mb-6" src={logo} alt="saltbox logo"/>
+					{
+                        process.env.GATSBY_ENV !== 'prod' ? (
+                            <img src={logo} alt="saltbox logo" className="w-40 mb-6" />
+                        ) : (
+                            <img src={placeholder} data-src={logo} alt="saltbox logo" className="lozad w-40 mb-6" />
+                        )
+                    }
 				</Link>
 			</div>
 			<div className="flex flex-col items-start justify-start w-full md:w-1/4">

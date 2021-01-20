@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import placeholder from '../../images/placeholder.png';
+
 const TeamMember = ({ member }) => {
     return (
         <Link 
@@ -8,7 +10,13 @@ const TeamMember = ({ member }) => {
             to={member.link.replace("https://wordpress.saltbox.solutions", "")}
         >
             <div className="w-48 h-48 p-2 shadow-md rounded-full bg-white">
-                <img src={member.featured_media.localFile.publicURL} alt={member.featured_media.alt_text} className="w-full h-full object-cover rounded-full shadow-inner" />
+                {
+                    process.env.GATSBY_ENV !== 'prod' ? (
+                        <img src={member.featured_media.localFile.publicURL} alt={member.featured_media.alt_text} className="w-full h-full object-cover rounded-full shadow-inner" />
+                    ) : (
+                        <img src={placeholder} data-src={member.featured_media.localFile.publicURL} alt={member.featured_media.alt_text} className="lozad w-full h-full object-cover rounded-full shadow-inner" />
+                    )
+                }
             </div>
             <h3 className="font-bold text-blue-600" dangerouslySetInnerHTML={{ __html: member.title }}></h3>
             <h4 className="font-light text-sm" dangerouslySetInnerHTML={{ __html: member.acf.job_title }}></h4>

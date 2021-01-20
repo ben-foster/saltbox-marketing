@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
+import placeholder from '../images/placeholder.png';
 import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
@@ -26,7 +27,13 @@ const Post = ({ data }) => {
                         <p className="text-xl md:text-2xl font-light text-white italic leading-snug pt-2 mb-8" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                     )}
                     <p className="flex flex-row text-sm mb-3 self-start items-center">
-                        <img className="w-12 h-12 mr-3 rounded-full shadow-md" src={author.acf.avatar_img.localFile.publicURL} alt={author.name} />
+                        {
+                            process.env.GATSBY_ENV !== 'prod' ? (
+                                <img src={author.acf.avatar_img.localFile.publicURL} alt={author.name} className="w-12 h-12 mr-3 rounded-full shadow-md" />
+                            ) : (
+                                <img src={placeholder} data-src={author.acf.avatar_img.localFile.publicURL} alt={author.name} className="lozad w-12 h-12 mr-3 rounded-full shadow-md" />
+                            )
+                        }
                         <span className="text-white pr-1">by</span>
                         <Link 
                             to={author.link.replace("https://wordpress.saltbox.solutions", "")}

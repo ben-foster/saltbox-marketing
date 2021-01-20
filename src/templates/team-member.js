@@ -20,7 +20,13 @@ const TeamMember = ({ data }) => {
                             <Link to="/about/#team">&larr; Back to Team</Link>
                         </div>
                         <div className="w-48 md:w-64 h-48 md:h-64 p-1 md:p-2 mt-4 md:mt-2 shadow-md rounded-full bg-white">
-                            <img src={featured_media.localFile.publicURL} alt={featured_media.alt_text} className="w-full h-full rounded-full shadow-inner" />
+                        {
+                            process.env.GATSBY_ENV !== 'prod' ? (
+                                <img src={featured_media.localFile.publicURL} alt={featured_media.alt_text} className="w-full h-full rounded-full shadow-inner" />
+                            ) : (
+                                <img src={placeholder} data-src={featured_media.localFile.publicURL} alt={featured_media.alt_text} className="lozad w-full h-full rounded-full shadow-inner" />
+                            )
+                        }
                         </div>
                         <h1 className="font-bold mt-4" dangerouslySetInnerHTML={{ __html: title }}></h1>
                         { acf.job_title && (
