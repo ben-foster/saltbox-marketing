@@ -6,6 +6,7 @@ html {
 }
 
 h1,h2,h3,h4,h5,a,span,button,ul,ol,p {
+    @apply font-sans;
     font-family: "Ubuntu";
 }
 
