@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 
+import placeholder from '../images/placeholder.png';
 import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
