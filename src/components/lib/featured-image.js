@@ -1,6 +1,8 @@
 import React from "react";
 import Img from "gatsby-image";
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 const FeaturedImage = ({ featuredImage, className, style }) => { 
     return ( featuredImage ? (
         featuredImage.localFile.childImageSharp ? (
@@ -12,7 +14,7 @@ const FeaturedImage = ({ featuredImage, className, style }) => {
             />
         ) : (
             featuredImage.localFile.publicURL && (
-                <img
+                <LazyLoadImage
                     src={featuredImage.localFile.publicURL}
                     alt={featuredImage.alt_text}
                     className={className}
