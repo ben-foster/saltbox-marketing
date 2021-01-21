@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
+import FeaturedImage from "../components/lib/featured-image";
 
 const TeamMember = ({ data }) => {
     const { title, content, yoast_meta, acf, featured_media } = data.wordpressWpTeamMembers;
@@ -20,7 +21,11 @@ const TeamMember = ({ data }) => {
                             <Link to="/about/#team">&larr; Back to Team</Link>
                         </div>
                         <div className="w-48 md:w-64 h-48 md:h-64 p-1 md:p-2 mt-4 md:mt-2 shadow-md rounded-full bg-white">
-                            <img src={featured_media.localFile.publicURL} alt={featured_media.alt_text} className="w-full h-full rounded-full shadow-inner" />
+                            <FeaturedImage 
+                                featuredImage={featured_media}
+                                className="w-full h-full rounded-full shadow-inner"
+                            />
+                            {/* <img src={featured_media.localFile.publicURL} alt={featured_media.alt_text} className="w-full h-full rounded-full shadow-inner" /> */}
                         </div>
                         <h1 className="font-bold mt-4" dangerouslySetInnerHTML={{ __html: title }}></h1>
                         { acf.job_title && (

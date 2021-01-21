@@ -19,9 +19,6 @@ const ThankYou = ({ data }) => {
 						<div className="w-full text-left">
 							<Link to="/">&larr; Back to Home</Link>
 						</div>
-						{/* <div className="w-64 h-64 p-2 mt-2 shadow-md rounded-full bg-white">
-							<img src={featured_media.localFile.publicURL} alt={featured_media.alt_text} className="w-full h-full rounded-full shadow-inner" />
-						</div> */}
 						<h1 className="font-bold mt-20 mb-10" dangerouslySetInnerHTML={{ __html: title }}></h1>
 					</div>
 				</div>

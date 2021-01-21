@@ -7,6 +7,7 @@ import Hero from "../components/content/hero";
 import FeaturedPosts from "../components/content/featured-posts";
 import BlogAuthorCard from "../components/content/blog-author-card";
 import BlogServiceCard from "../components/content/blog-service-card";
+import FeaturedImage from "../components/lib/featured-image";
 
 const Post = ({ data }) => {
     const { title, content, author, categories, acf, yoast_meta } = data.wordpressPost;
@@ -26,7 +27,11 @@ const Post = ({ data }) => {
                         <p className="text-xl md:text-2xl font-light text-white italic leading-snug pt-2 mb-8" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
                     )}
                     <p className="flex flex-row text-sm mb-3 self-start items-center">
-                        <img className="w-12 h-12 mr-3 rounded-full shadow-md" src={author.acf.avatar_img.localFile.publicURL} alt={author.name} />
+                        <FeaturedImage 
+                            featuredImage={author.acf.avatar_img}
+                            className="w-12 h-12 mr-3 rounded-full shadow-md"
+                        />
+                        {/* <img className="w-12 h-12 mr-3 rounded-full shadow-md" src={author.acf.avatar_img.localFile.publicURL} alt={author.name} /> */}
                         <span className="text-white pr-1">by</span>
                         <Link 
                             to={author.link.replace("https://wordpress.saltbox.solutions", "")}
@@ -48,7 +53,7 @@ const Post = ({ data }) => {
                         name={author.name}
                         jobTitle={author.acf.job_title}
                         bio={author.description}
-                        imgSrc={author.acf.avatar_img.localFile.publicURL}
+                        image={author.acf.avatar_img}
                     />
                 </div>
                 <div className="max-w-3xl mx-auto mt-16">
