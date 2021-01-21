@@ -17,12 +17,12 @@ const Layout = ({ children }) => (
                 })(window,document,'script','dataLayer','GTM-WWXBKHH');
             `}</script>
         </Helmet>
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWXBKHH" height="0" width="0" style={{ display: "none", visibility:"hidden" }}></iframe></noscript>
         <Header />
         <div>
             <main>{children}</main>
         </div>
         <Footer />
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWXBKHH" height="0" width="0" style={{ display: "none", visibility:"hidden" }}></iframe></noscript>
     </>
 )
 
