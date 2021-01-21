@@ -12,7 +12,7 @@ const HeaderLogo = () => (
                 alt="saltbox logo"
                 className="w-32"
                 width="150px"
-                height="auto"
+                height="54px"
             />
             {/* <img 
                 className="w-32"
