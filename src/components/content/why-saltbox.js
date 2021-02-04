@@ -10,7 +10,7 @@ const WhySaltbox = ({ className }) => {
                     <LazyLoadImage
                         src="https://wordpress.saltbox.solutions/wp-content/uploads/2020/07/no-commitments-icon-1.svg"
                         alt="no commitments icon"
-                        className="my-4"
+                        className="my-4 w-32 mx-auto"
                     />
                     {/* <img src="https://wordpress.saltbox.solutions/wp-content/uploads/2020/07/no-commitments-icon-1.svg" alt="" className="my-4" /> */}
                     <h3 className="font-bold text-center text-xl mb-6">No Commitments</h3>
@@ -22,7 +22,7 @@ const WhySaltbox = ({ className }) => {
                     <LazyLoadImage
                         src="https://wordpress.saltbox.solutions/wp-content/uploads/2020/07/fixed-fee-icon-1.svg"
                         alt="no variable fees icon"
-                        className="my-4"
+                        className="my-4 w-32 mx-auto"
                     />
                     {/* <img src="https://wordpress.saltbox.solutions/wp-content/uploads/2020/07/fixed-fee-icon-1.svg" alt="" className="my-4" /> */}
                     <h3 className="font-bold text-center text-xl mb-6">No Variable Fees</h3>
@@ -34,7 +34,7 @@ const WhySaltbox = ({ className }) => {
                     <LazyLoadImage
                         src="https://wordpress.saltbox.solutions/wp-content/uploads/2020/07/transparency-icon.svg"
                         alt="transparency icon"
-                        className="my-4"
+                        className="my-4 w-32 mx-auto"
                     />
                     {/* <img src="https://wordpress.saltbox.solutions/wp-content/uploads/2020/07/transparency-icon.svg" alt="" className="my-4" /> */}
                     <h3 className="font-bold text-center text-xl mb-6">Full Transparency</h3>
