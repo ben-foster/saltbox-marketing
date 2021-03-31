@@ -242,7 +242,13 @@ form.on-dark button[type=submit]:disabled {
 }
 
 .blog-post-body iframe {
-    @apply max-w-full h-auto sm:w-128 sm:h-64;
+    @apply max-w-full h-auto;
+}
+
+@media (min-width:768px) {
+    .blog-post-body iframe {
+        @apply w-128 h-64;
+    }
 }
 
 @responsive {
