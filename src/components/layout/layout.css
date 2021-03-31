@@ -241,6 +241,10 @@ form.on-dark button[type=submit]:disabled {
     }
 }
 
+.blog-post-body iframe {
+    @apply max-w-full h-auto sm:w-128 sm:h-64;
+}
+
 @responsive {
     .text-shadow {
       text-shadow: 0 2px 4px rgba(0,0,0,0.10);
