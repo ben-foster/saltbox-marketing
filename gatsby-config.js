@@ -35,15 +35,10 @@ module.exports = {
 				fonts: {
 					google: [
 						{
-							family: `Ubuntu`,
-							variants: [`300`, `300i`, `400`, `700`],
+							family: `Poppins`,
+							variants: [`300`, `300i`, `500`, `700`],
 							fontDisplay: `swap`,
-						},
-						{
-							family: `Ubuntu Mono`,
-							variants: [`400`],
-							fontDisplay: `swap`,
-						},
+						}
 					],
 				},
 				// formatAgents: {

@@ -16,7 +16,10 @@ module.exports = {
         '128': '32rem',
       },
       colors: {
-        violet: '#20124D',
+        violet: {
+          100: '#20124D',
+          200: '#45007C'
+        },
         gray: {
           100: '#EDF2F7',
           200: '#DDE5EE',

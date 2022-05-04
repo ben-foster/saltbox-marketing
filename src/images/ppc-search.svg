@@ -1,7 +1,7 @@
 <svg width="823" height="574" viewBox="0 0 823 574" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_dddddd_621_179)">
 <rect x="117" y="90" width="589" height="341" rx="18.6617" fill="white"/>
-<rect x="198.898" y="106.898" width="242.204" height="13.2037" rx="6.60184" stroke="#DEDEDE" stroke-width="1.79631"/>
+<rect x="198.898" y="106.898" width="242.204" height="13.2037" rx="6.60184" stroke="#DEDEDE" strokeWidth="1.79631"/>
 <rect x="657" y="108" width="28" height="13" rx="1.40941" fill="#6D00C3"/>
 <rect x="138" y="109" width="44" height="8" fill="#6D00C3"/>
 <rect x="639" y="108" width="3" height="3" fill="#C4C4C4"/>
@@ -13,11 +13,11 @@
 <rect x="649" y="118" width="3" height="3" fill="#C4C4C4"/>
 <rect x="644" y="118" width="3" height="3" fill="#C4C4C4"/>
 <rect x="639" y="118" width="3" height="3" fill="#C4C4C4"/>
-<circle cx="427" cy="113" r="2.57587" stroke="#6D00C3" stroke-width="0.848259"/>
+<circle cx="427" cy="113" r="2.57587" stroke="#6D00C3" strokeWidth="0.848259"/>
 <rect width="1" height="5" transform="matrix(0.707099 -0.707115 0.707099 0.707115 429 115)" fill="#6D00C3"/>
 <rect x="416" y="110" width="2" height="5" rx="1" fill="#6D00C3"/>
 <rect x="417" y="116" width="1" height="2" fill="#6D00C3"/>
-<path d="M415 115C416.565 116.302 417.441 116.364 419 115" stroke="#6D00C3" stroke-width="0.678607"/>
+<path d="M415 115C416.565 116.302 417.441 116.364 419 115" stroke="#6D00C3" strokeWidth="0.678607"/>
 <rect x="198" y="164" width="153" height="5" fill="#6D00C3"/>
 <rect x="198" y="173" width="111" height="3" fill="#BC68FF"/>
 <rect x="198" y="181" width="142" height="3" fill="#BC68FF"/>

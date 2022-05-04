@@ -12,6 +12,7 @@ import HowToGetStarted from "../components/content/how-to-get-started";
 import AnalyticsAnimation from "../components/svg/analytics-animation";
 import PPCAnimation from "../components/svg/ppc-animation";
 import SEOAnimation from "../components/svg/seo-animation";
+import ppcBox from "../images/ppc-cube.svg"
 
 const Service = ({ data }) => {
     const { title, content, acf, yoast_meta } = data.wordpressWpServices;
@@ -22,10 +23,10 @@ const Service = ({ data }) => {
                 title={yoast_meta.yoast_wpseo_title} 
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
-            <Hero>
+            <Hero className="bg-violet-200">
                 <div className="container mx-auto flex items-center pt-40 py-32">
                     <div className="flex flex-col w-full text-white relative">
-                        <h1 className="text-center font-bold mb-40" dangerouslySetInnerHTML={{ __html: title }}></h1>
+                        {/* <h1 className="text-center font-bold mb-40" dangerouslySetInnerHTML={{ __html: title }}></h1> */}
                         <InView rootMargin="-250px 0px -250px 0px">
                             {({ inView, ref, entry }) => (
                                 <>
@@ -35,8 +36,22 @@ const Service = ({ data }) => {
                                         </div>
                                     )}
                                     { title === "Pay-per-Click Advertising" && (
-                                        <div ref={ref} className="z-50 -mt-16 -mb-48">
-                                            <PPCAnimation className="w-72 md:w-1/2 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                        // <div ref={ref} className="z-50 -mt-16 -mb-48">
+                                        //     <PPCAnimation className="w-72 md:w-1/2 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                        // </div>
+                                        
+                                        <div>
+                                            <div className="container mx-auto flex flex-col md:flex-row justify-center">
+                                                <div className="flex flex-col items-start justify-center w-full md:w-1/3 px-6 md:px-0 pb-3 md:pb-0">
+                                                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2" dangerouslySetInnerHTML={{ __html: acf.subservice_one_title }}></h2>
+                                                    <div className="max-w-sm" dangerouslySetInnerHTML={{ __html: acf.subservice_one_description }}></div>
+                                                </div>
+
+                                                <div className="flex items-center justify-center w-full md:w-auto px-6 py-12">
+                                                    {/* <FeaturedImage className="w-128 rounded shadow-lg" featuredImage={ppcBox} /> */}
+                                                    <img src={ppcBox}/>
+                                                </div>
+                                            </div>
                                         </div>
                                     )}
                                     { title === "Search Engine Optimization" && (
@@ -51,11 +66,18 @@ const Service = ({ data }) => {
                 </div>
             </Hero>
             <div className="bg-white">
-                <div className="container mx-auto flex items-center pt-20">
-                    <div className="max-w-4xl mx-auto flex items-center px-6 md:px-16 py-8 text-gray-800 text-base">
-                        <p className="w-full" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
-                    </div>
-                </div>
+                {/* <InView rootMargin="-250px 0px -250px 0px">
+                    {({ inView, ref, entry }) => (
+                        <>
+                        { title === "Pay-per-Click Advertising" && (
+                            <div ref={ref} className="z-50 -mt-16 -mb-48">
+                                <PPCAnimation className="w-72 md:w-1/2 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                            </div>
+                        )}
+                        </>
+                    )}
+                </InView> */}
+
                 <div className="container mx-auto flex flex-col md:flex-row justify-center">
                     <div className="flex items-center justify-center w-full md:w-auto px-6 py-12">
                         <FeaturedImage className="w-128 rounded shadow-lg" featuredImage={acf.subservice_one_image} />
@@ -84,7 +106,6 @@ const Service = ({ data }) => {
                     </div>
                 </div>
                 <div className="container mx-auto">
-                    <WhySaltbox />
                     <HowToGetStarted />
                 </div>
                 <ContactUs title="Get Started Today" fillColor="text-gray-100" />
