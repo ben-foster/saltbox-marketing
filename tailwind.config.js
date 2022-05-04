@@ -1,5 +1,9 @@
 module.exports = {
   theme: {
+
+    backgroundImage: {
+      'footer-texture': "url('../../images/footer-bg.svg')",
+    },
     extend: {
       spacing: {
         '72': '18rem',
@@ -12,6 +16,7 @@ module.exports = {
         '128': '32rem',
       },
       colors: {
+        violet: '#20124D',
         gray: {
           100: '#EDF2F7',
           200: '#DDE5EE',
