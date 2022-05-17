@@ -23,48 +23,43 @@ const Service = ({ data }) => {
                 title={yoast_meta.yoast_wpseo_title} 
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
-            <Hero className="bg-violet-200">
-                <div className="container mx-auto flex items-center pt-40 py-32">
-                    <div className="flex flex-col w-full text-white relative">
-                        {/* <h1 className="text-center font-bold mb-40" dangerouslySetInnerHTML={{ __html: title }}></h1> */}
-                        <InView rootMargin="-250px 0px -250px 0px">
-                            {({ inView, ref, entry }) => (
-                                <>
-                                    { title === "Web Analytics Solutions" && (
-                                        <div ref={ref} className="z-50 -mt-16 -mb-48">
-                                            <AnalyticsAnimation className="w-72 md:w-1/2 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
-                                        </div>
-                                    )}
-                                    { title === "Pay-per-Click Advertising" && (
-                                        // <div ref={ref} className="z-50 -mt-16 -mb-48">
-                                        //     <PPCAnimation className="w-72 md:w-1/2 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
-                                        // </div>
-                                        
-                                        <div>
-                                            <div className="container mx-auto flex flex-col md:flex-row justify-center">
-                                                <div className="flex flex-col items-start justify-center w-full md:w-1/3 px-6 md:px-0 pb-3 md:pb-0">
-                                                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2" dangerouslySetInnerHTML={{ __html: acf.subservice_one_title }}></h2>
-                                                    <div className="max-w-sm" dangerouslySetInnerHTML={{ __html: acf.subservice_one_description }}></div>
-                                                </div>
 
-                                                <div className="flex items-center justify-center w-full md:w-auto px-6 py-12">
-                                                    {/* <FeaturedImage className="w-128 rounded shadow-lg" featuredImage={ppcBox} /> */}
-                                                    <img src={ppcBox}/>
-                                                </div>
+            <InView rootMargin="-250px 0px -250px 0px">
+                {({ inView, ref, entry }) => (
+                <Hero className="bg-ppc-texture bg-auto bg-no-repeat bg-center overflow-visible">
+                    <div className="container mx-auto flex items-center pt-40 py-32">
+                        <div className="flex flex-col w-full text-white relative">
+                            <>
+                                { title === "Web Analytics Solutions" && (
+                                    <div ref={ref} className="z-50 -mt-16 -mb-48">
+                                        <AnalyticsAnimation className="w-72 md:w-1/2 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                    </div>
+                                )}
+                                { title === "Pay-per-Click Advertising" && (
+                                    <div>
+                                        <div className="container mx-auto flex flex-col md:flex-row justify-center">
+                                            <div className="flex flex-col items-start justify-center w-full md:w-1/3 px-6 md:px-0 pb-3 md:pb-0">
+                                                <h2 className="font-bold text-2xl md:text-3xl text-left mb-2" dangerouslySetInnerHTML={{ __html: acf.subservice_one_title }}></h2>
+                                                <div className="max-w-sm" dangerouslySetInnerHTML={{ __html: acf.subservice_one_description }}></div>
+                                            </div>
+
+                                            <div className="flex items-center justify-center w-full md:w-auto px-6 py-12">
+                                                <img src={ppcBox} width="250"/>
                                             </div>
                                         </div>
-                                    )}
-                                    { title === "Search Engine Optimization" && (
-                                        <div ref={ref} className="z-50 -mt-16 -mb-48">
-                                            <SEOAnimation className="w-72 md:w-1/2 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
-                                        </div>
-                                    )}
-                                </>
-                            )}
-                        </InView>
+                                    </div>
+                                )}
+                                { title === "Search Engine Optimization" && (
+                                    <div ref={ref} className="z-50 -mt-16 -mb-48">
+                                        <SEOAnimation className="w-72 md:w-1/2 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                    </div>
+                                )}
+                            </>
+                        </div>
                     </div>
-                </div>
-            </Hero>
+                </Hero>
+            )}
+            </InView>
             <div className="bg-white">
                 {/* <InView rootMargin="-250px 0px -250px 0px">
                     {({ inView, ref, entry }) => (

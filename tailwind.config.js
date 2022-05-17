@@ -3,6 +3,7 @@ module.exports = {
 
     backgroundImage: {
       'footer-texture': "url('../../images/footer-bg.svg')",
+      'ppc-texture': "url('../../images/ppc-bg.svg')"
     },
     extend: {
       spacing: {
