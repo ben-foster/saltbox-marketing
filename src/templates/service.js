@@ -13,7 +13,9 @@ import AnalyticsAnimation from "../components/svg/analytics-animation";
 import PPCAnimation from "../components/svg/ppc-animation";
 import SEOAnimation from "../components/svg/seo-animation";
 import ppcBox from "../images/ppc-cube.svg"
+import seoBox from "../images/seo-cube.svg"
 import PPCComponent from "../components/content/ppc";
+import SEOComponent from "../components/content/seo";
 
 const Service = ({ data }) => {
     const { title, content, acf, yoast_meta } = data.wordpressWpServices;
@@ -27,7 +29,7 @@ const Service = ({ data }) => {
 
             <InView rootMargin="-250px 0px -250px 0px">
                 {({ inView, ref, entry }) => (
-                <Hero className="bg-ppc-texture bg-cover bg-no-repeat bg-center overflow-visible">
+                <Hero className={`${title === "Pay-per-Click Advertising" ? 'bg-ppc-bg' : title === "Search Engine Optimization" ? "bg-seo-bg" : "bg-seo-bg"} bg-cover bg-no-repeat bg-center overflow-visible`}>
                     <div className="container mx-auto flex items-center pt-40 py-32">
                         <div className="flex flex-col w-full text-white relative">
                             <>
@@ -37,7 +39,7 @@ const Service = ({ data }) => {
                                     </div>
                                 )}
                                 { title === "Pay-per-Click Advertising" && (
-                                    <div>
+                                    <>
                                         <div className="container mx-auto flex flex-col md:flex-row justify-center">
                                             <div className="flex flex-col items-start justify-center w-full md:w-1/3 px-6 md:px-0 pb-3 md:pb-0">
                                                 <h2 className="font-bold text-2xl md:text-3xl text-left mb-0">Pay-per-Click (PPC)</h2>
@@ -55,12 +57,28 @@ const Service = ({ data }) => {
                                                 <img className="md:w-96 lg:w-96 sm:w-40 xs:w-40" src={ppcBox}/>
                                             </div>
                                         </div>
-                                    </div>
+                                    </>
                                 )}
                                 { title === "Search Engine Optimization" && (
-                                    <div ref={ref} className="z-50 -mt-16 -mb-48">
-                                        <SEOAnimation className="w-72 md:w-1/2 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
-                                    </div>
+                                    <>
+                                        <div className="container mx-auto flex flex-col md:flex-row justify-center">
+                                            <div className="flex flex-col items-start justify-center w-full md:w-1/3 px-6 md:px-0 pb-3 md:pb-0">
+                                                <h2 className="font-bold text-2xl md:text-3xl text-left mb-0">Search Engine Optimization (SEO)</h2>
+                                                <small className="font-bolder mb-2">Search Engine Optimization Program</small>
+                                                <div className="max-w-sm text-xs">
+                                                    <span>SEO is a great way to earn traffic and leads from platforms like Google and Bing. Winning page-one ranks for competitive queries is no easy task. It takes a strong strategy and rigorous execution of technical optimization strategies, content production, content optimization, and promotion.</span>
+                                                </div>
+
+                                                <button type="button" className="mt-3 inline-flex items-center px-4 py-2 rounded-sm border border-transparent text-sm leading-4 font-medium shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                                                    Get started
+                                                </button>
+                                            </div>
+
+                                            <div className="flex items-center justify-center w-full md:w-auto px-6 py-12">
+                                                <img className="md:w-96 lg:w-96 sm:w-40 xs:w-40" src={seoBox}/>
+                                            </div>
+                                        </div>
+                                    </>
                                 )}
                             </>
                         </div>
@@ -72,11 +90,12 @@ const Service = ({ data }) => {
                 <InView rootMargin="-250px 0px -250px 0px">
                     {({ inView, ref, entry }) => (
                         <>
-                        { title === "Pay-per-Click Advertising" && (
-                            <>
+                            { title === "Pay-per-Click Advertising" && (
                                 <PPCComponent/>
-                            </>
-                        )}
+                            )}
+                            { title === "Search Engine Optimization" && (
+                                <SEOComponent/>
+                            )}
                         </>
                     )}
                 </InView>

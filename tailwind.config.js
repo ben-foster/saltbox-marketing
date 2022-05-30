@@ -3,7 +3,8 @@ module.exports = {
 
     backgroundImage: {
       'footer-texture': "url('../../images/footer-bg.svg')",
-      'ppc-texture': "url('../../images/ppc-bg.svg')"
+      'ppc-bg': "url('../../images/ppc-bg.svg')",
+      'seo-bg': "url('../../images/seo-bg.svg')"
     },
     extend: {
       spacing: {
@@ -47,6 +48,7 @@ module.exports = {
         },
         blue: {
           100: '#B3ECFF',
+          150: '#2617A2',
           200: '#81DEFD',
           300: '#5BD0FB',
           400: '#40C3F7',
