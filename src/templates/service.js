@@ -99,8 +99,6 @@ const Service = ({ data }) => {
                         </>
                     )}
                 </InView>
-
-                <ContactUs title="Get Started Today" fillColor="text-gray-100" />
             </div>
         </Layout>
     )

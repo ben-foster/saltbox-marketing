@@ -4,6 +4,7 @@ import ppcDisplayRetargeting from "../../images/display-retargeting.svg"
 import ppcLandingPage from "../../images/landing-page.svg"
 import ppcAnalyticsReporting from "../../images/analytics-reporting.svg"
 import HowToGetStarted from "./how-to-get-started";
+import ContactUs from "./contact-us";
 
 const PPC = () => {
     return (
@@ -58,6 +59,8 @@ const PPC = () => {
             <div className="container mx-auto">
                 <HowToGetStarted type="ppc"/>
             </div>
+
+            <ContactUs bgColor="bg-violet-300"/>
         </>
     );
 };

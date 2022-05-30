@@ -4,6 +4,7 @@ import seoTechnicalSeo from "../../images/technical-seo.svg"
 import seoContent from "../../images/seo-content.svg"
 import seoRankTracking from "../../images/rank-tracking.svg"
 import HowToGetStarted from "./how-to-get-started";
+import ContactUs from "./contact-us";
 
 const SEO = () => {
     return (
@@ -58,6 +59,8 @@ const SEO = () => {
             <div className="container mx-auto">
                 <HowToGetStarted type="seo"/>
             </div>
+
+            <ContactUs bgColor="bg-blue-150"/>
         </>
     );
 };
