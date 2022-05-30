@@ -3,6 +3,7 @@ import ppcSearch from "../../images/paid-search.svg"
 import ppcDisplayRetargeting from "../../images/display-retargeting.svg"
 import ppcLandingPage from "../../images/landing-page.svg"
 import ppcAnalyticsReporting from "../../images/analytics-reporting.svg"
+import HowToGetStarted from "./how-to-get-started";
 
 const PPC = () => {
     return (
@@ -52,6 +53,10 @@ const PPC = () => {
                 <div className="flex items-center justify-center w-full md:w-auto">
                     <img className="w-auto" src={ppcAnalyticsReporting}/>
                 </div>
+            </div>
+
+            <div className="container mx-auto">
+                <HowToGetStarted type="ppc"/>
             </div>
         </>
     );

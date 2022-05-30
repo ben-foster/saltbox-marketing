@@ -100,9 +100,6 @@ const Service = ({ data }) => {
                     )}
                 </InView>
 
-                <div className="container mx-auto">
-                    <HowToGetStarted />
-                </div>
                 <ContactUs title="Get Started Today" fillColor="text-gray-100" />
             </div>
         </Layout>

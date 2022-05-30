@@ -3,6 +3,7 @@ import seoResearchStrategy from "../../images/research-strategy.svg"
 import seoTechnicalSeo from "../../images/technical-seo.svg"
 import seoContent from "../../images/seo-content.svg"
 import seoRankTracking from "../../images/rank-tracking.svg"
+import HowToGetStarted from "./how-to-get-started";
 
 const SEO = () => {
     return (
@@ -52,6 +53,10 @@ const SEO = () => {
                 <div className="flex items-center justify-center w-full md:w-auto">
                     <img className="w-auto" src={seoRankTracking}/>
                 </div>
+            </div>
+
+            <div className="container mx-auto">
+                <HowToGetStarted type="seo"/>
             </div>
         </>
     );
