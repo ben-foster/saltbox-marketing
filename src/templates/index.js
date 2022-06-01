@@ -56,10 +56,8 @@ const IndexPage = ({ data }) => {
 				title={acf.recent_posts.recent_posts_title}
 				description={acf.recent_posts.recent_posts_description}
 			/>
-			<ContactUs
-				title={acf.contact_us.contact_us_title}
-				description={acf.contact_us.contact_us_description}
-			/>
+
+			<ContactUs bgColor="bg-blue-violet" contactColor="bg-contact-purple"/>
 		</Layout>
 	)
 }
