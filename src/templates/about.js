@@ -26,7 +26,7 @@ const Page = ({ data }) => {
                 </div>
             </Hero>
             <div id="story" className="bg-white">
-                <div className="max-w-4xl mx-auto flex items-center px-6 py-16 md:p-16">
+                <div className="max-w-4xl mx-auto flex items-center px-6 md:px-16 pt-16">
                     <div className="flex flex-col text-gray-800 text-sm md:text-base">
                         <div dangerouslySetInnerHTML={{ __html: content }}></div>
                     </div>
