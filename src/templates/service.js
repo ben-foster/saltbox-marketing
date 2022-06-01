@@ -29,13 +29,27 @@ const Service = ({ data }) => {
 
             <InView rootMargin="-250px 0px -250px 0px">
                 {({ inView, ref, entry }) => (
-                <Hero className={`${title === "Pay-per-Click Advertising" ? 'bg-ppc-bg' : title === "Search Engine Optimization" ? "bg-seo-bg" : "bg-seo-bg"} bg-cover bg-no-repeat bg-center overflow-visible`}>
+                <Hero className={`${title === "Pay-per-Click Advertising" ? 'bg-ppc-bg' : title === "Search Engine Optimization" ? "bg-seo-bg" : "bg-careers-bg"} bg-cover bg-no-repeat bg-center overflow-visible`}>
                     <div className="container mx-auto flex items-center pt-40 py-32">
                         <div className="flex flex-col w-full text-white relative">
                             <>
                                 { title === "Web Analytics Solutions" && (
-                                    <div ref={ref} className="z-50 -mt-16 -mb-48">
-                                        <AnalyticsAnimation className="w-72 md:w-1/2 h-auto mx-auto shadow-md mb-4" animateOnHover={animateOnHover} inView={inView} />
+                                    <div className="container mx-auto flex flex-col md:flex-row justify-center">
+                                        <div className="flex flex-col items-start justify-center w-full md:w-1/3 px-6 md:px-0 pb-3 md:pb-0">
+                                            <h2 className="font-bold text-2xl md:text-3xl text-left mb-0">Pay-per-Click (PPC)</h2>
+                                            <small className="font-bolder mb-2">Google and Microsoft Advertising</small>
+                                            <div className="max-w-sm text-xs">
+                                                <span>We believe you should manage your money like it's your money. We treat our advertising campaigns with the rigor that we would treat managing our retirement accounts. Succeeding at real-time auction-based advertising requires strong analytics and diligent execution of a recurring set of optimization tactics.</span>
+                                            </div>
+
+                                            <button type="button" className="mt-3 inline-flex items-center px-4 py-2 rounded-sm border border-transparent text-sm leading-4 font-medium shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                                                Get started
+                                            </button>
+                                        </div>
+
+                                        <div className="flex items-center justify-center w-full md:w-auto px-6 py-12">
+                                            <img className="md:w-96 lg:w-96 sm:w-40 xs:w-40" src={ppcBox}/>
+                                        </div>
                                     </div>
                                 )}
                                 { title === "Pay-per-Click Advertising" && (

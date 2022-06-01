@@ -5,6 +5,7 @@ module.exports = {
       'footer-texture': "url('../../images/footer-bg.svg')",
       'ppc-bg': "url('../../images/ppc-bg.svg')",
       'seo-bg': "url('../../images/seo-bg.svg')",
+      'careers-bg': "url('../../images/careers-bg.svg')",
       'contact-purple': "url('../../images/contact-purple.svg')",
       'contact-blue': "url('../../images/contact-blue.svg')",
       'blue-violet': "linear-gradient(93.31deg, #002590 0%, #6D00C4 100%)"
