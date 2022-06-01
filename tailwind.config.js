@@ -7,6 +7,7 @@ module.exports = {
       'seo-bg': "url('../../images/seo-bg.svg')",
       'contact-purple': "url('../../images/contact-purple.svg')",
       'contact-blue': "url('../../images/contact-blue.svg')",
+      'blue-violet': "linear-gradient(93.31deg, #002590 0%, #6D00C4 100%)"
     },
     extend: {
       spacing: {

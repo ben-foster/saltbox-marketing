@@ -11,7 +11,7 @@ const ContactUs = (props) => {
                 <div className="absolute inset-y-0 left-0 w-1/2 bg-gray-50" />
             </div>
 
-            <div className={`relative rounded-2xl ${contactColor} bg-auto bg-center shadow-xl max-w-5xl mx-auto lg:grid lg:grid-cols-5 p-10`}>
+            <div className={`relative rounded-2xl ${contactColor} bg-auto bg-center bg-no-repeat shadow-xl max-w-5xl mx-auto lg:grid lg:grid-cols-5 p-10`}>
                 <div className="py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12 justify-content-center">
                     <div className="max-w-lg mx-auto text-white">
                         <h3 className="text-2xl font-extrabold sm:text-3xl">Don’t get lost in the crowd. </h3>
