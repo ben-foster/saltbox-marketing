@@ -60,7 +60,7 @@ const SEO = () => {
                 <HowToGetStarted type="seo"/>
             </div>
 
-            <ContactUs bgColor="bg-blue-150"/>
+            <ContactUs bgColor="bg-blue-150" contactColor="bg-contact-blue"/>
         </>
     );
 };

@@ -60,7 +60,7 @@ const PPC = () => {
                 <HowToGetStarted type="ppc"/>
             </div>
 
-            <ContactUs bgColor="bg-violet-300"/>
+            <ContactUs bgColor="bg-violet-300" contactColor="bg-contact-purple"/>
         </>
     );
 };
