@@ -5,6 +5,9 @@ import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
 import careersBox from "../images/careers-cube.svg"
+import cubeLightBlue from "../images/cube-light-blue.svg"
+import cubeBlue from "../images/cube-blue.svg"
+import cubePurple from "../images/cube-purple.svg"
 
 const Careers = ({ data }) => {
     const { title, content, acf, yoast_meta } = data.wordpressPage;
@@ -32,6 +35,73 @@ const Careers = ({ data }) => {
                     </div>
                 </div>
             </Hero>
+
+
+            <div className="bg-white p-10">
+
+                <div>
+                    <h3 className="text-lg leading-6 font-medium text-blue-250">ANALYTICS</h3>
+
+                    <div className="shadow-2xl rounded-lg p-10 relative border border-gray-300 bg-white px-6 py-5 flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                        <div className="flex-shrink-0 text-center">
+                            <img className="w-100" src={cubeLightBlue} alt="" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-900">Web Analytics Manager</p>
+                            <p className="text-sm text-gray-500 truncate">6/21/2020 Full-time, Remote</p>
+                            <button type="button" className="inline-flex items-center p-2 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                Apply Now
+                            </button>
+                        </div>
+
+                        <div className="flex-1 min-w-0">
+                            <p className="text-xs font-medium text-gray-150">The Web Analytics Manager is responsible for managing all tracking configuration and reporting for our clients, including event tracking in Google Tag Manager, integrating clients’ systems for lead attribution data flow, creating and maintaining Google Data Studio dashboards.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 className="text-lg leading-6 font-medium text-blue-150">SEO</h3>
+
+                    <div className="shadow-2xl rounded-lg p-10 relative border border-gray-300 bg-white px-6 py-5 flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                        <div className="flex-shrink-0 text-center">
+                            <img className="w-100" src={cubeBlue} alt="" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-900">SEO Analyst</p>
+                            <p className="text-sm text-gray-500 truncate">6/21/2020 Full-time, Remote</p>
+                            <button type="button" className="inline-flex items-center p-2 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                Apply Now
+                            </button>
+                        </div>
+
+                        <div className="flex-1 min-w-0">
+                            <p className="text-xs font-medium text-gray-150">The SEO analyst is responsible for managing all search engine optimization strategies for our clients, including keyword research, on-site optimization, competitive analysis, and link-building outreach.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 className="text-lg leading-6 font-medium text-blue-250">PPC</h3>
+
+                    <div className="shadow-2xl rounded-lg p-10 relative border border-gray-300 bg-white px-6 py-5 flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                        <div className="flex-shrink-0 text-center">
+                            <img className="w-100" src={cubePurple} alt="" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-900">PPC Analyst</p>
+                            <p className="text-sm text-gray-500 truncate">6/21/2020 Full-time, Remote</p>
+                            <button type="button" className="inline-flex items-center p-2 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                Apply Now
+                            </button>
+                        </div>
+
+                        <div className="flex-1 min-w-0">
+                            <p className="text-xs font-medium text-gray-150">The pay-per-click analyst is responsible for managing online advertising campaigns for our clients including paid search, display advertising, social advertising, and video advertising.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </Layout>
     )
 }
