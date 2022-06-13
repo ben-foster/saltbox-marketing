@@ -25,7 +25,6 @@ const TeamMember = ({ data }) => {
                                 featuredImage={featured_media}
                                 className="w-full h-full rounded-full shadow-inner"
                             />
-                            {/* <img src={featured_media.localFile.publicURL} alt={featured_media.alt_text} className="w-full h-full rounded-full shadow-inner" /> */}
                         </div>
                         <h1 className="font-bold mt-4" dangerouslySetInnerHTML={{ __html: title }}></h1>
                         { acf.job_title && (
