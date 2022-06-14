@@ -5,13 +5,6 @@ import { InView } from "react-intersection-observer"
 import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
-import ContactUs from "../components/content/contact-us";
-import FeaturedImage from "../components/lib/featured-image";
-import WhySaltbox from "../components/content/why-saltbox";
-import HowToGetStarted from "../components/content/how-to-get-started";
-import AnalyticsAnimation from "../components/svg/analytics-animation";
-import PPCAnimation from "../components/svg/ppc-animation";
-import SEOAnimation from "../components/svg/seo-animation";
 import ppcBox from "../images/ppc-cube.svg"
 import seoBox from "../images/seo-cube.svg"
 import PPCComponent from "../components/content/ppc";

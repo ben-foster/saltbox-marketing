@@ -12,10 +12,12 @@ import HomeFeaturedPosts from "../components/content/home-featured-posts";
 import ContactUs from "../components/content/contact-us";
 import WhySaltbox from "../components/content/why-saltbox";
 
+import blueLogo from "../images/blue-logo.svg"
+
 const IndexPage = ({ data }) => {
 	const { acf, yoast_meta } = data.wordpressPage;
 	return ( 
-		<Layout>
+		<Layout logo={blueLogo}>
 			<SEO
 				title={yoast_meta.yoast_wpseo_title} 
 				description={yoast_meta.yoast_wpseo_metadesc} 

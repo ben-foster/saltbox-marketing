@@ -4,6 +4,7 @@ module.exports = {
     backgroundImage: {
       'footer-texture': "url('../../images/footer-bg.svg')",
       'ppc-bg': "url('../../images/ppc-bg.svg')",
+      'home-bg': "url('../../images/home-bg.svg')",
       'seo-bg': "url('../../images/seo-bg.svg')",
       'about-bg': "url('../../images/about-bg.svg')",
       'about-bg-s': "url('../../images/about-box.svg')",
