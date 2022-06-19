@@ -14,27 +14,27 @@ const TeamMember = ({ data }) => {
                 title={yoast_meta.yoast_wpseo_title} 
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
-            <Hero noCurve>
-                <div className="max-w-4xl mx-auto flex flex-col items-center pt-32 md:pt-40 pb-6">
+            <Hero className="bg-careers-bg bg-cover bg-no-repeat bg-center h-70 mb-96">
+                <div className="max-w-4xl mx-auto flex flex-col items-center p-20 bg-contact-blue bg-no-repeat mt-20">
                     <div className="flex flex-col w-full text-white text-center items-center">
                         <div className="w-full text-left mb-4 md:mb-0 pl-4 md:pl-0">
                             <Link to="/about/#team">&larr; Back to Team</Link>
                         </div>
                         <div className="w-48 md:w-64 h-48 md:h-64 p-1 md:p-2 mt-4 md:mt-2 shadow-md rounded-full bg-white">
-                            <FeaturedImage 
-                                featuredImage={featured_media}
-                                className="w-full h-full rounded-full shadow-inner"
-                            />
+                            
+
+                            <img className="w-full h-full rounded-full shadow-inner" src={featured_media.localFile.publicURL}/>
                         </div>
                         <h1 className="font-bold mt-4" dangerouslySetInnerHTML={{ __html: title }}></h1>
                         { acf.job_title && (
                             <p dangerouslySetInnerHTML={{ __html: acf.job_title }}></p>
                         )}
                     </div>
-                </div>
-                <div className="max-w-2xl mx-auto flex items-center px-8 pb-16 text-white">
-                    <div className="flex flex-col">
-                        <div dangerouslySetInnerHTML={{ __html: content }}></div>
+
+                    <div className="max-w-2xl mx-auto flex items-center px-8 pb-16 text-white">
+                        <div className="flex flex-col  text-center">
+                            <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                        </div>
                     </div>
                 </div>
             </Hero>

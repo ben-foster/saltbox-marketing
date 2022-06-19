@@ -102,7 +102,8 @@ module.exports = {
         '-64': '-16rem',
       },
       height: {
-        '60' : '30rem'
+        '60' : '30rem',
+        '70' : '40rem'
       },
       inset: {
         '1/2': '50%',
