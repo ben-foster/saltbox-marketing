@@ -16,7 +16,7 @@ const Page = ({ data }) => {
                 title={yoast_meta.yoast_wpseo_title} 
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
-            <Hero className="bg-about-bg bg-cover bg-no-repeat bg-center">
+            <Hero className="bg-about-bg bg-cover bg-no-repeat bg-center h-60">
                 <div className="container mx-auto flex items-center p-16 pt-40 pb-32">
                     <div className="w-full bg-white flex flex-col text-white shadow-lg rounded-lg">
                         <div className={`relative rounded-2xl shadow-xl max-w-5xl mx-auto lg:grid lg:grid-cols-5 p-10`}>
@@ -36,16 +36,17 @@ const Page = ({ data }) => {
                     </div>
                 </div>
             </Hero>
-            <div id="story" className="bg-white">
+
+            <div id="story" className="bg-white mt-96">
                 <div id="team" className="container mx-auto flex items-center p-16 pt-8 md:pt-16">
                     <div className="flex flex-col text-gray-800">
-                        <h2>Our Team</h2>
+                        <h2 className="text-blue-150">Our Team</h2>
                         <TeamMembers />
                     </div>
                 </div>
                 <div id="pets" className="container mx-auto flex items-center p-16 pt-8 md:pt-16">
                     <div className="flex flex-col text-gray-800">
-                        <h2>Our Support Staff</h2>
+                        <h2 className="text-blue-150">Our Support Staff</h2>
                         <Pets />
                     </div>
                 </div>
