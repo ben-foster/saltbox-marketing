@@ -7,6 +7,7 @@ module.exports = {
       'home-bg': "url('../../images/home-bg.svg')",
       'seo-bg': "url('../../images/seo-bg.svg')",
       'about-bg': "url('../../images/about-bg.svg')",
+      'blog-bg': "url('../../images/blog-bg.svg')",
       'about-bg-s': "url('../../images/about-box.svg')",
       'careers-bg': "url('../../images/careers-bg.svg')",
       'contact-purple': "url('../../images/contact-purple.svg')",
