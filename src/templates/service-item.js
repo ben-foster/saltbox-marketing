@@ -3,12 +3,14 @@ import React from "react"
 const ServiceItem = ({ itemImg, itemText }) => {
     return (
         <div className="container mx-auto flex flex-col md:flex-row justify-center">
-            <div className="flex flex-col items-start justify-center w-full md:w-1/3 px-6 md:px-0 pb-3 md:pb-0">
-                <h2 className="font-bold text-2xl md:text-3xl text-left mb-0">
+            <div className="flex flex-col items-start justify-center w-full md:w-1/3 px-6 md:px-0">
+                <h2 className="font-bold text-2xl md:text-3xl text-left mb-2">
                     {itemText.title}
                 </h2>
-                <small className="font-bolder mb-2">{itemText.secondary}</small>
-                <div className="max-w-sm text-xs">
+
+                <small className="font-bold mb-4">{itemText.secondary}</small>
+
+                <div className="max-w-sm text-xs mb-2">
                     <span>{itemText.body}</span>
                 </div>
 
@@ -17,7 +19,7 @@ const ServiceItem = ({ itemImg, itemText }) => {
                 </button>
             </div>
 
-            <div className="flex items-center justify-center w-full md:w-auto px-6 py-12">
+            <div className="flex items-center justify-center w-full md:w-auto px-36 ml-24">
                 <img className="md:w-96 lg:w-96 sm:w-40 xs:w-40" src={itemImg}/>
             </div>
         </div>

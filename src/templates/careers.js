@@ -9,8 +9,18 @@ import cubeLightBlue from "../images/cube-light-blue.svg"
 import cubeBlue from "../images/cube-blue.svg"
 import cubePurple from "../images/cube-purple.svg"
 
+import ServiceItem from "./service-item";
+
+
 const Careers = ({ data }) => {
     const { title, content, acf, yoast_meta } = data.wordpressPage;
+
+    const ppcText = {
+        'title': "Pay-per-Click (PPC)",
+        'secondary': "Google and Microsoft Advertising",
+        'body': "We believe you should manage your money like it's your money. We treat our advertising campaigns with the rigor that we would treat managing our retirement accounts. Succeeding at real-time auction-based advertising requires strong analytics and diligent execution of a recurring set of optimization tactics."
+    };
+
     return (
         <Layout>
             <SEO 
@@ -20,18 +30,7 @@ const Careers = ({ data }) => {
             <Hero className="bg-careers-bg bg-cover bg-no-repeat bg-center">
                 <div className="container mx-auto flex items-center pt-40 py-32">
                     <div className="flex flex-col w-full text-white relative">
-                        <div className="container mx-auto flex flex-col md:flex-row justify-center">
-                            <div className="flex flex-col items-start justify-center w-full md:w-1/3 px-6 md:px-0 pb-3 md:pb-0">
-                                <h2 className="font-bold text-2xl md:text-3xl text-left mb-0">Careers</h2>
-                                <div className="max-w-sm text-sm mt-3">
-                                    <span>View our open positions here. Though we have an office in Raleigh, NC, we have teammates on both the east and west coast. If you can work in the U.S. legally, you are good to go! Come join our dedicated team of industry experts and grow within a company culture designed to support you to success.</span>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center justify-center w-full md:w-auto px-6 py-12">
-                                <img className="md:w-96 lg:w-96 sm:w-40 xs:w-40" src={careersBox}/>
-                            </div>
-                        </div>
+                        <ServiceItem itemImg={careersBox} itemText={ppcText}/>
                     </div>
                 </div>
             </Hero>

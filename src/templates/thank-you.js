@@ -13,7 +13,7 @@ const ThankYou = ({ data }) => {
 				title={yoast_meta.yoast_wpseo_title} 
 				description={yoast_meta.yoast_wpseo_metadesc}
 			/>
-			<Hero noCurve>
+			<Hero className="bg-violet-300">
 				<div className="max-w-4xl mx-auto flex flex-col items-center pt-40 pb-6">
 					<div className="flex flex-col w-full text-white text-center items-center">
 						<div className="w-full text-left">

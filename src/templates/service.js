@@ -38,8 +38,8 @@ const Service = ({ data }) => {
             <InView rootMargin="-250px 0px -250px 0px">
                 {({ inView, ref, entry }) => (
                 <Hero className={`${title === "Pay-per-Click Advertising" ? 'bg-ppc-bg' : title === "Search Engine Optimization" ? "bg-seo-bg" : "bg-careers-bg"} bg-cover bg-no-repeat bg-center overflow-visible`}>
-                    <div className="container mx-auto flex items-center pt-40 py-32">
-                        <div className="flex flex-col w-full text-white relative">
+                    <div className="container mx-auto flex items-center pt-12 pb-20">
+                        <div className="flex flex-col w-full text-white relative py-10">
                             <>
                                 { title === "Web Analytics Solutions" && (
                                     <ServiceItem/>

@@ -13,6 +13,9 @@ import ContactUs from "../components/content/contact-us";
 import WhySaltbox from "../components/content/why-saltbox";
 
 import blueLogo from "../images/blue-logo.svg"
+import pricing from "../images/pricing.png"
+import control from "../images/control.svg"
+import option from "../images/options.png"
 
 const IndexPage = ({ data }) => {
 	const { acf, yoast_meta } = data.wordpressPage;
@@ -27,7 +30,19 @@ const IndexPage = ({ data }) => {
 				taglineLineOne={acf.hero.hero_tagline_line_one}
 				taglineLineTwo={acf.hero.hero_tagline_line_two}
 			/>
-			<FeaturedServices
+
+			<div className="flex items-center justify-center w-full px-36">
+                <img className="" src={control}/>
+            </div>
+
+			<div className="flex items-center justify-center w-full px-36">
+                <img className="" src={pricing}/>
+            </div>
+
+			<div className="flex items-center justify-center w-full px-36 mb-2">
+                <img className="w-full" src={option}/>
+            </div>
+			{/* <FeaturedServices
 				title={acf.services.services_title}
 				description={acf.services.services_description}
 				className="bg-white"
@@ -36,28 +51,28 @@ const IndexPage = ({ data }) => {
 				title={acf.clients.featured_clients_title}
 				description={acf.clients.clients_description}
 				className="bg-white"
-			/>
-			<div className="bg-white">
+			/> */}
+			{/* <div className="bg-white">
 				<div className="container mx-auto">
 					<WhySaltbox />
 				</div>
-			</div>
-			<FeaturedCaseStudies
+			</div> */}
+			{/* <FeaturedCaseStudies
 				title={acf.case_studies.case_studies_title}
 				description={acf.case_studies.case_studies_description}
-			/>
+			/> */}
 			{/* <FeaturedTestimonials
 				title={acf.testimonials.testimonials_title}
 				description={acf.testimonials.testimonials_description}
 			/> */}
-			<FeaturedWhitepaper
+			{/* <FeaturedWhitepaper
 				title={acf.whitepaper.whitepaper_title}
 				description={acf.whitepaper.whitepaper_description}
 			/>
 			<HomeFeaturedPosts
 				title={acf.recent_posts.recent_posts_title}
 				description={acf.recent_posts.recent_posts_description}
-			/>
+			/> */}
 
 			<ContactUs bgColor="bg-blue-violet" contactColor="bg-contact-purple"/>
 		</Layout>
