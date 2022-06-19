@@ -108,6 +108,11 @@ form textarea:disabled {
     @apply bg-gray-100 border-gray-300;
 }
 
+#contactBtn {
+    background-color: #1DB954 !important;
+    border-color: #1DB954 !important;
+}
+
 form button[type=submit] {
     @apply py-3 px-6 mt-4 border-2 border-teal-500 bg-teal-500 text-white font-bold rounded shadow;
 }
