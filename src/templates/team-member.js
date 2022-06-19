@@ -15,7 +15,7 @@ const TeamMember = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
             <Hero className="bg-careers-bg bg-cover bg-no-repeat bg-center h-70 mb-96">
-                <div className="max-w-4xl mx-auto flex flex-col items-center p-20 bg-contact-blue bg-no-repeat mt-20">
+                <div className="max-w-4xl mx-auto flex flex-col items-center rounded-2xl p-16 bg-contact-blue bg-cover bg-no-repeat mt-20">
                     <div className="flex flex-col w-full text-white text-center items-center">
                         <div className="w-full text-left mb-4 md:mb-0 pl-4 md:pl-0">
                             <Link to="/about/#team">&larr; Back to Team</Link>
@@ -31,8 +31,8 @@ const TeamMember = ({ data }) => {
                         )}
                     </div>
 
-                    <div className="max-w-2xl mx-auto flex items-center px-8 pb-16 text-white">
-                        <div className="flex flex-col  text-center">
+                    <div className="max-w-2xl mx-auto flex items-center text-white">
+                        <div className="flex flex-col text-center">
                             <div dangerouslySetInnerHTML={{ __html: content }}></div>
                         </div>
                     </div>
