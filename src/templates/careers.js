@@ -35,20 +35,18 @@ const Careers = ({ data }) => {
                 </div>
             </Hero>
 
-
-            <div className="bg-white p-10">
-
+            <div className="container mx-auto bg-white px-32 py-10">
                 <div>
-                    <h3 className="text-lg leading-6 font-medium text-blue-250">ANALYTICS</h3>
+                    <p className="text-2xl leading-6 text-blue-250 font-bold">ANALYTICS</p>
 
-                    <div className="shadow-2xl rounded-lg p-10 relative border border-gray-300 bg-white px-6 py-5 flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                        <div className="flex-shrink-0 text-center">
+                    <div className="shadow-2xl rounded-lg px-10 bg-white flex items-center space-x-3 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                        <div className="flex-shrink-0 text-center mt-12">
                             <img className="w-100" src={cubeLightBlue} alt="" />
                         </div>
                         <div className="flex-1 min-w-0">
                             <p className="text-sm font-medium text-gray-900">Web Analytics Manager</p>
                             <p className="text-sm text-gray-500 truncate">6/21/2020 Full-time, Remote</p>
-                            <button type="button" className="inline-flex items-center p-2 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <button type="button" className="inline-flex items-center px-8 h-10 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-green-100 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                 Apply Now
                             </button>
                         </div>
@@ -59,17 +57,17 @@ const Careers = ({ data }) => {
                     </div>
                 </div>
 
-                <div>
-                    <h3 className="text-lg leading-6 font-medium text-blue-150">SEO</h3>
+                <div className="mt-10">
+                    <p className="text-2xl leading-6 text-blue-250 font-bold">SEO</p>
 
-                    <div className="shadow-2xl rounded-lg p-10 relative border border-gray-300 bg-white px-6 py-5 flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                        <div className="flex-shrink-0 text-center">
+                    <div className="shadow-2xl rounded-lg px-10 bg-white flex items-center space-x-3 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                        <div className="flex-shrink-0 text-center mt-12">
                             <img className="w-100" src={cubeBlue} alt="" />
                         </div>
                         <div className="flex-1 min-w-0">
                             <p className="text-sm font-medium text-gray-900">SEO Analyst</p>
                             <p className="text-sm text-gray-500 truncate">6/21/2020 Full-time, Remote</p>
-                            <button type="button" className="inline-flex items-center p-2 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <button type="button" className="inline-flex items-center px-8 h-10 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-green-100 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                 Apply Now
                             </button>
                         </div>
@@ -80,17 +78,17 @@ const Careers = ({ data }) => {
                     </div>
                 </div>
 
-                <div>
-                    <h3 className="text-lg leading-6 font-medium text-blue-250">PPC</h3>
+                <div className="mt-10">
+                    <p className="text-2xl leading-6 text-blue-250 font-bold">PPC</p>
 
-                    <div className="shadow-2xl rounded-lg p-10 relative border border-gray-300 bg-white px-6 py-5 flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                        <div className="flex-shrink-0 text-center">
+                    <div className="shadow-2xl rounded-lg px-10 bg-white flex items-center space-x-3 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                        <div className="flex-shrink-0 text-center mt-12">
                             <img className="w-100" src={cubePurple} alt="" />
                         </div>
                         <div className="flex-1 min-w-0">
                             <p className="text-sm font-medium text-gray-900">PPC Analyst</p>
                             <p className="text-sm text-gray-500 truncate">6/21/2020 Full-time, Remote</p>
-                            <button type="button" className="inline-flex items-center p-2 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <button type="button" className="inline-flex items-center px-8 h-10 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-green-100 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                 Apply Now
                             </button>
                         </div>
