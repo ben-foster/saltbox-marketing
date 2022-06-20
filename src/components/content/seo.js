@@ -22,7 +22,6 @@ const SEO = () => {
             </div>
 
             <div className="container mx-auto mt-12 grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
-                
                 <div className="cols-span-1 p-24">
                     <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 text-blue-150"> Technical SEO</h2>
                     <div className="max-w-sm">

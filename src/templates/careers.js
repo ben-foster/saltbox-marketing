@@ -11,7 +11,6 @@ import cubePurple from "../images/cube-purple.svg"
 
 import ServiceItem from "./service-item";
 
-
 const Careers = ({ data }) => {
     const { title, content, acf, yoast_meta } = data.wordpressPage;
 

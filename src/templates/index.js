@@ -10,11 +10,10 @@ import FeaturedCaseStudies from "../components/content/featured-case-studies";
 import FeaturedWhitepaper from "../components/content/featured-whitepaper";
 import HomeFeaturedPosts from "../components/content/home-featured-posts";
 import ContactUs from "../components/content/contact-us";
-import WhySaltbox from "../components/content/why-saltbox";
+import HomeBanner from "../components/content/home-banner";
 
 import blueLogo from "../images/blue-logo.svg"
 import pricing from "../images/pricing.png"
-import control from "../images/control.svg"
 import option from "../images/options.png"
 
 const IndexPage = ({ data }) => {
@@ -31,9 +30,7 @@ const IndexPage = ({ data }) => {
 				taglineLineTwo={acf.hero.hero_tagline_line_two}
 			/>
 
-			<div className="flex items-center justify-center w-full px-36">
-                <img className="" src={control}/>
-            </div>
+			<HomeBanner/>
 
 			<div className="flex items-center justify-center w-full px-36">
                 <img className="" src={pricing}/>
@@ -68,11 +65,11 @@ const IndexPage = ({ data }) => {
 			{/* <FeaturedWhitepaper
 				title={acf.whitepaper.whitepaper_title}
 				description={acf.whitepaper.whitepaper_description}
-			/>
+			/>*/}
 			<HomeFeaturedPosts
-				title={acf.recent_posts.recent_posts_title}
-				description={acf.recent_posts.recent_posts_description}
-			/> */}
+				title={"Learn the tools of the trade."}
+				description={"Unlock the secrets to search engine acquisition."}
+			/>
 
 			<ContactUs bgColor="bg-blue-violet" contactColor="bg-contact-purple"/>
 		</Layout>

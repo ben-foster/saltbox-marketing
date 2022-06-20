@@ -9,6 +9,7 @@ module.exports = {
       'about-bg': "url('../../images/about-bg.svg')",
       'blog-bg': "url('../../images/blog-bg.svg')",
       'about-bg-s': "url('../../images/about-box.svg')",
+      'banner-bg': "url('../../images/bg-linear.svg')",
       'careers-bg': "url('../../images/careers-bg.svg')",
       'contact-purple': "url('../../images/contact-purple.svg')",
       'contact-blue': "url('../../images/contact-blue.svg')",
@@ -104,7 +105,12 @@ module.exports = {
       },
       height: {
         '60' : '30rem',
-        '70' : '40rem'
+        '70' : '40rem',
+        '80' : '50rem'
+      },
+      width: {
+        '60' : '30rem',
+        '65' : '35rem'
       },
       inset: {
         '1/2': '50%',
