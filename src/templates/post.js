@@ -8,6 +8,7 @@ import FeaturedPosts from "../components/content/featured-posts";
 import BlogAuthorCard from "../components/content/blog-author-card";
 import BlogServiceCard from "../components/content/blog-service-card";
 import FeaturedImage from "../components/lib/featured-image";
+import postBanner from "../images/post-banner.svg"
 
 const Post = ({ data }) => {
     const { title, content, author, categories, acf, yoast_meta } = data.wordpressPost;
@@ -20,50 +21,27 @@ const Post = ({ data }) => {
                 title={yoast_meta.yoast_wpseo_title} 
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
-            <Hero className="pb-48">
-                <div className="max-w-3xl mx-auto flex flex-col items-center pt-32 md:pt-48 px-12 md:px-20">
-                    <h1 className="text-white text-3xl md:text-4xl font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
-                    { acf.subheader && (
-                        <p className="text-xl md:text-2xl font-light text-white italic leading-snug pt-2 mb-8" dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
-                    )}
-                    <p className="flex flex-row text-sm mb-3 self-start items-center">
-                        <FeaturedImage 
-                            featuredImage={author.acf.avatar_img}
-                            className="w-12 h-12 mr-3 rounded-full shadow-md"
-                        />
-                        {/* <img className="w-12 h-12 mr-3 rounded-full shadow-md" src={author.acf.avatar_img.localFile.publicURL} alt={author.name} /> */}
-                        <span className="text-white pr-1">by</span>
-                        <Link 
-                            to={author.link.replace("https://wordpress.saltbox.solutions", "")}
-                            className="no-underline text-white hover:text-gray-100"
-                        >
-                            <span className="text-white hover:text-gray-100" dangerouslySetInnerHTML={{ __html: author.name }}></span>
-                        </Link>
-                    </p>
-                </div>
+            <Hero className="bg-blog-bg bg-cover bg-no-repeat bg-center h-96">
             </Hero>
-            <div className="bg-white">
-                <div className="w-11/12 md:w-auto md:max-w-3xl mx-auto -mt-40 relative z-10 flex flex-col bg-white items-center py-8 md:py-16 px-8 md:px-16 rounded-lg shadow-lg">
+            <div>
+                <div className="w-11/12 md:w-auto md:max-w-3xl -mt-56 mx-auto relative z-10 flex flex-col items-center py-8 md:py-16 px-8 md:px-16 rounded-lg">
+                    <div className="w-full">
+                        <img className="w-54 h-54 m-auto" src={postBanner}/>
+                    </div>
+                </div>
+
+                <div className="w-11/12 md:w-auto md:max-w-3xl mx-auto -mt-20 relative z-10 flex flex-col items-center py-8 px-8 md:px-16 rounded-lg">
                     <div className="w-full">
                         <div className="blog-post-body" dangerouslySetInnerHTML={{ __html: content }}></div>    
                     </div>
                 </div>
-                <div className="w-11/12 max-w-3xl mx-auto mt-16">
+                <div className="w-11/12 max-w-3xl mx-auto mb-3">
                     <BlogAuthorCard 
                         name={author.name}
                         jobTitle={author.acf.job_title}
                         bio={author.description}
                         image={author.acf.avatar_img}
                     />
-                </div>
-                <div className="max-w-3xl mx-auto mt-16">
-                    <BlogServiceCard 
-                        featuredServices={featuredServices}
-                        categoryName={category.name}
-                    />
-                </div>
-                <div className="container mx-auto py-16 ">
-                    <FeaturedPosts />
                 </div>
             </div>
         </Layout>
