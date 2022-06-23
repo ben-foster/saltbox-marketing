@@ -4,9 +4,7 @@ import { graphql } from "gatsby";
 import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
-import ContactForm from "../components/forms/contact-form";
-import FeaturedClients from "../components/content/featured-clients";
-import HowToGetStarted from "../components/content/how-to-get-started";
+import ContactUs from "../components/content/contact-us";
 
 const Contact = ({ data }) => {
     const { title, yoast_meta, acf } = data.wordpressPage;
@@ -16,25 +14,11 @@ const Contact = ({ data }) => {
                 title={yoast_meta.yoast_wpseo_title} 
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
-            <Hero>
-                <div className="container mx-auto flex items-center p-16 pt-40 pb-32">
-                    <div className="flex flex-col w-full text-white">
-                        <h1 className="text-center font-bold" dangerouslySetInnerHTML={{ __html: title }}></h1>
-                        { acf.subheader && (
-                            <p dangerouslySetInnerHTML={{ __html: acf.subheader }}></p>
-                        )}
-                    </div>
+            <Hero className="bg-blue-violet bg-auto bg-no-repeat bg-center  ">
+                <div className="container mx-auto flex items-center p-16 pt-32 pb-32">
+                    <ContactUs contactColor="bg-contact-purple"/>
                 </div>
             </Hero>
-            <div className="bg-white mb-8">
-                <div className="container mx-auto flex flex-col items-center px-8 py-10">
-                    <div className="flex flex-col md:w-96 mx-auto text-gray-800">
-                        <p>Please fill out the form below, and we will reach out via email to schedule a discovery call.</p>
-                        <ContactForm />
-                    </div>
-                </div>
-                <FeaturedClients title="Trusted by" />
-            </div>
         </Layout>
     )
 }

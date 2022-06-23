@@ -10,12 +10,17 @@ import FeaturedCaseStudies from "../components/content/featured-case-studies";
 import FeaturedWhitepaper from "../components/content/featured-whitepaper";
 import HomeFeaturedPosts from "../components/content/home-featured-posts";
 import ContactUs from "../components/content/contact-us";
-import WhySaltbox from "../components/content/why-saltbox";
+import HomeBanner from "../components/content/home-banner";
+import HomeBannerTwo from "../components/content/home-banner-two";
+
+import blueLogo from "../images/blue-logo.svg"
+import pricing from "../images/pricing.png"
+import option from "../images/options.png"
 
 const IndexPage = ({ data }) => {
 	const { acf, yoast_meta } = data.wordpressPage;
 	return ( 
-		<Layout>
+		<Layout logo={blueLogo}>
 			<SEO
 				title={yoast_meta.yoast_wpseo_title} 
 				description={yoast_meta.yoast_wpseo_metadesc} 
@@ -25,7 +30,17 @@ const IndexPage = ({ data }) => {
 				taglineLineOne={acf.hero.hero_tagline_line_one}
 				taglineLineTwo={acf.hero.hero_tagline_line_two}
 			/>
-			<FeaturedServices
+
+			<FeaturedClients className="bg-white"/> 
+
+			<HomeBanner/>
+
+			<div className="flex items-center justify-center w-full px-36">
+                <img className="" src={pricing}/>
+            </div>
+			
+			<HomeBannerTwo/>
+			{/* <FeaturedServices
 				title={acf.services.services_title}
 				description={acf.services.services_description}
 				className="bg-white"
@@ -34,32 +49,30 @@ const IndexPage = ({ data }) => {
 				title={acf.clients.featured_clients_title}
 				description={acf.clients.clients_description}
 				className="bg-white"
-			/>
-			<div className="bg-white">
+			/> */}
+			{/* <div className="bg-white">
 				<div className="container mx-auto">
 					<WhySaltbox />
 				</div>
-			</div>
-			<FeaturedCaseStudies
+			</div> */}
+			{/* <FeaturedCaseStudies
 				title={acf.case_studies.case_studies_title}
 				description={acf.case_studies.case_studies_description}
-			/>
+			/> */}
 			{/* <FeaturedTestimonials
 				title={acf.testimonials.testimonials_title}
 				description={acf.testimonials.testimonials_description}
 			/> */}
-			<FeaturedWhitepaper
+			{/* <FeaturedWhitepaper
 				title={acf.whitepaper.whitepaper_title}
 				description={acf.whitepaper.whitepaper_description}
-			/>
+			/>*/}
 			<HomeFeaturedPosts
-				title={acf.recent_posts.recent_posts_title}
-				description={acf.recent_posts.recent_posts_description}
+				title={"Learn the tools of the trade."}
+				description={"Unlock the secrets to search engine acquisition."}
 			/>
-			<ContactUs
-				title={acf.contact_us.contact_us_title}
-				description={acf.contact_us.contact_us_description}
-			/>
+
+			<ContactUs bgColor="bg-blue-violet" contactColor="bg-contact-purple"/>
 		</Layout>
 	)
 }

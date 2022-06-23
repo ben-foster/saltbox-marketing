@@ -1,5 +1,22 @@
 module.exports = {
   theme: {
+
+    backgroundImage: {
+      'footer-texture': "url('../../images/footer-bg.svg')",
+      'ppc-bg': "url('../../images/ppc-bg.svg')",
+      'home-bg': "url('../../images/home-bg.svg')",
+      'seo-bg': "url('../../images/seo-bg.svg')",
+      'about-bg': "url('../../images/about-bg.svg')",
+      'blog-bg': "url('../../images/blog-bg.svg')",
+      'about-bg-s': "url('../../images/about-box.svg')",
+      'blue-rectangle': "url('../../images/bg-rectangle.svg')",
+      'check-icon': "url('../../images/check.svg')",
+      'banner-bg': "url('../../images/bg-linear.svg')",
+      'careers-bg': "url('../../images/careers-bg.svg')",
+      'contact-purple': "url('../../images/contact-purple.svg')",
+      'contact-blue': "url('../../images/contact-blue.svg')",
+      'blue-violet': "linear-gradient(93.31deg, #002590 0%, #6D00C4 100%)"
+    },
     extend: {
       spacing: {
         '72': '18rem',
@@ -12,10 +29,18 @@ module.exports = {
         '128': '32rem',
       },
       colors: {
+        violet: {
+          100: '#20124D',
+          200: '#45007C',
+          300: '#6D00C3'
+        },
         gray: {
           100: '#EDF2F7',
+          150: '#20124C',
           200: '#DDE5EE',
+          250: '#969696',
           300: '#B9C9DA',
+          350: '#ADADAD',
           400: '#93A8BD',
           500: '#768A9E',
           600: '#5E7387',
@@ -36,8 +61,11 @@ module.exports = {
         },
         blue: {
           100: '#B3ECFF',
+          150: '#2617A2',
           200: '#81DEFD',
+          250: '#3B83E4',
           300: '#5BD0FB',
+          350: '#201A9E',
           400: '#40C3F7',
           500: '#2CB0ED',
           600: '#1991D2',
@@ -56,6 +84,9 @@ module.exports = {
           800: '#260D96',
           900: '#180381',
         },
+        green: {
+          100: '#1DB954'
+        }
       },
       margin: {
         '-1': '-0.25rem',
@@ -76,9 +107,21 @@ module.exports = {
         '-56': '-14rem',
         '-64': '-16rem',
       },
+      height: {
+        '60' : '30rem',
+        '70' : '40rem',
+        '80' : '50rem'
+      },
+      width: {
+        '60' : '30rem',
+        '65' : '35rem'
+      },
       inset: {
         '1/2': '50%',
       },
+      padding: {
+        '13' : '3.3rem'
+      }
     },
   },
   variants: {

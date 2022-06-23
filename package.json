@@ -20,7 +20,7 @@
     "gatsby-plugin-postcss": "^2.1.10",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.1.8",
-    "gatsby-plugin-sharp": "^2.4.0",
+    "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-plugin-webfonts": "^1.1.4",
     "gatsby-source-filesystem": "^2.1.26",
     "gatsby-source-wordpress": "^3.1.58",
@@ -40,7 +40,7 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "prettier": "^1.18.2",
-    "tailwindcss": "^1.1.2"
+    "tailwindcss": "^3.1.4"
   },
   "keywords": [
     "gatsby"

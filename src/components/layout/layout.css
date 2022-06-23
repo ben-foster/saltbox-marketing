@@ -7,19 +7,11 @@ html {
 
 h1,h2,h3,h4,h5,a,span,button,ul,ol,p {
     @apply font-sans;
-    font-family: "Ubuntu";
+    font-family: "Poppins";
 }
 
 p {
     @apply leading-loose mb-4;
-}
-
-.mono {
-    font-family: "Ubuntu Mono";
-}
-
-.slab {
-    font-family: "Roboto Slab";
 }
 
 a {
@@ -114,6 +106,11 @@ form input:disabled,
 form select:disabled,
 form textarea:disabled {
     @apply bg-gray-100 border-gray-300;
+}
+
+#contactBtn {
+    background-color: #1DB954 !important;
+    border-color: #1DB954 !important;
 }
 
 form button[type=submit] {

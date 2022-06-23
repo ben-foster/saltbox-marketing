@@ -122,6 +122,7 @@ const NetlifyForm = ({ name, action, inputs, buttonCTA, onDark, noAttr }) => {
             })}
             <button 
                 type="submit"
+                id="contactBtn"
             >
                 { buttonCTA }
             </button>
