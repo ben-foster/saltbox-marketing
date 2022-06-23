@@ -35,9 +35,10 @@ const Careers = ({ data }) => {
             </Hero>
 
             <div className="container mx-auto bg-white px-32 py-10">
-                <div>
-                    <p className="text-2xl leading-6 text-blue-250 font-bold">ANALYTICS</p>
 
+                <p className="text-2xl leading-6 text-blue-150 font-bold">Join Our Team</p>
+
+                <div>
                     <div className="shadow-2xl rounded-lg px-10 bg-white flex items-center space-x-3 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                         <div className="flex-shrink-0 text-center mt-12">
                             <img className="w-100" src={cubeLightBlue} alt="" />
@@ -57,8 +58,6 @@ const Careers = ({ data }) => {
                 </div>
 
                 <div className="mt-10">
-                    <p className="text-2xl leading-6 text-blue-250 font-bold">SEO</p>
-
                     <div className="shadow-2xl rounded-lg px-10 bg-white flex items-center space-x-3 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                         <div className="flex-shrink-0 text-center mt-12">
                             <img className="w-100" src={cubeBlue} alt="" />
@@ -78,8 +77,6 @@ const Careers = ({ data }) => {
                 </div>
 
                 <div className="mt-10">
-                    <p className="text-2xl leading-6 text-blue-250 font-bold">PPC</p>
-
                     <div className="shadow-2xl rounded-lg px-10 bg-white flex items-center space-x-3 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                         <div className="flex-shrink-0 text-center mt-12">
                             <img className="w-100" src={cubePurple} alt="" />

@@ -11,6 +11,7 @@ import FeaturedWhitepaper from "../components/content/featured-whitepaper";
 import HomeFeaturedPosts from "../components/content/home-featured-posts";
 import ContactUs from "../components/content/contact-us";
 import HomeBanner from "../components/content/home-banner";
+import HomeBannerTwo from "../components/content/home-banner-two";
 
 import blueLogo from "../images/blue-logo.svg"
 import pricing from "../images/pricing.png"
@@ -30,15 +31,15 @@ const IndexPage = ({ data }) => {
 				taglineLineTwo={acf.hero.hero_tagline_line_two}
 			/>
 
+			<FeaturedClients className="bg-white"/> 
+
 			<HomeBanner/>
 
 			<div className="flex items-center justify-center w-full px-36">
                 <img className="" src={pricing}/>
             </div>
-
-			<div className="flex items-center justify-center w-full px-36 mb-2">
-                <img className="w-full" src={option}/>
-            </div>
+			
+			<HomeBannerTwo/>
 			{/* <FeaturedServices
 				title={acf.services.services_title}
 				description={acf.services.services_description}

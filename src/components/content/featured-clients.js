@@ -7,14 +7,14 @@ const FeaturedClients = (props) => {
     const { title, description, className } = props;
     return (
         <div className={className}>
-            <div className="container mx-auto flex flex-col flex-no-wrap items-center p-12">
+            <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
                 { title && <h2 className="font-bold">{title}</h2>}
                 { description && <p>{description}</p>}
-                <div className="flex flex-row flex-wrap w-full">  
+                <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">  
                     <StaticQuery
                         query={graphql`
                             query FeaturedClientsQuery {
-                                allWordpressWpClients(limit: 12, filter: {categories: {elemMatch: {slug: {eq: "featured"}}}}, sort: {order: ASC, fields: date}){
+                                allWordpressWpClients(limit: 5, filter: {categories: {elemMatch: {slug: {eq: "featured"}}}}, sort: {order: ASC, fields: date}){
                                     edges {
                                         node {
                                             title

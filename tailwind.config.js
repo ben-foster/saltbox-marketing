@@ -9,6 +9,8 @@ module.exports = {
       'about-bg': "url('../../images/about-bg.svg')",
       'blog-bg': "url('../../images/blog-bg.svg')",
       'about-bg-s': "url('../../images/about-box.svg')",
+      'blue-rectangle': "url('../../images/bg-rectangle.svg')",
+      'check-icon': "url('../../images/check.svg')",
       'banner-bg': "url('../../images/bg-linear.svg')",
       'careers-bg': "url('../../images/careers-bg.svg')",
       'contact-purple': "url('../../images/contact-purple.svg')",
@@ -36,7 +38,9 @@ module.exports = {
           100: '#EDF2F7',
           150: '#20124C',
           200: '#DDE5EE',
+          250: '#969696',
           300: '#B9C9DA',
+          350: '#ADADAD',
           400: '#93A8BD',
           500: '#768A9E',
           600: '#5E7387',
@@ -115,6 +119,9 @@ module.exports = {
       inset: {
         '1/2': '50%',
       },
+      padding: {
+        '13' : '3.3rem'
+      }
     },
   },
   variants: {

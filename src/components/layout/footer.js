@@ -11,7 +11,7 @@ import FooterNavThree from "./footer-nav-three";
 
 const Footer = () => (
 	<footer className="bg-footer-texture">
-		<div className="grid grid-cols-3 gap-4 py-12 px-40">
+		<div className="grid grid-cols-3 gap-4 py-12 mx-32">
 			<div className="col-span-2">
 				<Link to="/">
 					<LazyLoadImage
