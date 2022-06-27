@@ -11,7 +11,7 @@ const PPC = () => {
         <>
             <div className="container mx-auto pt-24 pb-10 md:py-24 md:pt-12 flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 px-16">
-                    <img className="w-auto sb-box-shadow rounded-xl z-10" src={ppcSearch}/>
+                    <img className="w-auto sb-box-shadow rounded-xl z-10" width="500" height="290" src={ppcSearch}/>
                 </div>
                 <div className="w-full md:w-1/2 px-16">
                     <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300"> Paid Search</h2>
@@ -29,13 +29,13 @@ const PPC = () => {
                     </div>
                 </div>
                 <div className="w-full md:w-1/2 px-16">
-                    <img className="w-auto sb-box-shadow rounded-xl " src={ppcDisplayRetargeting}/>
+                    <img className="w-auto sb-box-shadow rounded-xl " width="500" height="290" src={ppcDisplayRetargeting}/>
                 </div>
             </div>
 
             <div className="container mx-auto py-10 md:py-24 flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 px-16">
-                    <img className="w-auto sb-box-shadow rounded-xl " src={ppcLandingPage}/>
+                    <img className="w-auto sb-box-shadow rounded-xl " width="500" height="290" src={ppcLandingPage}/>
                 </div>
                 <div className="w-full md:w-1/2 px-16">
                     <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300"> Paid Search</h2>
@@ -53,7 +53,7 @@ const PPC = () => {
                     </div>
                 </div>
                 <div className="w-full md:w-1/2 px-16">
-                    <img className="w-auto sb-box-shadow rounded-xl " src={ppcAnalyticsReporting}/>
+                    <img className="w-auto sb-box-shadow rounded-xl " width="500" height="290" src={ppcAnalyticsReporting}/>
                 </div>
             </div>
 

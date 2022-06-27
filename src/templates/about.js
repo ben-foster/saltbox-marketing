@@ -22,7 +22,7 @@ const Page = ({ data }) => {
                     <div className="md:bg-white relative rounded-2xl shadow-xl max-w-5xl mx-auto lg:grid lg:grid-cols-5 md:p-16">
                         <div className="md:py-16 px-4 md:bg-about-bg-s bg-auto bg-center bg-no-repeat  sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12 justify-content-center rounded-xl">
                             <div className="max-w-lg mx-auto text-white">
-                                <img className="w-40 mx-auto md:mx-0 md:w-96" src={blogCube}/>
+                                <img className="w-40 mx-auto md:mx-0 md:w-96" width="300" height="300" src={blogCube}/>
                             </div>
                         </div>
                         <div className="sm:px-6 lg:col-span-3 lg:px-8 xl:pl-12 text-white md:text-violet-100">

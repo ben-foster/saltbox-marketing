@@ -16,7 +16,7 @@ const Pet = ({ pet }) => {
                     featuredImage={pet.featured_media}
                     className="w-full h-full object-cover rounded-full shadow-inner"
                 /> */}
-                <img src={pet.featured_media.localFile.publicURL} alt={pet.featured_media.alt_text} className="w-full h-full object-cover rounded-full shadow-inner" />
+                <FeaturedImage featuredImage={pet.featured_media} alt={pet.featured_media.alt_text} className="w-full h-full object-cover rounded-full shadow-inner" />
             </div>
             <h3 className="font-semibold normal-case text-gray-150 text-xl" dangerouslySetInnerHTML={{ __html: pet.title }}></h3>
             <h4 className="font-light text-md" dangerouslySetInnerHTML={{ __html: pet.acf.job_title }}></h4>

@@ -25,7 +25,7 @@ const HomeHero = (props) => {
                 </div>
 
                 <div className="w-full md:w-1/2 py-16">
-                    <img className="w-auto" src={homeImg}/>
+                    <img className="w-auto" width="640" height="425" src={homeImg}/>
                 </div>
             </div>
         </Hero>

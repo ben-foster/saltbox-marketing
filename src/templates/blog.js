@@ -25,7 +25,7 @@ const Blog = ({ data }) => {
                 </div>
             </Hero>
 
-            <div className="bg-white px-4">
+            <div className="bg-transparent px-4">
                 <div className="container mx-auto flex items-center pt-24 md:pt-40 pb-20">
                     <div className="flex flex-col text-gray-800">
                         <div dangerouslySetInnerHTML={{ __html: content }}></div>

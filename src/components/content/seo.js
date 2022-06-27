@@ -11,7 +11,7 @@ const SEO = () => {
         <>
             <div className="container mx-auto pt-24 pb-10 md:py-24 md:pt-12 flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 px-16">
-                    <img className="w-auto sb-box-shadow rounded-xl " src={seoResearchStrategy}/>
+                    <img className="w-auto sb-box-shadow rounded-xl " width="500" height="290" src={seoResearchStrategy}/>
                 </div>
                 <div className="w-full md:w-1/2 px-16">
                     <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300"> Research & Strategy</h2>
@@ -30,13 +30,13 @@ const SEO = () => {
                 </div>
 
                 <div className="w-full md:w-1/2 px-16">
-                    <img className="w-auto sb-box-shadow rounded-xl " src={seoTechnicalSeo}/>
+                    <img className="w-auto sb-box-shadow rounded-xl " width="500" height="290" src={seoTechnicalSeo}/>
                 </div>
             </div>
 
             <div className="container mx-auto py-10 md:py-24 flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 px-16">
-                    <img className="w-auto sb-box-shadow rounded-xl " src={seoContent}/>
+                    <img className="w-auto sb-box-shadow rounded-xl " width="500" height="290" src={seoContent}/>
                 </div>
                 <div className="w-full md:w-1/2 px-16">
                     <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300"> SEO Content</h2>
@@ -55,7 +55,7 @@ const SEO = () => {
                 </div>
 
                 <div className="w-full md:w-1/2 px-16">
-                    <img className="w-auto sb-box-shadow rounded-xl " src={seoRankTracking}/>
+                    <img className="w-auto sb-box-shadow rounded-xl " width="500" height="290" src={seoRankTracking}/>
                 </div>
             </div>
 

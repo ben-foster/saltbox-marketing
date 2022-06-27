@@ -7,7 +7,7 @@ const HomeCallout = () => {
         <div className="w-full mb-5 md:mr-0 md:pr-0 bg-banner-bg bg-cover px-4 pt-20 pb-12 md:p-10">
             <div className="rounded-lg flex flex-col md:flex-row items-center w-full">
                 <div className="w-full md:w-1/2 md:p-12">
-                    <img className="w-full sb-box-shadow" src={googleSearch} alt="" />
+                    <img className="w-full sb-box-shadow" width="700" height="400" src={googleSearch} alt="" />
                 </div>
 
                 <div className="w-full md:w-1/2 text-white md:ml-10 px-4 py-12 md:p-10 flex flex-col items-center md:items-start">

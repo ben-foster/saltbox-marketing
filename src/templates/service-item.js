@@ -26,7 +26,7 @@ const ServiceItem = ({ itemImg, itemText }) => {
             </div>
 
             <div className="flex items-center justify-center w-full md:w-1/2 px-36">
-                <img className="w-32 md:w-96" src={itemImg}/>
+                <img className="w-32 md:w-96" width="430" height="450" src={itemImg}/>
             </div>
         </div>
     );
