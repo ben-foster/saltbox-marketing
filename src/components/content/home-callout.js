@@ -12,7 +12,7 @@ const HomeCallout = () => {
 
                 <div className="w-full md:w-1/2 text-white md:ml-10 px-4 py-12 md:p-10 flex flex-col items-center md:items-start">
                     <h2 className="font-semibold text-xl md:text-4xl text-center md:text-left leading-snug max-w-md mb-6">Take control of your search engine visibility.</h2>
-                    <p className="text-sm text-center md:text-left leading-relaxed font-medium mb-8 max-w-sm">We help businesses develop holistic search engine marketing programs that drive sustainable, profitable customer acquisition.</p>
+                    <p className="text-sm text-center md:text-left leading-relaxed font-medium mb-8 max-w-sm">See if you qualify for a free discovery assessment.</p>
                     <Link to="/contact" className="font-bold inline-flex items-center px-8 h-10 border border-transparent text-sm rounded-lg shadow-sm text-white bg-green-500 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         Get Started
                     </Link>
