@@ -28,7 +28,8 @@ module.exports = {
 				icon: `src/images/saltbox-logo-square.svg`, // This path is relative to the root of the site.
 			},
 		},
-		`gatsby-plugin-postcss`,
+		// `gatsby-plugin-postcss`,
+		`gatsby-theme-tailwindcss`,
 		{
 			resolve: `gatsby-plugin-webfonts`,
 			options: {
