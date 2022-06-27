@@ -11,8 +11,8 @@ import FooterNavThree from "./footer-nav-three";
 
 const Footer = () => (
 	<footer className="bg-footer-texture">
-		<div className="grid grid-cols-3 gap-4 py-12 mx-32">
-			<div className="col-span-2">
+		<div className="md:grid grid-cols-3 gap-4 py-12 md:mx-32">
+			<div className="flex flex-col items-center md:block col-span-2 pr-3 md:pr-0">
 				<Link to="/">
 					<LazyLoadImage
 						src={logo}
@@ -20,22 +20,22 @@ const Footer = () => (
 						className="w-40"
 					/>
 				</Link>
-				<p className="text-gray-500 text-xs pl-3">
+				<p className="text-gray-500 text-xs md:pl-3">
 					<span>© {new Date().getFullYear()} Saltbox Group LLC</span>
 				</p>
 			</div>
 
-			<div className="grid grid-cols-3">
-				<div className="flex flex-col items-start justify-start">
-					<h4 className="px-3 py-1 text-xs font-bold text-white text-center md:text-left uppercase">Services</h4>
+			<div className="flex flex-row flex-wrap md:grid grid-cols-3">
+				<div className="w-1/2 md:w-auto flex flex-col items-start justify-start">
+					<h4 className="px-3 py-1 text-xs font-bold text-white text-left md:text-left">Services</h4>
 					<FooterNavOne />
 				</div>
-				<div className="flex flex-col items-start justify-start">
-					<h4 className="px-3 py-1 text-xs font-bold text-white text-center md:text-left uppercase">Company</h4>
+				<div className="w-1/2 md:w-auto flex flex-col items-start justify-start">
+					<h4 className="px-3 py-1 text-xs font-bold text-white text-left md:text-left">Company</h4>
 					<FooterNavTwo />
 				</div>
-				<div className="flex flex-col items-start justify-start">
-					<h4 className="px-3 py-1 text-xs font-bold text-white text-center md:text-left uppercase">Resources</h4>
+				<div className="w-1/2 md:w-auto flex flex-col items-start justify-start">
+					<h4 className="px-3 py-1 text-xs font-bold text-white text-left md:text-left">Resources</h4>
 					<FooterNavThree />
 				</div>
 			</div>

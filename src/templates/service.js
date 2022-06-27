@@ -34,7 +34,7 @@ const Service = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
 
-            <Hero className={`${title === "Pay-per-Click Advertising" ? 'bg-ppc-bg' : title === "Search Engine Optimization" ? "bg-seo-bg" : "bg-careers-bg"} bg-cover bg-no-repeat bg-center overflow-visible`}>
+            <Hero page={title}>
                 <div className="container mx-auto flex items-center pt-12 pb-20">
                     <div className="flex flex-col w-full text-white relative py-10">
                         <>
@@ -51,7 +51,7 @@ const Service = ({ data }) => {
                     </div>
                 </div>
             </Hero>
-            <div className="bg-white">
+            <div className="bg-transparent">
                 <>
                     { title === "Pay-per-Click Advertising" && (
                         <PPCComponent/>

@@ -16,7 +16,7 @@ const TeamMember = ({ member }) => {
                 /> */}
                 <img src={member.featured_media.localFile.publicURL} alt={member.featured_media.alt_text} className="w-full h-full object-cover rounded-full shadow-inner" />
             </div>
-            <h3 className="font-semibold normal-case text-gray-150 text-xl" dangerouslySetInnerHTML={{ __html: member.title }}></h3>
+            <h3 className="font-semibold normal-case text-gray-150 text-xl mt-2 md:mt-4" dangerouslySetInnerHTML={{ __html: member.title }}></h3>
             <h4 className="font-light text-md" dangerouslySetInnerHTML={{ __html: member.acf.job_title }}></h4>
         </Link>
     );

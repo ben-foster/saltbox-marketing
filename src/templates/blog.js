@@ -16,18 +16,17 @@ const Blog = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
             
-            <Hero className="bg-blog-bg bg-cover bg-no-repeat bg-center h-96">
-                <div className="container mx-auto flex items-center pt-32 pb-32">
-                    <div className="w-full flex flex-col text-white">
-                        <h1 className="text-center font-semibold z-1"> The Blog</h1>
-
-                        <img className="w-54 h-54 m-auto z-0" src={blogCube}/>
+            <Hero page={title}>
+                <div className="container mx-auto flex items-center pt-24 md:pt-32">
+                    <div className="relative w-full flex flex-col text-white">
+                        <h1 className="text-4xl text-center font-semibold z-10 mt-12 md:mt-40">The Blog</h1>
+                        <img className="absolute top-0 left-0 right-0 text-center w-40 md:w-96 md:h-96 m-auto z-0" src={blogCube}/>
                     </div>
                 </div>
             </Hero>
 
-            <div className="bg-white">
-                <div className="container mx-auto flex items-center py-20">
+            <div className="bg-white px-4">
+                <div className="container mx-auto flex items-center pt-24 md:pt-40 pb-20">
                     <div className="flex flex-col text-gray-800">
                         <div dangerouslySetInnerHTML={{ __html: content }}></div>
                         <BlogPosts />

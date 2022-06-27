@@ -5,7 +5,26 @@ html {
     font-size: 18px;
 }
 
-h1,h2,h3,h4,h5,a,span,button,ul,ol,p {
+#gatsby-focus-wrapper {
+    position:static;
+}
+
+@media(min-width:767px) {
+    #gatsby-focus-wrapper {
+        position:relative;
+    }
+}
+
+html, 
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+h1,h2,h3,h4,h5,a,span,button,ul,ol,p,label,input,select,textarea,div {
     @apply font-sans;
     font-family: "Poppins";
 }
@@ -87,7 +106,7 @@ form label {
 form input,
 form select,
 form textarea {
-    @apply text-sm p-2 mt-1 mb-4 w-full border border-teal-100 text-gray-800 rounded shadow outline-none;        
+    @apply text-sm p-2 mt-1 mb-4 w-full border border-teal-100 text-gray-800 rounded shadow-inner outline-none;        
 }
 
 form input:hover,
@@ -313,6 +332,10 @@ form.on-dark button[type=submit]:disabled {
 }
 
 /* End Flickity slider prev/next button */
+
+.sb-box-shadow {
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.15), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.107828), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0894161), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.075), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0605839), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0421718);
+}
 
 @tailwind components;
 @tailwind utilities;

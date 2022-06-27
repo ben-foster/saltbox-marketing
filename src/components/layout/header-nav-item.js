@@ -6,8 +6,8 @@ const HeaderNavItem = ({ item }) => {
     return (
         <div className="relative w-full md:w-auto">
             <Link
-                to={item.url.replace("https://wordpress.saltbox.solutions", "")}
-                className="w-full flex items-center justify-center bg-blue-900 md:bg-transparent md:w-auto p-4 text-white font-normal"
+                to={item.url === "https://wordpress.saltbox.solutions/services/" ? "#" : item.url.replace("https://wordpress.saltbox.solutions", "")}
+                className="hidden w-full md:flex items-center justify-center bg-blue-900 md:bg-transparent md:w-auto p-4 text-white font-normal text-sm"
                 key={item.title}
                 onMouseEnter={() => item.child_items ? setShowSubNav(true) : null}
                 onMouseLeave={() => item.child_items ? setShowSubNav(false) : null}

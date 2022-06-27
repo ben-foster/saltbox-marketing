@@ -30,7 +30,7 @@ const FooterNavTwo = () => {
                 return items.map(item => (
                     <Link
                         to={item.url.replace("https://wordpress.saltbox.solutions", "")}
-                        className="w-full p-3 text-sm text-white font-normal text-center md:text-left hover:text-gray-200 focus:text-gray-200"
+                        className="w-full p-3 text-sm text-white font-light text-left hover:text-gray-200 focus:text-gray-200"
                         key={item.title}
                     >
                         {item.title}

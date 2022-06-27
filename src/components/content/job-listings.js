@@ -5,7 +5,7 @@ import JobListingPreview from "./job-listing-preview";
 
 const JobListings = () => {
     return (
-        <div className="flex flex-row flex-wrap">
+        <div className="mt-10 flex flex-row flex-wrap">
             <StaticQuery
                 query={ALL_JOB_LISTINGS_QUERY}
                 render={data => {

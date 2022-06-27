@@ -6,11 +6,11 @@ import PostPreview from "./post-preview";
 const HomeFeaturedPosts = (props) => {
     const { title, description } = props;
     return (
-        <div className="bg-white pt-6 pb-10 md:py-12">
+        <div className="bg-white px-4 pb-10 md:py-12">
             <div className="container mx-auto flex flex-col flex-no-wrap items-center">
-                <div className="flex flex-col">
-                    { title && <h2 className="text-blue-350 text-3xl" dangerouslySetInnerHTML={{ __html: title }}></h2>}
-                    { description && <p className="text-gray-150 text-xs text-center -mt-8" dangerouslySetInnerHTML={{ __html: description }}></p>}
+                <div className="flex flex-col pt-20 md:pb-8">
+                    { title && <h2 className="text-blue-350 text-2xl md:text-4xl mb-12" dangerouslySetInnerHTML={{ __html: title }}></h2>}
+                    { description && <p className="text-gray-150 mx-auto md:mx-0 w-56 md:w-auto text-xs md:text-sm text-center -mt-8" dangerouslySetInnerHTML={{ __html: description }}></p>}
                 </div>
                 <div className="flex-grow flex flex-col md:flex-row md:flex-wrap justify-start">  
                     <StaticQuery

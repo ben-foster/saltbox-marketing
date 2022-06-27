@@ -12,7 +12,7 @@ import seoH4 from "../../images/seo-h4.svg"
 const HowToGetStarted = (props) => {
     return (
         <div className="flex flex-col mb-8">
-            <h2 className={`${props.type == 'ppc' ? 'text-violet-300' : 'text-blue-150'} font-bold text-center`}>How to Get Started</h2>
+            <h2 className={`${props.type == 'ppc' ? 'text-violet-300' : 'text-blue-150'} font-bold text-center text-3xl mt-12`}>How to Get Started</h2>
             <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-center p-2 md:p-0">
                 <div className="flex flex-col items-center bg-white rounded-lg px-5 py-8 mb-2 w-full max-w-sm">
                     {props.type == 'ppc' 

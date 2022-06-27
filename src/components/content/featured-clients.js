@@ -7,10 +7,9 @@ const FeaturedClients = (props) => {
     const { title, description, className } = props;
     return (
         <div className={className}>
-            <div className="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-                { title && <h2 className="font-bold">{title}</h2>}
-                { description && <p>{description}</p>}
-                <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">  
+            <div className="container max-w-7xl mx-auto pb-24 px-4 sm:px-6 lg:px-8 xl:pt-16">
+                <h2 className="text-2xl md:text-4xl tracking-wide text-blue-150 mb-12 max-w-2xl mx-auto bg-white rounded-xl">Businesses that know how to use search engines win big.</h2>
+                <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5  bg-white rounded-xl">  
                     <StaticQuery
                         query={graphql`
                             query FeaturedClientsQuery {

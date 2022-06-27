@@ -16,8 +16,7 @@ const AuthorCard = props => {
             </div>
             <div className="flex-grow flex flex-col text-violet-100">
                 <h4 className="text-lg text-center md:text-left font-semibold" dangerouslySetInnerHTML={{ __html: name }}></h4>
-                <h5 className="italic text-base mt-1" dangerouslySetInnerHTML={{ __html: jobTitle + ", Saltbox Solutions" }}></h5>
-                <div dangerouslySetInnerHTML={{ __html: bio }}></div>
+                <h5 className="text-center md:text-left italic text-base mt-1" dangerouslySetInnerHTML={{ __html: jobTitle + ", Saltbox Solutions" }}></h5>
             </div>
         </div>
     );

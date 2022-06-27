@@ -14,10 +14,8 @@ const Contact = ({ data }) => {
                 title={yoast_meta.yoast_wpseo_title} 
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
-            <Hero className="bg-blue-violet bg-auto bg-no-repeat bg-center  ">
-                <div className="container mx-auto flex items-center p-16 pt-32 pb-32">
-                    <ContactUs contactColor="bg-contact-purple"/>
-                </div>
+            <Hero className="bg-blue-violet bg-cover bg-no-repeat bg-center px-2 pt-24 md:p-8">
+                <ContactUs contactColor="bg-contact-purple"/>
             </Hero>
         </Layout>
     )

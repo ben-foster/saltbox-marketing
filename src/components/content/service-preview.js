@@ -23,7 +23,7 @@ class ServicePreview extends Component {
 	}
 	
 	updateWindowDimensions() {
-		this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight });
+		this.setState({ windowWidth: typeof window !== "undefined" ? window.innerWidth : "auto", windowHeight: window.innerHeight });
 	}
 
 	render() {

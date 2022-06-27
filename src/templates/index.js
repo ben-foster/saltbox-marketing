@@ -4,18 +4,18 @@ import { graphql } from "gatsby"
 import SEO from "../components/layout/seo";
 import Layout from "../components/layout/layout";
 import HomeHero from "../components/content/home-hero";
-import FeaturedServices from "../components/content/featured-services";
 import FeaturedClients from "../components/content/featured-clients";
-import FeaturedCaseStudies from "../components/content/featured-case-studies";
-import FeaturedWhitepaper from "../components/content/featured-whitepaper";
 import HomeFeaturedPosts from "../components/content/home-featured-posts";
 import ContactUs from "../components/content/contact-us";
-import HomeBanner from "../components/content/home-banner";
-import HomeBannerTwo from "../components/content/home-banner-two";
+import HomeCallout from "../components/content/home-callout";
+import HomePricing from "../components/content/home-pricing";
 
+import expertsCube from "../images/experts-cube.svg"
+import noCommitmentsCube from "../images/no-commitments-cube.svg"
+import noVariableFeesCube from "../images/no-variable-fees-cube.svg"
 import blueLogo from "../images/blue-logo.svg"
-import pricing from "../images/pricing.png"
-import option from "../images/options.png"
+import homeBg from "../images/home-bg.svg"
+import mobileHomeBg from "../images/mobile-home-bg.svg"
 
 const IndexPage = ({ data }) => {
 	const { acf, yoast_meta } = data.wordpressPage;
@@ -25,54 +25,81 @@ const IndexPage = ({ data }) => {
 				title={yoast_meta.yoast_wpseo_title} 
 				description={yoast_meta.yoast_wpseo_metadesc} 
 			/>
+			<div className="relative w-full">
+				<img className="absolute right-0 top-0 hidden md:block" style={{ width: typeof window !== "undefined" ? window.innerWidth : "auto" * 0.55, zIndex: -1 }} src={homeBg}/>
+				<img className="absolute left-0 right-0 top-0 block md:hidden" style={{ width: typeof window !== "undefined" ? window.innerWidth : "auto", zIndex: -1 }} src={mobileHomeBg}/>
+			</div>
 			<HomeHero
-				background={acf.hero.hero_background_image}
 				taglineLineOne={acf.hero.hero_tagline_line_one}
 				taglineLineTwo={acf.hero.hero_tagline_line_two}
 			/>
+			<FeaturedClients /> 
+			<HomeCallout/>
 
-			<FeaturedClients className="bg-white"/> 
-
-			<HomeBanner/>
-
-			<div className="flex items-center justify-center w-full px-36">
-                <img className="" src={pricing}/>
+			<div className="flex flex-col items-center justify-center w-full py-12 md:py-32">
+                <h2 className="text-2xl md:text-4xl tracking-wide text-blue-150 mb-20">We do things a little differently.</h2>
+				<div className="flex flex-col md:flex-row justify-between mt-0 md:mt-16">
+					<div className="bg-uniques-blue bg-cover rounded-xl mx-4 md:mx-12 mt-12 md:mt-0">
+						<div className="relative px-8 py-10 md:p-10">
+							<div className="md:w-48">
+								<img
+									className="absolute w-40 left-0 right-0 text-center mx-auto"
+									style={{ top: "-6.5rem"}}
+									src={noVariableFeesCube}
+									alt="no variable fees"
+								/>
+								<h3 className="mt-8 md:mt-12 mb-8 text-center text-white font-bold text-lg normal-case">No Variable Fees</h3>
+								<div className="text-center">
+									<p className="md:mb-8 text-white text-sm leading-relaxed">We manage PPC using a flat-rate service fee, so we aren’t incentivized to just spend money.</p>
+									<p className="md:mb-8 text-white text-sm leading-relaxed">We are incentivized to see measurable returns from your investment in our partnership.</p>
+								</div>	
+							</div>
+						</div>
+					</div>
+					<div className="bg-uniques-purple bg-cover rounded-xl mx-4 md:mx-12 mt-32 md:mt-0">
+						<div className="relative px-8 py-10 md:p-10">
+							<div className="md:w-48">
+								<img
+									className="absolute w-40 left-0 right-0 text-center mx-auto"
+									style={{ top: "-6.5rem"}}
+									src={noCommitmentsCube}
+									alt="no commitments"
+								/>
+								<h3 className="mt-8 md:mt-12 mb-8 text-center text-white font-bold text-lg normal-case">No Commitments</h3>
+								<div className="text-center">
+									<p className="md:mb-8 text-white text-sm leading-relaxed">We don’t lock you into minimum terms and we enable scope flexibility month-to-month.</p>
+									<p className="md:mb-8 text-white text-sm leading-relaxed">We want to work together, but only if it’s working for you too.</p>
+								</div>	
+							</div>
+						</div>
+					</div>
+					<div className="bg-uniques-light-blue bg-cover rounded-xl mx-4 md:mx-12 mt-32 md:mt-0">
+						<div className="relative px-8 py-10 md:p-10">
+							<div className="md:w-48">
+								<img
+									className="absolute w-40 left-0 right-0 text-center mx-auto"
+									style={{ top: "-6.5rem"}}
+									src={expertsCube}
+									alt="experts"
+								/>
+								<h3 className="mt-8 md:mt-12 mb-8 text-center text-white font-bold text-lg normal-case">No Account Managers</h3>
+								<div className="text-center">
+									<p className="md:mb-8 text-white text-sm leading-relaxed">We don’t pay people to answer the phone, send emails, or set meetings.</p>
+									<p className="md:mb-8 text-white text-sm leading-relaxed">We want you to benefit from working directly with the analysts executing the work.</p>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
             </div>
 			
-			<HomeBannerTwo/>
-			{/* <FeaturedServices
-				title={acf.services.services_title}
-				description={acf.services.services_description}
-				className="bg-white"
-			/> 
-			<FeaturedClients
-				title={acf.clients.featured_clients_title}
-				description={acf.clients.clients_description}
-				className="bg-white"
-			/> */}
-			{/* <div className="bg-white">
-				<div className="container mx-auto">
-					<WhySaltbox />
-				</div>
-			</div> */}
-			{/* <FeaturedCaseStudies
-				title={acf.case_studies.case_studies_title}
-				description={acf.case_studies.case_studies_description}
-			/> */}
-			{/* <FeaturedTestimonials
-				title={acf.testimonials.testimonials_title}
-				description={acf.testimonials.testimonials_description}
-			/> */}
-			{/* <FeaturedWhitepaper
-				title={acf.whitepaper.whitepaper_title}
-				description={acf.whitepaper.whitepaper_description}
-			/>*/}
+			<HomePricing/>
 			<HomeFeaturedPosts
 				title={"Learn the tools of the trade."}
 				description={"Unlock the secrets to search engine acquisition."}
 			/>
 
-			<ContactUs bgColor="bg-blue-violet" contactColor="bg-contact-purple"/>
+			<ContactUs bgColor="bg-blue-150 md:bg-blue-violet" contactColor="bg-contact-purple"/>
 		</Layout>
 	)
 }

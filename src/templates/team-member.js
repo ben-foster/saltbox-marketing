@@ -15,25 +15,23 @@ const TeamMember = ({ data }) => {
                 description={yoast_meta.yoast_wpseo_metadesc}
             />
             <Hero className="bg-careers-bg bg-cover bg-no-repeat bg-center h-70 mb-96">
-                <div className="max-w-4xl mx-auto flex flex-col items-center rounded-2xl p-16 bg-contact-blue bg-cover bg-no-repeat mt-20">
+                <div className="max-w-4xl mx-auto flex flex-col items-center rounded-2xl py-16 px-8 md:p-16 bg-contact-blue bg-cover bg-no-repeat mt-20">
                     <div className="flex flex-col w-full text-white text-center items-center">
-                        <div className="w-full text-left mb-4 md:mb-0 pl-4 md:pl-0">
+                        <div className="w-full text-left mb-4 md:mb-0 pl-4 md:pl-0 mr-8 md:mr-0">
                             <Link to="/about/#team">&larr; Back to Team</Link>
                         </div>
                         <div className="w-48 md:w-64 h-48 md:h-64 p-1 md:p-2 mt-4 md:mt-2 shadow-md rounded-full bg-white">
-                            
-
                             <img className="w-full h-full rounded-full shadow-inner" src={featured_media.localFile.publicURL}/>
                         </div>
-                        <h1 className="font-bold mt-4" dangerouslySetInnerHTML={{ __html: title }}></h1>
+                        <h1 className="font-bold mt-8 md:mt-4 text-2xl md:text-4xl" dangerouslySetInnerHTML={{ __html: title }}></h1>
                         { acf.job_title && (
-                            <p dangerouslySetInnerHTML={{ __html: acf.job_title }}></p>
+                            <p className="text-xs md:text-base" dangerouslySetInnerHTML={{ __html: acf.job_title }}></p>
                         )}
                     </div>
 
                     <div className="max-w-2xl mx-auto flex items-center text-white">
-                        <div className="flex flex-col text-center">
-                            <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                        <div className="flex flex-col text-left">
+                            <div className="text-xs md:text-base" dangerouslySetInnerHTML={{ __html: content }}></div>
                         </div>
                     </div>
                 </div>
