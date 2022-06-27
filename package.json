@@ -22,7 +22,7 @@
     "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-plugin-webfonts": "^1.1.4",
     "gatsby-source-filesystem": "^2.11.1",
-    "gatsby-source-wordpress": "^3.11.0",
+    "gatsby-source-wordpress": "^4.0.8",
     "gatsby-theme-tailwindcss": "^1.1.0",
     "gatsby-transformer-sharp": "^2.12.1",
     "graphql-tag": "^2.12.6",
