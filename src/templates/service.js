@@ -14,18 +14,6 @@ import ServiceItem from "../components/content/service-item";
 const Service = ({ data }) => {
     const { title, content, acf, yoast_meta } = data.wordpressWpServices;
 
-    const ppcText = {
-        'title': "Pay-per-Click (PPC)",
-        'secondary': "Google and Microsoft Advertising",
-        'body': "We believe you should manage your money like it's your money. We treat our advertising campaigns with the rigor that we would treat managing our retirement accounts. Succeeding at real-time auction-based advertising requires strong analytics and diligent execution of a recurring set of optimization tactics."
-    };
-
-    const seoText = {
-        'title': "Search Engine Optimization (SEO)",
-        'secondary': "Search Engine Optimization Program",
-        'body': "SEO is a great way to earn traffic and leads from platforms like Google and Bing. Winning page-one ranks for competitive queries is no easy task. It takes a strong strategy and rigorous execution of technical optimization strategies, content production, content optimization, and promotion."
-    };
-
     return (
         <Layout>
             <SEO 
@@ -37,11 +25,11 @@ const Service = ({ data }) => {
                 <div className="container mx-auto flex items-center pt-12 pb-20">
                     <div className="flex flex-col w-full text-white relative py-10">
                         <>
-                            { title === "Pay-per-Click Advertising" && (
-                                <ServiceItem itemImg={ppcBox} itemText={ppcText}/>
+                            { title === "Pay-per-Click (PPC)" && (
+                                <ServiceItem img={ppcBox} title={title} subtitle={acf.hero_subtitle} content={acf.hero_description} link={acf.hero_link} />
                             )}
-                            { title === "Search Engine Optimization" && (
-                                <ServiceItem itemImg={seoBox} itemText={seoText}/>
+                            { title === "Search Engine Optimization (SEO)" && (
+                                <ServiceItem img={seoBox} title={title} subtitle={acf.hero_subtitle} content={acf.hero_description} link={acf.hero_link} />
                             )}
                         </>
                     </div>
@@ -49,11 +37,11 @@ const Service = ({ data }) => {
             </Hero>
             <div className="bg-transparent">
                 <>
-                    { title === "Pay-per-Click Advertising" && (
-                        <PPCComponent/>
+                    { title === "Pay-per-Click (PPC)" && (
+                        <PPCComponent acf={acf} />
                     )}
-                    { title === "Search Engine Optimization" && (
-                        <SEOComponent/>
+                    { title === "Search Engine Optimization (SEO)" && (
+                        <SEOComponent acf={acf} />
                     )}
                 </>
             </div>
@@ -72,49 +60,21 @@ export const query = graphql`
                 yoast_wpseo_metadesc
             }
             acf {
-                subheader
-                subservice_one_title
-                subservice_one_description
-                subservice_one_image {
-                    alt_text
-                    localFile {
-                        publicURL
-                        extension
-                        childImageSharp {
-                            fluid(maxWidth: 500, quality: 100) {
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
-                    }
+                hero_subtitle
+                hero_description
+                hero_link {
+                    title
+                    target
+                    url
                 }
-                subservice_two_title
-                subservice_two_description
-                subservice_two_image {
-                    alt_text
-                    localFile {
-                        publicURL
-                        extension
-                        childImageSharp {
-                            fluid(maxWidth: 500, quality: 100) {
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
-                    }
-                }
-                subservice_three_title
-                subservice_three_description
-                subservice_three_image {
-                    alt_text
-                    localFile {
-                        publicURL
-                        extension
-                        childImageSharp {
-                            fluid(maxWidth: 500, quality: 100) {
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
-                    }
-                }
+                feature_one_title
+                feature_one_description
+                feature_two_title
+                feature_two_description
+                feature_three_title
+                feature_three_description
+                feature_four_title
+                feature_four_description
             }
 		}
 	}

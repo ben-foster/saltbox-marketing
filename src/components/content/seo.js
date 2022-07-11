@@ -6,7 +6,7 @@ import seoRankTracking from "../../images/rank-tracking.svg"
 import HowToGetStarted from "./how-to-get-started";
 import ContactUs from "./contact-us";
 
-const SEO = () => {
+const SEO = ({ acf }) => {
     return (
         <>
             <div className="container mx-auto pt-24 pb-10 md:py-24 md:pt-12 flex flex-col md:flex-row items-center">
@@ -14,18 +14,18 @@ const SEO = () => {
                     <img className="w-auto sb-box-shadow rounded-xl " width="500" height="290" src={seoResearchStrategy}/>
                 </div>
                 <div className="w-full md:w-1/2 px-16">
-                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300"> Research & Strategy</h2>
+                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300">{acf.feature_one_title}</h2>
                     <div className="max-w-sm">
-                        <span className="text-xs text-gray-150">We help clients understand the upside potential and risks of SEO, benchmark competitor standings, and prioritize keyword targets and tactical initiatives.</span>
+                        <span className="text-xs text-gray-150">{acf.feature_one_description}</span>
                     </div>
                 </div>
             </div>
 
             <div className="container mx-auto py-10 md:py-24 flex flex-col-reverse md:flex-row items-center">
                 <div className="w-full md:w-1/2 px-16">
-                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300"> Technical SEO</h2>
+                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300">{acf.feature_two_title}</h2>
                     <div className="max-w-sm">
-                        <span className="text-xs text-gray-150">We help our clients implement technical SEO best practices like meta data optimization, load time optimization, website interlinking, and other on-page elements.</span>
+                        <span className="text-xs text-gray-150">{acf.feature_two_description}</span>
                     </div>
                 </div>
 
@@ -39,18 +39,18 @@ const SEO = () => {
                     <img className="w-auto sb-box-shadow rounded-xl " width="500" height="290" src={seoContent}/>
                 </div>
                 <div className="w-full md:w-1/2 px-16">
-                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300"> SEO Content</h2>
+                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300">{acf.feature_three_title}</h2>
                     <div className="max-w-sm">
-                        <span className="text-xs text-gray-150">We help our clients update existing content and create new content to provide search engines with optimal web pages to rank for target keywords.</span>
+                        <span className="text-xs text-gray-150">{acf.feature_three_description}</span>
                     </div>
                 </div>
             </div>
 
             <div className="container mx-auto py-10 md:py-24 flex flex-col-reverse md:flex-row items-center">
                 <div className="w-full md:w-1/2 px-16">
-                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300"> Rank Tracking & Analytics</h2>
+                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300">{acf.feature_four_title}</h2>
                     <div className="max-w-sm">
-                        <span className="text-xs text-gray-150">We help our clients paint a picture of the impact investments are having on sales and other key business metrics.</span>
+                        <span className="text-xs text-gray-150">{acf.feature_four_description}</span>
                     </div>
                 </div>
 

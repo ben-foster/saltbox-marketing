@@ -29,10 +29,7 @@ const IndexPage = ({ data }) => {
 				<img className="home-hero absolute right-0 top-0 hidden md:block" style={{ width: typeof window !== "undefined" ? window.innerWidth * 0.55 : "auto", zIndex: -1 }} src={homeBg}/>
 				<img className="home-hero absolute left-0 right-0 top-0 block md:hidden" style={{ width: typeof window !== "undefined" ? window.innerWidth : "auto", zIndex: -1 }} src={mobileHomeBg}/>
 			</div>
-			<HomeHero
-				taglineLineOne={acf.hero.hero_tagline_line_one}
-				taglineLineTwo={acf.hero.hero_tagline_line_two}
-			/>
+			<HomeHero />
 			<FeaturedClients /> 
 			<HomeCallout/>
 
@@ -111,49 +108,75 @@ export const query = graphql`
 			id
 			path
 			acf {
-				hero {
-					hero_background_image {
-						localFile {
-							publicURL
-							extension
-							childImageSharp {
-								resolutions(width: 1800) {
-									...GatsbyImageSharpResolutions_withWebp
-								}
-							}
-						}
-					}
-					hero_tagline_line_one
-					hero_tagline_line_two
+				# hero {
+				hero_title
+				hero_subtitle
+				hero_link {
+					title
+					url
+					target
 				}
-				services {
-					services_title
-					services_description
+				# }
+				# testimonials {
+				testimonials_header
+				testimonials_list {
+					testimonials_client_company
 				}
-				clients {
-					featured_clients_title
-					clients_description
+				# client_logos {
+				# 	logo {
+				# 		localFile {
+				# 			publicURL
+				# 			extension
+				# 			childImageSharp {
+				# 				resolutions(width: 1800) {
+				# 					...GatsbyImageSharpResolutions_withWebp
+				# 				}
+				# 			}
+				# 		}
+				# 	}
+				# }
+				# }
+				# callout {
+				callout_title
+				callout_subtitle
+				callout_link {
+					title
+					url
+					target
 				}
-				case_studies {
-					case_studies_title
-					case_studies_description
+				# }
+				# uniques {
+				uniques_title
+				unique_one_title
+				unique_one_description
+				unique_two_title
+				unique_two_description
+				unique_three_title
+				unique_three_description
+				# }
+				# pricing {
+				pricing_title
+				pricing_subtitle
+				pricing_description
+				ppc_pricing_title
+				ppc_pricing_starting_at
+				ppc_pricing_features {
+					ppc_pricing_feature
 				}
-				testimonials {
-					testimonials_title
-					testimonials_description
+				seo_pricing_title
+				seo_pricing_starting_at
+				seo_pricing_features {
+					seo_pricing_feature
 				}
-				whitepaper {
-					whitepaper_title
-					whitepaper_description
-				}
-				recent_posts {
-					recent_posts_title
-					recent_posts_description
-				}
-				contact_us {
-					contact_us_title
-					contact_us_description
-				}
+				# }
+				# featured_posts {
+				featured_posts_title
+				featured_posts_subtitle
+				# }
+				# contact {
+				contact_title
+				contact_description
+				# }
 			}
 			yoast_meta {
 				yoast_wpseo_title

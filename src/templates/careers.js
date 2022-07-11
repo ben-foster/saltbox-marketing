@@ -10,13 +10,7 @@ import ServiceItem from "../components/content/service-item";
 import JobListings from "../components/content/job-listings";
 
 const Careers = ({ data }) => {
-    const { title, yoast_meta } = data.wordpressPage;
-
-    const careersText = {
-        'title': "Careers",
-        'body': "View our open positions here. Though we have an office in Raleigh, NC, we have teammates on both the east and west coast. If you can work in the U.S. legally, you are good to go! Come join our dedicated team of industry experts and grow within a company culture designed to support you to success.",
-        'noButton': true,
-    };
+    const { title, content, yoast_meta } = data.wordpressPage;
 
     return (
         <Layout>
@@ -27,7 +21,7 @@ const Careers = ({ data }) => {
             <Hero page={title}>
                 <div className="container mx-auto flex items-center pt-32 md:pt-40 py-32">
                     <div className="flex flex-col w-full text-white relative">
-                        <ServiceItem itemImg={careersBox} itemText={careersText}/>
+                        <ServiceItem img={careersBox} title={title} content={content} />
                     </div>
                 </div>
             </Hero>
