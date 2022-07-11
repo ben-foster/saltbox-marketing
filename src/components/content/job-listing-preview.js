@@ -29,7 +29,7 @@ const JobListingPreview = ({ jobListing }) => {
                 </div>
 
                 <div className="flex pt-6 md:pt-0 px-6 md:px-0 md:w-1/2 ml-auto min-w-0">
-                    <p className="text-center md:text-left text-sm font-light text-gray-150 leading-tight mb-0" dangerouslySetInnerHTML={{ __html: jobListing.excerpt }}></p>
+                    <p className="text-center md:text-left text-sm font-light text-gray-150 leading-tight mb-0" dangerouslySetInnerHTML={{ __html: jobListing.excerpt || jobListing.content }}></p>
                 </div>
             </div>
         </div>

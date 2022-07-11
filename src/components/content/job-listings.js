@@ -31,6 +31,7 @@ const ALL_JOB_LISTINGS_QUERY = graphql`
                 node {
                     title
                     excerpt
+                    content
                     link
                     date(formatString: "MM/DD/YYYY")
                     featured_media {

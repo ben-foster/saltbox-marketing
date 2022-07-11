@@ -10,7 +10,7 @@ import blogCube from "../images/blog-cube.svg";
 import ctaBg from "../images/blog-post-cta-bg.svg"
 
 const Page = ({ data }) => {
-    const { title, yoast_meta } = data.wordpressPage;
+    const { title, yoast_meta, content } = data.wordpressPage;
     return (
         <Layout>
             <SEO 
@@ -27,9 +27,10 @@ const Page = ({ data }) => {
                         </div>
                         <div className="sm:px-6 lg:col-span-3 lg:px-8 xl:pl-12 text-white md:text-violet-100">
                             <h1 className="text-2xl md:text-4xl font-bold tracking-wide text-center md:text-left text-white md:text-blue-350 mb-8 mt-2">About Us</h1>
-                            <p className="text-sm md:font-light leading-snug">We believe that many businesses struggle to consistently and profitably acquire customers from search engines. The landscape is always evolving and successful tactical execution requires both domain knowledge and niche technical skillsets. Working with agency partners can also be frustrating – businesses can often end up feeling like they don’t have the right level transparency into their data, they don’t understand the decision-making process of their partners, or they are being underserved by cookie-cutter service solutions.</p>
+                            <div className="text-sm md:font-light leading-snug" dangerouslySetInnerHTML={{ __html: content }} />
+                            {/* <p className="text-sm md:font-light leading-snug">We believe that many businesses struggle to consistently and profitably acquire customers from search engines. The landscape is always evolving and successful tactical execution requires both domain knowledge and niche technical skillsets. Working with agency partners can also be frustrating – businesses can often end up feeling like they don’t have the right level transparency into their data, they don’t understand the decision-making process of their partners, or they are being underserved by cookie-cutter service solutions.</p>
                             <p className="text-sm md:font-light leading-snug">In 2018, Saltbox Solutions was founded in an attempt to provide a better solution for marketers looking to augment the strategy and execution of their current digital marketing initiatives. Saltbox focuses on client education and transparency around data, tools, and tactics. We feel like an educated client is a great client – and we aim to build lasting partnerships by listening to the needs of our clients and striving for operational excellence.</p>
-                            <p className="text-sm md:font-light leading-snug">Saltbox Solutions is located in Raleigh, North Carolina. We primarily work with clients in B2B Software, Health and Fitness, and B2C Services like HVAC and automotive repair.</p>
+                            <p className="text-sm md:font-light leading-snug">Saltbox Solutions is located in Raleigh, North Carolina. We primarily work with clients in B2B Software, Health and Fitness, and B2C Services like HVAC and automotive repair.</p> */}
                         </div>
                     </div>
                 </div>

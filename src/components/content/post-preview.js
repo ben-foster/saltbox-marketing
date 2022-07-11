@@ -35,7 +35,7 @@ const PostPreview = ({ post }) => {
                     </div>
                 </div>
                 <div className="p-4">
-                    <p className="text-xs leading-tight overflow-hidden h-24 font-light" dangerouslySetInnerHTML={{ __html: post.excerpt }}></p>
+                    <p className="text-xs leading-tight overflow-hidden h-24 font-light" dangerouslySetInnerHTML={{ __html: post.excerpt || post.content }}></p>
                     
                     <Link className="font-bold text-blue-350 hover:text-teal-500 w-full text-left mt-auto text-sm" to={post.link.replace("https://wordpress.saltbox.solutions", "")}>
                         Read more &rarr;

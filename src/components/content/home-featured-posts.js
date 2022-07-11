@@ -22,6 +22,7 @@ const HomeFeaturedPosts = (props) => {
                                             title
                                             link
                                             excerpt
+                                            content
                                             author {
                                                 name
                                                 link
