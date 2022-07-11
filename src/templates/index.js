@@ -29,12 +29,12 @@ const IndexPage = ({ data }) => {
 				<img className="home-hero absolute right-0 top-0 hidden md:block" style={{ width: typeof window !== "undefined" ? window.innerWidth * 0.55 : "auto", zIndex: -1 }} src={homeBg}/>
 				<img className="home-hero absolute left-0 right-0 top-0 block md:hidden" style={{ width: typeof window !== "undefined" ? window.innerWidth : "auto", zIndex: -1 }} src={mobileHomeBg}/>
 			</div>
-			<HomeHero />
-			<FeaturedClients /> 
-			<HomeCallout/>
+			<HomeHero title={acf.hero_title} subtitle={acf.hero_subtitle} link={acf.hero_link} />
+			<FeaturedClients title={acf.testimonials_title} /> 
+			<HomeCallout title={acf.callout_title} subtitle={acf.callout_subtitle} link={acf.callout_link} />
 
 			<div className="flex flex-col items-center justify-center w-full py-12 md:py-32">
-                <h2 className="text-2xl md:text-4xl tracking-wide text-blue-150 mb-20">We do things a little differently.</h2>
+                <h2 className="text-2xl md:text-4xl tracking-wide text-blue-150 mb-20">{acf.uniques_title}</h2>
 				<div className="flex flex-col md:flex-row justify-between mt-0 md:mt-16">
 					<div className="bg-uniques-blue bg-cover rounded-xl mx-4 md:mx-12 mt-12 md:mt-0">
 						<div className="relative px-8 py-10 md:p-10">
@@ -45,11 +45,8 @@ const IndexPage = ({ data }) => {
 									src={noVariableFeesCube}
 									alt="no variable fees"
 								/>
-								<h3 className="mt-8 md:mt-12 mb-8 text-center text-white font-bold text-lg normal-case">No Variable Fees</h3>
-								<div className="text-center">
-									<p className="md:mb-8 text-white text-sm leading-relaxed">We manage PPC using a flat-rate service fee, so we aren’t incentivized to just spend money.</p>
-									<p className="md:mb-8 text-white text-sm leading-relaxed">We are incentivized to see measurable returns from your investment in our partnership.</p>
-								</div>	
+								<h3 className="mt-8 md:mt-12 mb-8 text-center text-white font-bold text-lg normal-case" dangerouslySetInnerHTML={{ __html: acf.unique_one_title }}/>
+								<div className="text-center text-white text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: acf.unique_one_description }} />
 							</div>
 						</div>
 					</div>
@@ -62,11 +59,8 @@ const IndexPage = ({ data }) => {
 									src={noCommitmentsCube}
 									alt="no commitments"
 								/>
-								<h3 className="mt-8 md:mt-12 mb-8 text-center text-white font-bold text-lg normal-case">No Commitments</h3>
-								<div className="text-center">
-									<p className="md:mb-8 text-white text-sm leading-relaxed">We don’t lock you into minimum terms and we enable scope flexibility month-to-month.</p>
-									<p className="md:mb-8 text-white text-sm leading-relaxed">We want to work together, but only if it’s working for you too.</p>
-								</div>	
+								<h3 className="mt-8 md:mt-12 mb-8 text-center text-white font-bold text-lg normal-case" dangerouslySetInnerHTML={{ __html: acf.unique_two_title }}/>
+								<div className="text-center text-white text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: acf.unique_two_description }} />
 							</div>
 						</div>
 					</div>
@@ -79,23 +73,19 @@ const IndexPage = ({ data }) => {
 									src={expertsCube}
 									alt="experts"
 								/>
-								<h3 className="mt-8 md:mt-12 mb-8 text-center text-white font-bold text-lg normal-case">No Account Managers</h3>
-								<div className="text-center">
-									<p className="md:mb-8 text-white text-sm leading-relaxed">We don’t pay people to answer the phone, send emails, or set meetings.</p>
-									<p className="md:mb-8 text-white text-sm leading-relaxed">We want you to benefit from working directly with the analysts executing the work.</p>
-								</div>	
+								<h3 className="mt-8 md:mt-12 mb-8 text-center text-white font-bold text-lg normal-case" dangerouslySetInnerHTML={{ __html: acf.unique_three_title }}/>
+								<div className="text-center text-white text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: acf.unique_three_description }} />	
 							</div>
 						</div>
 					</div>
 				</div>
             </div>
 			
-			<HomePricing/>
+			<HomePricing acf={acf} />
 			<HomeFeaturedPosts
-				title={"Learn the tools of the trade."}
-				description={"Unlock the secrets to search engine acquisition."}
+				title={acf.featured_posts_title}
+				description={acf.featured_posts_subtitle}
 			/>
-
 			<ContactUs bgColor="bg-blue-150 md:bg-blue-violet" contactColor="bg-contact-purple"/>
 		</Layout>
 	)
@@ -108,7 +98,6 @@ export const query = graphql`
 			id
 			path
 			acf {
-				# hero {
 				hero_title
 				hero_subtitle
 				hero_link {
@@ -116,27 +105,12 @@ export const query = graphql`
 					url
 					target
 				}
-				# }
-				# testimonials {
+				
 				testimonials_header
 				testimonials_list {
 					testimonials_client_company
 				}
-				# client_logos {
-				# 	logo {
-				# 		localFile {
-				# 			publicURL
-				# 			extension
-				# 			childImageSharp {
-				# 				resolutions(width: 1800) {
-				# 					...GatsbyImageSharpResolutions_withWebp
-				# 				}
-				# 			}
-				# 		}
-				# 	}
-				# }
-				# }
-				# callout {
+				
 				callout_title
 				callout_subtitle
 				callout_link {
@@ -144,8 +118,7 @@ export const query = graphql`
 					url
 					target
 				}
-				# }
-				# uniques {
+				
 				uniques_title
 				unique_one_title
 				unique_one_description
@@ -153,8 +126,7 @@ export const query = graphql`
 				unique_two_description
 				unique_three_title
 				unique_three_description
-				# }
-				# pricing {
+
 				pricing_title
 				pricing_subtitle
 				pricing_description
@@ -168,15 +140,9 @@ export const query = graphql`
 				seo_pricing_features {
 					seo_pricing_feature
 				}
-				# }
-				# featured_posts {
+
 				featured_posts_title
 				featured_posts_subtitle
-				# }
-				# contact {
-				contact_title
-				contact_description
-				# }
 			}
 			yoast_meta {
 				yoast_wpseo_title

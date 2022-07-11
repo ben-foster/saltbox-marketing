@@ -3,14 +3,14 @@ import { Link } from "gatsby";
 
 import arrow from "../../images/arrow.svg";
 
-const HomePricing = () => {
+const HomePricing = ({acf}) => {
     return (
         <div className="w-full mb-5 mr-0 md:bg-banner-bg bg-cover px-4 pt-10 md:p-20">
-            <h1 className="px-4 md:px-0 font-semibold text-2xl md:text-4xl leading-10 text-blue-150 md:text-white text-center mb-5">You've got options. Select your service.</h1>
+            <h1 className="px-4 md:px-0 font-semibold text-2xl md:text-4xl leading-10 text-blue-150 md:text-white text-center mb-5">{acf.pricing_title}</h1>
             <div className="rounded-lg w-full bg-white m-auto pt-4 md:p-10 flex flex-col md:flex-row justify-between">
                 <div className="hidden md:flex flex-col bg-blue-rectangle bg-cover bg-no-repeat rounded-xl text-white p-13 w-1/3">
-                    <p className="font-semibold text-xl leading-normal mb-6">Take your search game to the next level with PPC, SEO, or a combo of both.</p>
-                    <p className="text-sm leading-relaxed font-medium mb-32">Check out what our PPC and SEO services can do for you and choose the service that fits your strategic goals. We also offer custom pricing and service packages, so please contact us for further details.</p>
+                    <p className="font-semibold text-xl leading-normal mb-6">{acf.pricing_subtitle}</p>
+                    <p className="text-sm leading-relaxed font-medium mb-32">{acf.pricing_description}</p>
                     <img className="w-6 ml-auto mt-auto" src={arrow} alt="" />
                 </div>
 
@@ -20,26 +20,16 @@ const HomePricing = () => {
                     </div>
 
                     <div className="text-violet-300">
-                        <p className="text-base leading-tight">Google & Microsoft Advertising Program</p>
+                        <p className="text-base leading-tight">{acf.ppc_pricing_title}</p>
                         <span className="text-xs text-gray-350">Starting at</span>
-                        <p className="leading-tight text-3xl font-bold">$2,200 <span className="text-lg font-normal"> /mo</span></p>
+                        <p className="leading-tight text-3xl font-bold">${acf.ppc_pricing_starting_at}<span className="text-lg font-normal"> /mo</span></p>
                         
-                        <div className="flex items-center mb-6">
-                            <div className="bg-check-icon bg-no-repeat bg-cover w-4 h-4 mr-4"></div>
-                            <span className="text-sm">Paid Search</span>
-                        </div>
-                        <div className="flex items-center mb-6">
-                            <div className="bg-check-icon bg-no-repeat bg-cover w-4 h-4 mr-4"></div>
-                            <span className="text-sm">Display Retargeting</span>
-                        </div>
-                        <div className="flex items-center mb-6">
-                            <div className="bg-check-icon bg-no-repeat bg-cover w-4 h-4 mr-4"></div>
-                            <span className="text-sm">Google Search & Display Network</span>
-                        </div>
-                        <div className="flex items-center mb-6">
-                            <div className="bg-check-icon bg-no-repeat bg-cover w-4 h-4 mr-4"></div>
-                            <span className="text-sm">Microsoft/Bing Network</span>
-                        </div>
+                        {acf.ppc_pricing_features && acf.ppc_pricing_features.map(({ ppc_pricing_feature }) => (
+                            <div className="flex items-center mb-6">
+                                <div className="bg-check-icon bg-no-repeat bg-cover w-4 h-4 mr-4"></div>
+                                <span className="text-sm">{ppc_pricing_feature}</span>
+                            </div>
+                        ))}
 
                         <Link 
                             type="button"
@@ -58,26 +48,16 @@ const HomePricing = () => {
                     </div>
 
                     <div className="text-blue-150">
-                        <p className="text-base leading-tight">Search Engine Optimization Program</p>
+                        <p className="text-base leading-tight">{acf.seo_pricing_title}</p>
                         <span className="text-xs text-gray-350">Starting at</span>
-                        <p className="leading-tight text-3xl font-bold">$3,000 <span className="text-lg font-normal"> /mo</span></p>
+                        <p className="leading-tight text-3xl font-bold">${acf.seo_pricing_starting_at}<span className="text-lg font-normal"> /mo</span></p>
                         
-                        <div className="flex items-center mb-6">
-                            <div className="bg-check-icon bg-no-repeat bg-cover w-4 h-4 mr-4"></div>
-                            <span className="text-sm">SEO Research & Strategy</span>
-                        </div>
-                        <div className="flex items-center mb-6">
-                            <div className="bg-check-icon bg-no-repeat bg-cover w-4 h-4 mr-4"></div>
-                            <span className="text-sm">SEO Audits</span>
-                        </div>
-                        <div className="flex items-center mb-6">
-                            <div className="bg-check-icon bg-no-repeat bg-cover w-4 h-4 mr-4"></div>
-                            <span className="text-sm">SEO Content</span>
-                        </div>
-                        <div className="flex items-center mb-6">
-                            <div className="bg-check-icon bg-no-repeat bg-cover w-4 h-4 mr-4"></div>
-                            <span className="text-sm">Technical SEO</span>
-                        </div>
+                        {acf.seo_pricing_features && acf.seo_pricing_features.map(({ seo_pricing_feature }) => (
+                            <div className="flex items-center mb-6">
+                                <div className="bg-check-icon bg-no-repeat bg-cover w-4 h-4 mr-4"></div>
+                                <span className="text-sm">{seo_pricing_feature}</span>
+                            </div>
+                        ))}
 
                         <Link 
                             type="button"
