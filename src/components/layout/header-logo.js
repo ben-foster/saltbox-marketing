@@ -12,15 +12,15 @@ const HeaderLogo = ({logo}) => {
                     src={logo ? logo : defaultLogo}
                     alt="saltbox logo"
                     className="w-32 hidden md:block"
-                    width="150px"
-                    height="54px"
+                    width="150"
+                    height="54"
                 />
                 <LazyLoadImage
                     src={defaultLogo}
                     alt="saltbox logo"
                     className="w-32 block md:hidden"
-                    width="150px"
-                    height="54px"
+                    width="150"
+                    height="54"
                 />
             </Link>
         </div>
