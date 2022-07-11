@@ -16,13 +16,13 @@ const Hero = ({ children, className, page }) => {
             className={`relative md:static z-10 p-8 ${className}`}
         >
             { children }
-            { page === "Pay-per-Click Advertising" && (
+            { page === "Pay-per-Click (PPC)" && (
                 <>
                     <img className="hero absolute right-0 top-0 left-0 hidden md:block" style={{ zIndex: -1, width: typeof window !== "undefined" ? window.innerWidth : "auto" }} src={ppc} alt="" />
                     <img className="hero absolute right-0 top-0 left-0 block md:hidden" style={{ zIndex: -1, width: typeof window !== "undefined" ? window.innerWidth : "auto" }} src={mobilePpc} alt="" />
                 </>
             )}
-            { page === "Search Engine Optimization" && (
+            { page === "Search Engine Optimization (SEO)" && (
                 <>
                     <img className="hero absolute right-0 top-0 left-0 hidden md:block" style={{ zIndex: -1, width: typeof window !== "undefined" ? window.innerWidth : "auto" }} src={seo} alt="" />
                     <img className="hero absolute right-0 top-0 left-0 block md:hidden" style={{ zIndex: -1, width: typeof window !== "undefined" ? window.innerWidth : "auto" }} src={mobileSeo} alt="" />

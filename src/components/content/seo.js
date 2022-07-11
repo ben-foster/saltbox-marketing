@@ -14,7 +14,7 @@ const SEO = ({ acf }) => {
                     <img className="w-auto sb-box-shadow rounded-xl " width="500" height="290" src={seoResearchStrategy}/>
                 </div>
                 <div className="w-full md:w-1/2 px-16">
-                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300">{acf.feature_one_title}</h2>
+                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-blue-150">{acf.feature_one_title}</h2>
                     <div className="max-w-sm">
                         <span className="text-xs text-gray-150">{acf.feature_one_description}</span>
                     </div>
@@ -23,7 +23,7 @@ const SEO = ({ acf }) => {
 
             <div className="container mx-auto py-10 md:py-24 flex flex-col-reverse md:flex-row items-center">
                 <div className="w-full md:w-1/2 px-16">
-                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300">{acf.feature_two_title}</h2>
+                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-blue-150">{acf.feature_two_title}</h2>
                     <div className="max-w-sm">
                         <span className="text-xs text-gray-150">{acf.feature_two_description}</span>
                     </div>
@@ -39,7 +39,7 @@ const SEO = ({ acf }) => {
                     <img className="w-auto sb-box-shadow rounded-xl " width="500" height="290" src={seoContent}/>
                 </div>
                 <div className="w-full md:w-1/2 px-16">
-                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300">{acf.feature_three_title}</h2>
+                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-blue-150">{acf.feature_three_title}</h2>
                     <div className="max-w-sm">
                         <span className="text-xs text-gray-150">{acf.feature_three_description}</span>
                     </div>
@@ -48,7 +48,7 @@ const SEO = ({ acf }) => {
 
             <div className="container mx-auto py-10 md:py-24 flex flex-col-reverse md:flex-row items-center">
                 <div className="w-full md:w-1/2 px-16">
-                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300">{acf.feature_four_title}</h2>
+                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-blue-150">{acf.feature_four_title}</h2>
                     <div className="max-w-sm">
                         <span className="text-xs text-gray-150">{acf.feature_four_description}</span>
                     </div>
