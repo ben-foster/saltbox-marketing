@@ -47,7 +47,7 @@ const PPC = () => {
 
             <div className="container mx-auto py-10 md:py-24 flex flex-col-reverse md:flex-row items-center">
                 <div className="w-full md:w-1/2 px-16">
-                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300">Analytics & Reporting</h2>
+                    <h2 className="font-bold text-2xl md:text-3xl text-left mb-2 mt-12 md:mt-4 text-violet-300">Analytics &amp; Reporting</h2>
                     <div className="max-w-sm">
                         <span className="text-xs text-gray-150">We help our clients paint a picture of the impact investments are having on sales and other key business metrics. </span>
                     </div>
