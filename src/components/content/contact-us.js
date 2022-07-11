@@ -3,7 +3,7 @@ import React from "react";
 import ContactForm from "../forms/contact-form";
 
 const ContactUs = (props) => {
-    const { bgColor, contactColor } = props;
+    const { bgColor, contactColor, title, description } = props;
 
     return (
         <div className={`${bgColor} relative px-2 py-4 md:py-16 md:p-24`}>
