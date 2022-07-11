@@ -5,7 +5,7 @@ import Hero from "./hero";
 import homeImg from "../../images/home-img.svg"
 import { Link } from "gatsby";
 
-const HomeHero = (props) => {
+const HomeHero = () => {
     return (
         // <Hero className="bg-home-bg bg-auto bg-no-repeat bg-right mb-10 h-80">
         <Hero className="md:mb-10">

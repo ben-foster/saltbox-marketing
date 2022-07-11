@@ -9,11 +9,10 @@ import seoBox from "../images/seo-cube.svg"
 import PPCComponent from "../components/content/ppc";
 import SEOComponent from "../components/content/seo";
 
-import ServiceItem from "./service-item";
+import ServiceItem from "../components/content/service-item";
 
 const Service = ({ data }) => {
     const { title, content, acf, yoast_meta } = data.wordpressWpServices;
-    const animateOnHover = false;
 
     const ppcText = {
         'title': "Pay-per-Click (PPC)",
@@ -38,9 +37,6 @@ const Service = ({ data }) => {
                 <div className="container mx-auto flex items-center pt-12 pb-20">
                     <div className="flex flex-col w-full text-white relative py-10">
                         <>
-                            {/* { title === "Web Analytics Solutions" && (
-                                <ServiceItem/>
-                            )} */}
                             { title === "Pay-per-Click Advertising" && (
                                 <ServiceItem itemImg={ppcBox} itemText={ppcText}/>
                             )}

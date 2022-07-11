@@ -10,7 +10,7 @@ import blogCube from "../images/blog-cube.svg";
 import ctaBg from "../images/blog-post-cta-bg.svg"
 
 const Page = ({ data }) => {
-    const { title, content, acf, yoast_meta } = data.wordpressPage;
+    const { title, yoast_meta } = data.wordpressPage;
     return (
         <Layout>
             <SEO 

@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import arrow from "../../images/arrow.svg"
-import check from "../../images/check.svg"
+import arrow from "../../images/arrow.svg";
 
 const HomePricing = () => {
     return (

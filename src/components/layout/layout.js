@@ -1,15 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
 
 import Header from "./header";
-// import HeadScripts from "./head-scripts";
+import HeadScripts from "./head-scripts";
 import Footer from "./footer";
 import "./layout.css";
 
 const Layout = ({ children, logo }) => (
     <>
-        {/* <HeadScripts /> */}
+        <HeadScripts />
         <Header logo={logo}/>
         <div>
             <main>{children}</main>

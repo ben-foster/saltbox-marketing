@@ -1,5 +1,4 @@
 import React from "react";
-import { navigate } from "gatsby-link";
 
 const NetlifyForm = ({ name, action, inputs, buttonCTA, onDark, noAttr }) => {
     const [state, setState] = React.useState({})

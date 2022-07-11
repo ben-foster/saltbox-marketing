@@ -3,7 +3,7 @@ import React from "react";
 import FeaturedImage from "../lib/featured-image";
 
 const AuthorCard = props => {
-    const { name, jobTitle, bio, image } = props;
+    const { name, jobTitle, image } = props;
     
     return (
         <div className="w-full flex flex-col md:flex-row bg-white rounded-lg px-12 py-8">
@@ -12,7 +12,6 @@ const AuthorCard = props => {
                     featuredImage={image}
                     className="w-16 h-16 mx-auto md:mx-0 mb-2 md:mb-0 md:mr-3 rounded-full shadow-md"
                 />
-                {/* <img className="w-24 h-24 mx-auto md:mx-0 mb-2 md:mb-0 md:mr-3 rounded-full shadow-md" src={imgSrc} alt={name} /> */}
             </div>
             <div className="flex-grow flex flex-col text-violet-100">
                 <h4 className="text-lg text-center md:text-left font-semibold" dangerouslySetInnerHTML={{ __html: name }}></h4>

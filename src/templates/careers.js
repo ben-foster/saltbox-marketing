@@ -6,11 +6,11 @@ import Layout from "../components/layout/layout";
 import Hero from "../components/content/hero";
 import careersBox from "../images/careers-cube.svg"
 
-import ServiceItem from "./service-item";
+import ServiceItem from "../components/content/service-item";
 import JobListings from "../components/content/job-listings";
 
 const Careers = ({ data }) => {
-    const { title, content, acf, yoast_meta } = data.wordpressPage;
+    const { title, yoast_meta } = data.wordpressPage;
 
     const careersText = {
         'title': "Careers",

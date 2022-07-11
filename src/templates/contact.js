@@ -7,7 +7,7 @@ import Hero from "../components/content/hero";
 import ContactUs from "../components/content/contact-us";
 
 const Contact = ({ data }) => {
-    const { title, yoast_meta, acf } = data.wordpressPage;
+    const { yoast_meta } = data.wordpressPage;
     return (
         <Layout>
             <SEO 

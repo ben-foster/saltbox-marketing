@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import ppcH1 from "../../images/ppc-h1.svg"
 import ppcH2 from "../../images/ppc-h2.svg"
 import ppcH3 from "../../images/ppc-h3.svg"

@@ -26,8 +26,8 @@ const IndexPage = ({ data }) => {
 				description={yoast_meta.yoast_wpseo_metadesc} 
 			/>
 			<div className="relative w-full">
-				<img className="absolute right-0 top-0 hidden md:block" style={{ width: typeof window !== "undefined" ? window.innerWidth * 0.55 : "auto", zIndex: -1 }} src={homeBg}/>
-				<img className="absolute left-0 right-0 top-0 block md:hidden" style={{ width: typeof window !== "undefined" ? window.innerWidth : "auto", zIndex: -1 }} src={mobileHomeBg}/>
+				<img className="home-hero absolute right-0 top-0 hidden md:block" style={{ width: typeof window !== "undefined" ? window.innerWidth * 0.55 : "auto", zIndex: -1 }} src={homeBg}/>
+				<img className="home-hero absolute left-0 right-0 top-0 block md:hidden" style={{ width: typeof window !== "undefined" ? window.innerWidth : "auto", zIndex: -1 }} src={mobileHomeBg}/>
 			</div>
 			<HomeHero
 				taglineLineOne={acf.hero.hero_tagline_line_one}

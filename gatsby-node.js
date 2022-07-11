@@ -43,26 +43,6 @@ exports.createPages = async ({ graphql, actions }) => {
 					}
 				}
 			}
-			allWordpressWpCaseStudies {
-				edges {
-					node {
-						id
-						path
-						slug
-						status
-					}
-				}
-			}
-			allWordpressWpWhitepapers {
-				edges {
-					node {
-						id
-						path
-						slug
-						status
-					}
-				}
-			}
 			allWordpressWpTeamMembers {
 				edges {
 					node {
@@ -72,28 +52,7 @@ exports.createPages = async ({ graphql, actions }) => {
 						status
 					}
 				}
-			}
-			allWordpressWpPets {
-				edges {
-					node {
-						id
-						path
-						slug
-						status
-					}
-				}
-			}
-			allWordpressWpJobListings {
-				edges {
-					node {
-						id
-						path
-						slug
-						status
-					}
-				}
-			}
-			allWordpressMenusMenusItems {
+			} allWordpressMenusMenusItems {
 				edges{
 					node {
 						slug
@@ -122,13 +81,10 @@ exports.createPages = async ({ graphql, actions }) => {
 		allWordpressPage,
 		allWordpressPost,
 		allWordpressWpServices,
-		allWordpressWpCaseStudies,
 		allWordpressWpTeamMembers,
-		allWordpressWpJobListings,
 	} = result.data
 
 	const homeTemplate = path.resolve(`./src/templates/index.js`);
-	const servicesTemplate = path.resolve(`./src/templates/services.js`);
 	const contactTemplate = path.resolve(`./src/templates/contact.js`);
 	const blogTemplate = path.resolve(`./src/templates/blog.js`);
 	const privacyPolicyTemplate = path.resolve(`./src/templates/privacy-policy.js`);
@@ -137,9 +93,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	const pageTemplate = path.resolve(`./src/templates/page.js`);
 	const postTemplate = path.resolve(`./src/templates/post.js`);
 	const serviceTemplate = path.resolve(`./src/templates/service.js`)
-	const caseStudyTemplate = path.resolve(`./src/templates/case-study.js`)
 	const teamMemberTemplate = path.resolve(`./src/templates/team-member.js`)
-	const jobListingTemplate = path.resolve(`./src/templates/job-listing.js`)
 	const thankYouTemplate = path.resolve(`./src/templates/thank-you.js`)
 
 	allWordpressPage.edges.forEach(edge => {
@@ -151,12 +105,6 @@ exports.createPages = async ({ graphql, actions }) => {
 			createPage({
 				path,
 				component: slash(homeTemplate),
-				context: { ...edge.node },
-			})
-		} else if(path === "/services/") {
-			createPage({
-				path,
-				component: slash(servicesTemplate),
 				context: { ...edge.node },
 			})
 		} else if(path === "/contact/") {
@@ -171,12 +119,6 @@ exports.createPages = async ({ graphql, actions }) => {
 				component: slash(blogTemplate),
 				context: { ...edge.node },
 			})
-		} else if(path === "/case-studies/") {
-			
-		} else if(path === "/whitepapers/") {
-			
-		} else if(path === "/pets/") {
-			
 		} else if(path === "/privacy-policy/") {
 			createPage({
 				path,
@@ -232,17 +174,6 @@ exports.createPages = async ({ graphql, actions }) => {
 		})
 	})
 
-	allWordpressWpCaseStudies.edges.forEach(edge => {
-		const path = edge.node.path;
-		delete edge.node.path;
-		
-		createPage({
-			path,
-			component: slash(caseStudyTemplate),
-			context: { ...edge.node },
-		})
-	})
-
 	allWordpressWpTeamMembers.edges.forEach(edge => {
 		const path = edge.node.path;
 		delete edge.node.path;
@@ -250,17 +181,6 @@ exports.createPages = async ({ graphql, actions }) => {
 		createPage({
 			path,
 			component: slash(teamMemberTemplate),
-			context: { ...edge.node },
-		})
-	})
-
-	allWordpressWpJobListings.edges.forEach(edge => {
-		const path = edge.node.path;
-		delete edge.node.path;
-		
-		createPage({
-			path,
-			component: slash(jobListingTemplate),
 			context: { ...edge.node },
 		})
 	})
